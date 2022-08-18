@@ -30,9 +30,9 @@ namespace CardiacAdmissionAdjudication
 
             Utility.SetComboBoxYesNoNull(comboBox12LeadECG);
             Utility.SetComboBox(comboBoxECGNormal, new ComboItem[] {
-                new ComboItem{ ID = "Normal",  Text = "Normal" },
+                new ComboItem{ ID = "Normal",     Text = "Normal" },
                 new ComboItem{ ID = "Abnormal",   Text = "Abnormal" },
-                new ComboItem { ID = "NULL", Text = "" }
+                new ComboItem { ID = "",          Text = "" }
             });
             Utility.SetComboBoxYesNoNull(comboBoxMyocardialIschaemia);
             Utility.SetComboBoxYesNoNull(comboBoxSubsequentIschaemia);
@@ -46,7 +46,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "RBBB (new)",   Text = "RBBB (new)" },
                 new ComboItem{ ID = "RBBB (old)",   Text = "RBBB (old)" },
                 new ComboItem{ ID = "LVH",          Text = "LVH" },
-                new ComboItem { ID = "NULL",        Text = "" }
+                new ComboItem { ID = "",            Text = "" }
             });
             Utility.SetComboBoxYesNoNull(comboBoxPathologicalQWave);
             Utility.SetComboBox(comboBoxRhythm, new ComboItem[] {
@@ -59,7 +59,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "Paced rhythm",       Text = "Paced rhythm" },
                 new ComboItem{ ID = "Advanced AV block",  Text = "Advanced AV block" },
                 new ComboItem{ ID = "Unknown",            Text = "Unknown" },
-                new ComboItem{ ID = "NULL",               Text = "" }
+                new ComboItem{ ID = "",                   Text = "" }
                 });
 
             // Angiogram Classification
@@ -78,7 +78,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "normal coronary arteries",           Text = "normal coronary arteries" },
                 new ComboItem{ ID = "bypass graft disease",               Text = "bypass graft disease" },
                 new ComboItem{ ID = "unknown (for angiographic review)",  Text = "unknown (for angiographic review)" },
-                new ComboItem{ ID = "NULL",                               Text = "" }
+                new ComboItem{ ID = "",                                   Text = "" }
                 });
 
             // LMS | LAD | Dx | Cx | OM | RCA | PLV | PDA | intermediate | multiple | bypass graft | none
@@ -95,7 +95,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "multiple",        Text = "multiple" },
                 new ComboItem{ ID = "bypass graft",    Text = "bypass graft" },
                 new ComboItem{ ID = "none",            Text = "none" },
-                new ComboItem{ ID = "NULL",           Text = "" }
+                new ComboItem{ ID = "",                Text = "" }
                 });
 
             // Smoking 
@@ -104,7 +104,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "Ex-",     Text = "Ex-" },
                 new ComboItem{ ID = "Never",   Text = "Never" },
                 new ComboItem{ ID = "Unknown", Text = "Unknown" },
-                new ComboItem{ ID = "NULL",   Text = "" }
+                new ComboItem{ ID = "",        Text = "" }
                 });
 
             // Final adjudication
@@ -113,7 +113,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "No",      Text = "No" },
                 new ComboItem{ ID = "NSTEMI",  Text = "NSTEMI" },
                 new ComboItem{ ID = "STEMI",   Text = "STEMI" },
-                new ComboItem{ ID = "NULL",   Text = "" }
+                new ComboItem{ ID = "",        Text = "" }
                 });
             Utility.SetComboBox(comboBoxProcedural, new ComboItem[] {
                 new ComboItem{ ID = "No",       Text = "No" },
@@ -121,14 +121,14 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "Type 4b",  Text = "Type 4b" },
                 new ComboItem{ ID = "Type 4c",  Text = "Type 4c" },
                 new ComboItem{ ID = "Type 5",   Text = "Type 5" },
-                new ComboItem{ ID = "NULL",   Text = "" }
+                new ComboItem{ ID = "",         Text = "" }
                 });
             Utility.SetComboBox(comboBoxSecondary, new ComboItem[] {
                 new ComboItem{ ID = "No",                         Text = "No" },
                 new ComboItem{ ID = "Type 2",                     Text = "Type 2" },
                 new ComboItem{ ID = "Acute Myocardial Injury",    Text = "Acute Myocardial Injury" },
                 new ComboItem{ ID = "Chronic Myocardial Injury",  Text = "Chronic Myocardial Injury" },
-                new ComboItem{ ID = "NULL",                       Text = "" }
+                new ComboItem{ ID = "",                           Text = "" }
                 });
             Utility.SetComboBoxYesNoNull(comboBoxSymptomsOfIschaemia);
             Utility.SetComboBoxYesNoNull(comboBoxSignsOfIschaemia);
@@ -142,13 +142,13 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "LVH",                     Text = "LVH" },
                 new ComboItem{ ID = "coronary embolism",       Text = "coronary embolism" },
                 new ComboItem{ ID = "coronary vasospasm",      Text = "coronary vasospasm" },
-                new ComboItem{ ID = "NULL",                   Text = "" }
+                new ComboItem{ ID = "",                        Text = "" }
                 });
             Utility.SetComboBox(comboBoxSuspectedCAD, new ComboItem[] {
                 new ComboItem{ ID = "known",             Text = "known" },
                 new ComboItem{ ID = "high-probability",  Text = "high-probability" },
                 new ComboItem{ ID = "low-probability",   Text = "low-probability" },
-                new ComboItem{ ID = "NULL",                   Text = "" }
+                new ComboItem{ ID = "",                  Text = "" }
                 });
             Utility.SetComboBox(comboBoxCardiac, new ComboItem[] {
                 new ComboItem{ ID = "No",                         Text = "No" },
@@ -163,7 +163,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "acute aortic dissection",    Text = "acute aortic dissection" },
                 new ComboItem{ ID = "takotsubo cardiomyopathy",   Text = "takotsubo cardiomyopathy" },
                 new ComboItem{ ID = "other",                      Text = "other" },
-                new ComboItem{ ID = "NULL",                      Text = "" }
+                new ComboItem{ ID = "",                           Text = "" }
                 });
             Utility.SetComboBox(comboBoxSystemic, new ComboItem[] {
                 new ComboItem{ ID = "No",                         Text = "No" },
@@ -176,7 +176,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "bleed",                      Text = "bleed" },
                 new ComboItem{ ID = "COPD",                       Text = "COPD" },
                 new ComboItem{ ID = "other",                      Text = "other" },
-                new ComboItem{ ID = "NULL",                      Text = "" }
+                new ComboItem{ ID = "",                           Text = "" }
                 });
 
             // Physiological parameters
@@ -185,13 +185,13 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "Yes",           Text = "Yes" },
                 new ComboItem{ ID = "No",            Text = "No" },
                 new ComboItem{ ID = "Uknown",        Text = "Unknown" },
-                new ComboItem{ ID = "NULL",         Text = "" }
+                new ComboItem{ ID = "",              Text = "" }
                 });
             Utility.SetComboBox(comboBoxAlert, new ComboItem[] {
                 new ComboItem{ ID = "Yes",           Text = "Yes" },
                 new ComboItem{ ID = "No",            Text = "No" },
                 new ComboItem{ ID = "Uknown",        Text = "Unknown" },
-                new ComboItem{ ID = "NULL",         Text = "" }
+                new ComboItem{ ID = "",              Text = "" }
                 });
             Utility.SetComboBox(comboBoxKillipClass, new ComboItem[] {
                 new ComboItem{ ID = "I",          Text = "I" },
@@ -199,7 +199,7 @@ namespace CardiacAdmissionAdjudication
                 new ComboItem{ ID = "III",        Text = "III" },
                 new ComboItem{ ID = "IV",         Text = "IV" },
                 new ComboItem{ ID = "Uknown",     Text = "Unknown" },
-                new ComboItem{ ID = "NULL",      Text = "" }
+                new ComboItem{ ID = "",           Text = "" }
                 });
             Utility.SetComboBoxYesNoNull(comboBoxCardiacArrest);
             Utility.SetComboBoxYesNoNull(comboBoxACSTreatmentInED);
@@ -451,13 +451,83 @@ namespace CardiacAdmissionAdjudication
                 {
                     if (c.Adjudication1Complete)
                     {
+                        comboBoxSuspectedACS.SelectedValue = c.SuspectedACS1;
+                        comboBox12LeadECG.SelectedValue = c.ECG12Lead;
+                        comboBoxECGNormal.SelectedValue = c.ECGNormalAbnormal;
+                        comboBoxMyocardialIschaemia.SelectedValue = c.ECGMyocardialIschaemia;
+                        comboBoxSubsequentIschaemia.SelectedValue = c.ECGSubsequentIschaemia;
+                        comboBoxSTElevation.SelectedValue = c.ECGSTElevation;
+                        comboBoxSTDepression.SelectedValue = c.ECGSTDepression;
+                        comboBoxTWaveInversion.SelectedValue = c.ECGTWaveInversion;
+                        comboBoxQRSAbnormalities.SelectedValue = c.ECGQRSAbnormalities;
+                        comboBoxPathologicalQWave.SelectedValue = c.ECGPathlogicalQWave;
+                        comboBoxRhythm.SelectedValue = c.Rhythum;
+                        comboBoxMechanism.SelectedValue = c.Mechanism;
+                        comboBoxCulpritVessel.SelectedValue = c.CulpritVessel;
+                        comboBoxSmoking.SelectedValue = c.Smoking;
+                        comboBoxInitialObs.SelectedValue = c.InitialObs;
+                        textBoxOxygenSat.Text = c.OxygenSat;
+                        comboBoxOxygenTherapy.SelectedValue = c.OxygenTherapy;
+                        textBoxRespiratoryRate.Text = c.RespiratoryRate;
+                        textBoxSystolicBP.Text = c.SystolicBP;
                         textBoxDiastolicBP.Text = c.DiastolicBP;
+                        textBoxHeartRate.Text = c.HeartRate;
+                        textBoxTemperature.Text = c.Temperature;
+                        comboBoxAlert.SelectedValue = c.Alert;
+                        comboBoxKillipClass.SelectedValue = c.KillipClass;
+                        comboBoxCardiacArrest.SelectedValue = c.CardiacArrest;
+                        comboBoxACSTreatmentInED.SelectedValue = c.ACSTreatmentInED;
+                        comboBoxInsufficientInfo.SelectedValue = c.InsufficientInfo;
                         comboBoxSpontaneous.SelectedValue = c.Spontaneous;
+                        comboBoxProcedural.SelectedValue = c.Procedural;
+                        comboBoxSecondary.SelectedValue = c.Secondary;
+                        comboBoxSymptomsOfIschaemia.SelectedValue = c.SymptomsOfIschaemia;
+                        comboBoxSignsOfIschaemia.SelectedValue = c.SignsOfIschaemia;
+                        comboBoxSupplyDemandImbalance.SelectedValue = c.SupplyDemandImbalance;
+                        comboBoxPrimaryMechanism.SelectedValue = c.PrimaryMechanism;
+                        comboBoxSuspectedCAD.SelectedValue = c.SuspectedCAD;
+                        comboBoxCardiac.SelectedValue = c.Cardiac;
+                        comboBoxSystemic.SelectedValue = c.Systemic;
                     }
                     else
                     {
+                        comboBoxSuspectedACS.SelectedValue = "";
+                        comboBox12LeadECG.SelectedValue = "";
+                        comboBoxECGNormal.SelectedValue = "";
+                        comboBoxMyocardialIschaemia.SelectedValue = "";
+                        comboBoxSubsequentIschaemia.SelectedValue = "";
+                        comboBoxSTElevation.SelectedValue = "";
+                        comboBoxSTDepression.SelectedValue = "";
+                        comboBoxTWaveInversion.SelectedValue = "";
+                        comboBoxQRSAbnormalities.SelectedValue = "";
+                        comboBoxPathologicalQWave.SelectedValue = "";
+                        comboBoxRhythm.SelectedValue = "";
+                        comboBoxMechanism.SelectedValue = "";
+                        comboBoxCulpritVessel.SelectedValue = "";
+                        comboBoxSmoking.SelectedValue = "";
+                        comboBoxInitialObs.SelectedValue = "";
+                        textBoxOxygenSat.Text = "";
+                        comboBoxOxygenTherapy.SelectedValue = "";
+                        textBoxRespiratoryRate.Text = "";
+                        textBoxSystolicBP.Text = "";
                         textBoxDiastolicBP.Text = "";
-                        comboBoxSpontaneous.SelectedValue = "NULL";
+                        textBoxHeartRate.Text = "";
+                        textBoxTemperature.Text = "";
+                        comboBoxAlert.SelectedValue = "";
+                        comboBoxKillipClass.SelectedValue = "";
+                        comboBoxCardiacArrest.SelectedValue = "";
+                        comboBoxACSTreatmentInED.SelectedValue = "";
+                        comboBoxInsufficientInfo.SelectedValue = "";
+                        comboBoxSpontaneous.SelectedValue = "";
+                        comboBoxProcedural.SelectedValue = "";
+                        comboBoxSecondary.SelectedValue = "";
+                        comboBoxSymptomsOfIschaemia.SelectedValue = "";
+                        comboBoxSignsOfIschaemia.SelectedValue = "";
+                        comboBoxSupplyDemandImbalance.SelectedValue = "";
+                        comboBoxPrimaryMechanism.SelectedValue = "";
+                        comboBoxSuspectedCAD.SelectedValue = "";
+                        comboBoxCardiac.SelectedValue = "";
+                        comboBoxSystemic.SelectedValue = "";
                     }
                 }
 
@@ -499,7 +569,7 @@ namespace CardiacAdmissionAdjudication
             textBoxArrivalDate.Text = "";
             textBoxPrimarySymptom.Text = "";
             textBoxTimeSinceOnset.Text = "";
-            comboBoxSuspectedACS.SelectedValue = "NULL";
+            comboBoxSuspectedACS.SelectedValue = "";
             textBoxAge.Text = "";
             textBoxSex.Text = "";
 
@@ -509,8 +579,43 @@ namespace CardiacAdmissionAdjudication
             dataGridViewTroponinTests.DataSource = troponinTestsData;
 
             // Annotation 1 data
+            comboBoxSuspectedACS.SelectedValue = "";
+            comboBox12LeadECG.SelectedValue = "";
+            comboBoxECGNormal.SelectedValue = "";
+            comboBoxMyocardialIschaemia.SelectedValue = "";
+            comboBoxSubsequentIschaemia.SelectedValue = "";
+            comboBoxSTElevation.SelectedValue = "";
+            comboBoxSTDepression.SelectedValue = "";
+            comboBoxTWaveInversion.SelectedValue = "";
+            comboBoxQRSAbnormalities.SelectedValue = "";
+            comboBoxPathologicalQWave.SelectedValue = "";
+            comboBoxRhythm.SelectedValue = "";
+            comboBoxMechanism.SelectedValue = "";
+            comboBoxCulpritVessel.SelectedValue = "";
+            comboBoxSmoking.SelectedValue = "";
+            comboBoxInitialObs.SelectedValue = "";
+            textBoxOxygenSat.Text = "";
+            comboBoxOxygenTherapy.SelectedValue = "";
+            textBoxRespiratoryRate.Text = "";
+            textBoxSystolicBP.Text = "";
             textBoxDiastolicBP.Text = "";
-            comboBoxSpontaneous.SelectedValue = "NULL";
+            textBoxHeartRate.Text = "";
+            textBoxTemperature.Text = "";
+            comboBoxAlert.SelectedValue = "";
+            comboBoxKillipClass.SelectedValue = "";
+            comboBoxCardiacArrest.SelectedValue = "";
+            comboBoxACSTreatmentInED.SelectedValue = "";
+            comboBoxInsufficientInfo.SelectedValue = "";
+            comboBoxSpontaneous.SelectedValue = "";
+            comboBoxProcedural.SelectedValue = "";
+            comboBoxSecondary.SelectedValue = "";
+            comboBoxSymptomsOfIschaemia.SelectedValue = "";
+            comboBoxSignsOfIschaemia.SelectedValue = "";
+            comboBoxSupplyDemandImbalance.SelectedValue = "";
+            comboBoxPrimaryMechanism.SelectedValue = "";
+            comboBoxSuspectedCAD.SelectedValue = "";
+            comboBoxCardiac.SelectedValue = "";
+            comboBoxSystemic.SelectedValue = "";
 
             // Progress label
             labelProgress.Text = "";
@@ -525,10 +630,46 @@ namespace CardiacAdmissionAdjudication
 
             if (this.adjudicationCases.IsFirstAdjudicator)
             {
-                c.Adjudicator1 = Environment.UserName;
-                c.DiastolicBP = textBoxDiastolicBP.Text;
-                c.Spontaneous = comboBoxSpontaneous.Text;
                 c.Adjudication1Complete = true;
+                c.Adjudicator1 = Environment.UserName;
+
+                c.SuspectedACS1 = comboBoxSuspectedACS.Text;
+                c.ECG12Lead = comboBox12LeadECG.Text;
+                c.ECGNormalAbnormal = comboBoxECGNormal.Text;
+                c.ECGMyocardialIschaemia = comboBoxMyocardialIschaemia.Text;
+                c.ECGSubsequentIschaemia = comboBoxSubsequentIschaemia.Text;
+                c.ECGSTElevation = comboBoxSTElevation.Text;
+                c.ECGSTDepression = comboBoxSTDepression.Text;
+                c.ECGTWaveInversion = comboBoxTWaveInversion.Text;
+                c.ECGQRSAbnormalities = comboBoxQRSAbnormalities.Text;
+                c.ECGPathlogicalQWave = comboBoxPathologicalQWave.Text;
+                c.Rhythum = comboBoxRhythm.Text;
+                c.Mechanism = comboBoxMechanism.Text;
+                c.CulpritVessel = comboBoxCulpritVessel.Text;
+                c.Smoking = comboBoxSmoking.Text;
+                c.InitialObs = comboBoxInitialObs.Text;
+                c.OxygenSat = textBoxOxygenSat.Text;
+                c.OxygenTherapy = comboBoxOxygenTherapy.Text;
+                c.RespiratoryRate = textBoxRespiratoryRate.Text;
+                c.SystolicBP = textBoxSystolicBP.Text;
+                c.DiastolicBP = textBoxDiastolicBP.Text;
+                c.HeartRate = textBoxHeartRate.Text;
+                c.Temperature = textBoxTemperature.Text;
+                c.Alert = comboBoxAlert.Text;
+                c.KillipClass = comboBoxKillipClass.Text;
+                c.CardiacArrest = comboBoxCardiacArrest.Text;
+                c.ACSTreatmentInED = comboBoxACSTreatmentInED.Text;
+                c.InsufficientInfo = comboBoxInsufficientInfo.Text;
+                c.Spontaneous = comboBoxSpontaneous.Text;
+                c.Procedural = comboBoxProcedural.Text;
+                c.Secondary = comboBoxSecondary.Text;
+                c.SymptomsOfIschaemia = comboBoxSymptomsOfIschaemia.Text;
+                c.SignsOfIschaemia = comboBoxSignsOfIschaemia.Text;
+                c.SupplyDemandImbalance = comboBoxSupplyDemandImbalance.Text;
+                c.PrimaryMechanism = comboBoxPrimaryMechanism.Text;
+                c.SuspectedCAD = comboBoxSuspectedCAD.Text;
+                c.Cardiac = comboBoxCardiac.Text;
+                c.Systemic = comboBoxSystemic.Text;
             }
             else
             {

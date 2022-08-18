@@ -38,6 +38,7 @@ namespace CardiacAdmissionAdjudication
         public string? Adjudicator1;
         public Boolean Adjudication1Complete;
 
+        public string? SuspectedACS1;
         public string? ECG12Lead;
         public string? ECGNormalAbnormal;
         public string? ECGMyocardialIschaemia;
@@ -141,9 +142,45 @@ namespace CardiacAdmissionAdjudication
             Adjudication1Complete = true;
 
             // Id will be column 0
-            Adjudicator1 = columns[1];
-            DiastolicBP  = columns[2];
-            Spontaneous  = columns[3];
+            int index = 1;
+            Adjudicator1 = columns[index++];
+            SuspectedACS1 = columns[index++];
+            ECG12Lead = columns[index++];
+            ECGNormalAbnormal = columns[index++];
+            ECGMyocardialIschaemia = columns[index++];
+            ECGSubsequentIschaemia = columns[index++];
+            ECGSTElevation = columns[index++];
+            ECGSTDepression = columns[index++];
+            ECGTWaveInversion = columns[index++];
+            ECGQRSAbnormalities = columns[index++];
+            ECGPathlogicalQWave = columns[index++];
+            Rhythum = columns[index++];
+            Mechanism = columns[index++];
+            CulpritVessel = columns[index++];
+            Smoking = columns[index++];
+            InitialObs = columns[index++];
+            OxygenSat = columns[index++];
+            OxygenTherapy = columns[index++];
+            RespiratoryRate = columns[index++];
+            SystolicBP = columns[index++];
+            DiastolicBP = columns[index++];
+            HeartRate = columns[index++];
+            Temperature = columns[index++];
+            Alert = columns[index++];
+            KillipClass = columns[index++];
+            CardiacArrest = columns[index++];
+            ACSTreatmentInED = columns[index++];
+            InsufficientInfo = columns[index++];
+            Spontaneous = columns[index++];
+            Procedural = columns[index++];
+            Secondary = columns[index++];
+            SymptomsOfIschaemia = columns[index++];
+            SignsOfIschaemia = columns[index++];
+            SupplyDemandImbalance = columns[index++];
+            PrimaryMechanism = columns[index++];
+            SuspectedCAD = columns[index++];
+            Cardiac = columns[index++];
+            Systemic = columns[index++];
         }
 
         public void AddSecondAdjudication(string input)
@@ -161,15 +198,44 @@ namespace CardiacAdmissionAdjudication
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(Id);
-            sb.Append('\t');
-            sb.Append(Adjudicator1);
-            sb.Append('\t');
-
-
-
-            sb.Append(DiastolicBP);
-            sb.Append('\t');
-            sb.Append(Spontaneous);
+            sb.Append("\t" + Adjudicator1);
+            sb.Append("\t" + SuspectedACS1);   
+            sb.Append("\t" + ECG12Lead);   
+            sb.Append("\t" + ECGNormalAbnormal);   
+            sb.Append("\t" + ECGMyocardialIschaemia);   
+            sb.Append("\t" + ECGSubsequentIschaemia);   
+            sb.Append("\t" + ECGSTElevation);   
+            sb.Append("\t" + ECGSTDepression);   
+            sb.Append("\t" + ECGTWaveInversion);   
+            sb.Append("\t" + ECGQRSAbnormalities);
+            sb.Append("\t" + ECGPathlogicalQWave);
+            sb.Append("\t" + Rhythum);
+            sb.Append("\t" + Mechanism);
+            sb.Append("\t" + CulpritVessel);
+            sb.Append("\t" + Smoking);
+            sb.Append("\t" + InitialObs);
+            sb.Append("\t" + OxygenSat);
+            sb.Append("\t" + OxygenTherapy);
+            sb.Append("\t" + RespiratoryRate);
+            sb.Append("\t" + SystolicBP);
+            sb.Append("\t" + DiastolicBP);
+            sb.Append("\t" + HeartRate);
+            sb.Append("\t" + Temperature);
+            sb.Append("\t" + Alert);
+            sb.Append("\t" + KillipClass);
+            sb.Append("\t" + CardiacArrest);
+            sb.Append("\t" + ACSTreatmentInED);
+            sb.Append("\t" + InsufficientInfo);
+            sb.Append("\t" + Spontaneous);
+            sb.Append("\t" + Procedural);
+            sb.Append("\t" + Secondary);
+            sb.Append("\t" + SymptomsOfIschaemia);
+            sb.Append("\t" + SignsOfIschaemia);
+            sb.Append("\t" + SupplyDemandImbalance);
+            sb.Append("\t" + PrimaryMechanism);
+            sb.Append("\t" + SuspectedCAD);
+            sb.Append("\t" + Cardiac);
+            sb.Append("\t" + Systemic);
 
             return sb.ToString();
         }

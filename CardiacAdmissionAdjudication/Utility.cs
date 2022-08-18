@@ -22,7 +22,7 @@ namespace CardiacAdmissionAdjudication
             Utility.SetComboBox(cb, new ComboItem[] {
                 new ComboItem{ ID = "Yes",  Text = "Yes" },
                 new ComboItem{ ID = "No",   Text = "No" },
-                new ComboItem { ID = "NULL", Text = "" }
+                new ComboItem { ID = "",    Text = "" }
             });
         }
     }
