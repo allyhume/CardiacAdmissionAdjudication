@@ -39,6 +39,8 @@ namespace CardiacAdmissionAdjudication
 
         public void ReadCasesFromFile(String fileName)
         {
+            cases = new List<AdjudicationCase>();
+
             this.baseFilename = fileName.Replace("_0.txt", "");
 
             string[] lines = File.ReadAllLines(fileName);
@@ -166,7 +168,22 @@ namespace CardiacAdmissionAdjudication
             }
             else
             {
-                lines.Add("Id\tAdjudicator\tSpontaneous");
+                StringBuilder sb = new StringBuilder();
+                sb.Append("Id");
+                sb.Append("\tAdjudicator2");
+                sb.Append("\tInsufficientInfo2");
+                sb.Append("\tSpontaneous2");
+                sb.Append("\tProcedural2");
+                sb.Append("\tSecondary2");
+                sb.Append("\tSymptomsOfIschaemia2");
+                sb.Append("\tSignsOfIschaemia2");
+                sb.Append("\tSupplyDemandImbalance2");
+                sb.Append("\tPrimaryMechanism2");
+                sb.Append("\tSuspectedCAD2");
+                sb.Append("\tCardiac2");
+                sb.Append("\tSystemic2");
+                lines.Add(sb.ToString());
+
                 foreach (AdjudicationCase c in cases)
                 {
                     if (c.Adjudication2Complete)

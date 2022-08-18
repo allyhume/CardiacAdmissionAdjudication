@@ -29,7 +29,6 @@ namespace CardiacAdmissionAdjudication
         public string TomcatLCx;
         public string TomcatRCA;
         public string TomcatLMS;
-        public string TomcatPCI;
         public string TomcatLAD;
         public string TomcatText;
 
@@ -100,15 +99,24 @@ namespace CardiacAdmissionAdjudication
         {
             string[] columns = input.Split('\t');
 
-            Id = columns[0];
-            Age = columns[1];
-            Sex = columns[2];
-            ArrivalDate = columns[3];
-            PrimarySymptom = columns[4];
-            SuspectedACS = columns[5];
-            TimeSinceOnset = columns[6];
-            ECGTimeFromPresentation = columns[7];
-            ECGMUSEText = columns[8];
+            int index = 0;
+            Id = columns[index++];
+            Age = columns[index++];
+            Sex = columns[index++];
+            ArrivalDate = columns[index++];
+            PrimarySymptom = columns[index++];
+            SuspectedACS = columns[index++];
+            TimeSinceOnset = columns[index++];
+            ECGTimeFromPresentation = columns[index++];
+            ECGMUSEText = columns[index++];
+
+            TomcatCath = columns[index++];
+            TomcatDaysFromPresentation = columns[index++];
+            TomcatLCx = columns[index++];
+            TomcatRCA = columns[index++];
+            TomcatLMS = columns[index++];
+            TomcatLAD = columns[index++];
+            TomcatText = columns[index++];
 
             TroponinTests = new List<TroponinTest>();
             EmergencyDepartmentNotes = new List<string>();
@@ -190,8 +198,19 @@ namespace CardiacAdmissionAdjudication
             Adjudication2Complete = true;
 
             // Id will be column 0
-            Adjudicator2 = columns[1];
-            Spontaneous2 = columns[2];
+            int index = 1;
+            Adjudicator2 = columns[index++];
+            InsufficientInfo2 = columns[index++];
+            Spontaneous2 = columns[index++];
+            Procedural2 = columns[index++];
+            Secondary2 = columns[index++];
+            SymptomsOfIschaemia2 = columns[index++];
+            SignsOfIschaemia2 = columns[index++];
+            SupplyDemandImbalance2 = columns[index++];
+            PrimaryMechanism2 = columns[index++];
+            SuspectedCAD2 = columns[index++];
+            Cardiac2 = columns[index++];
+            Systemic2 = columns[index++];
         }
 
         public string GetAnnotation1TSV()
@@ -244,13 +263,21 @@ namespace CardiacAdmissionAdjudication
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(Id);
-            sb.Append('\t');
-            sb.Append(Adjudicator2);
-            sb.Append('\t');
-            sb.Append(Spontaneous2);
+            sb.Append("\t" + Adjudicator2);
+            sb.Append("\t" + InsufficientInfo2);
+            sb.Append("\t" + Spontaneous2);
+            sb.Append("\t" + Procedural2);
+            sb.Append("\t" + Secondary2);
+            sb.Append("\t" + SymptomsOfIschaemia2);
+            sb.Append("\t" + SignsOfIschaemia2);
+            sb.Append("\t" + SupplyDemandImbalance2);
+            sb.Append("\t" + PrimaryMechanism2);
+            sb.Append("\t" + SuspectedCAD2);
+            sb.Append("\t" + Cardiac2);
+            sb.Append("\t" + Systemic2);
 
             return sb.ToString();
         }
-        
+
     }
 }

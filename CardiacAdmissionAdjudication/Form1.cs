@@ -447,6 +447,15 @@ namespace CardiacAdmissionAdjudication
                 textBoxECGTimeFromPresentation.Text = c.ECGTimeFromPresentation;
                 richTextBoxECGMUSEText.Text = c.ECGMUSEText;
 
+                // Tomcat data
+                textBoxCath.Text = c.TomcatCath;
+                textBoxDaysFromPresentation.Text = c.TomcatDaysFromPresentation; 
+                textBoxLCx.Text = c.TomcatLCx;
+                textBoxRCA.Text = c.TomcatRCA;
+                textBoxLMS.Text = c.TomcatLMS;
+                textBoxLAD.Text = c.TomcatLAD;
+                richTextTomcatText.Text = c.TomcatText;
+
                 if (this.adjudicationCases.IsFirstAdjudicator)
                 {
                     if (c.Adjudication1Complete)
@@ -517,6 +526,65 @@ namespace CardiacAdmissionAdjudication
                         comboBoxKillipClass.SelectedValue = "";
                         comboBoxCardiacArrest.SelectedValue = "";
                         comboBoxACSTreatmentInED.SelectedValue = "";
+                        comboBoxInsufficientInfo.SelectedValue = "";
+                        comboBoxSpontaneous.SelectedValue = "";
+                        comboBoxProcedural.SelectedValue = "";
+                        comboBoxSecondary.SelectedValue = "";
+                        comboBoxSymptomsOfIschaemia.SelectedValue = "";
+                        comboBoxSignsOfIschaemia.SelectedValue = "";
+                        comboBoxSupplyDemandImbalance.SelectedValue = "";
+                        comboBoxPrimaryMechanism.SelectedValue = "";
+                        comboBoxSuspectedCAD.SelectedValue = "";
+                        comboBoxCardiac.SelectedValue = "";
+                        comboBoxSystemic.SelectedValue = "";
+                    }
+                }
+                else
+                {
+                    comboBoxSuspectedACS.SelectedValue = c.SuspectedACS1;
+                    comboBox12LeadECG.SelectedValue = c.ECG12Lead;
+                    comboBoxECGNormal.SelectedValue = c.ECGNormalAbnormal;
+                    comboBoxMyocardialIschaemia.SelectedValue = c.ECGMyocardialIschaemia;
+                    comboBoxSubsequentIschaemia.SelectedValue = c.ECGSubsequentIschaemia;
+                    comboBoxSTElevation.SelectedValue = c.ECGSTElevation;
+                    comboBoxSTDepression.SelectedValue = c.ECGSTDepression;
+                    comboBoxTWaveInversion.SelectedValue = c.ECGTWaveInversion;
+                    comboBoxQRSAbnormalities.SelectedValue = c.ECGQRSAbnormalities;
+                    comboBoxPathologicalQWave.SelectedValue = c.ECGPathlogicalQWave;
+                    comboBoxRhythm.SelectedValue = c.Rhythum;
+                    comboBoxMechanism.SelectedValue = c.Mechanism;
+                    comboBoxCulpritVessel.SelectedValue = c.CulpritVessel;
+                    comboBoxSmoking.SelectedValue = c.Smoking;
+                    comboBoxInitialObs.SelectedValue = c.InitialObs;
+                    textBoxOxygenSat.Text = c.OxygenSat;
+                    comboBoxOxygenTherapy.SelectedValue = c.OxygenTherapy;
+                    textBoxRespiratoryRate.Text = c.RespiratoryRate;
+                    textBoxSystolicBP.Text = c.SystolicBP;
+                    textBoxDiastolicBP.Text = c.DiastolicBP;
+                    textBoxHeartRate.Text = c.HeartRate;
+                    textBoxTemperature.Text = c.Temperature;
+                    comboBoxAlert.SelectedValue = c.Alert;
+                    comboBoxKillipClass.SelectedValue = c.KillipClass;
+                    comboBoxCardiacArrest.SelectedValue = c.CardiacArrest;
+                    comboBoxACSTreatmentInED.SelectedValue = c.ACSTreatmentInED;
+
+                    // Adjudication 2
+                    if (c.Adjudication2Complete)
+                    {
+                        comboBoxInsufficientInfo.SelectedValue = c.InsufficientInfo2;
+                        comboBoxSpontaneous.SelectedValue = c.Spontaneous2;
+                        comboBoxProcedural.SelectedValue = c.Procedural2;
+                        comboBoxSecondary.SelectedValue = c.Secondary2;
+                        comboBoxSymptomsOfIschaemia.SelectedValue = c.SymptomsOfIschaemia2;
+                        comboBoxSignsOfIschaemia.SelectedValue = c.SignsOfIschaemia2;
+                        comboBoxSupplyDemandImbalance.SelectedValue = c.SupplyDemandImbalance2;
+                        comboBoxPrimaryMechanism.SelectedValue = c.PrimaryMechanism2;
+                        comboBoxSuspectedCAD.SelectedValue = c.SuspectedCAD2;
+                        comboBoxCardiac.SelectedValue = c.Cardiac2;
+                        comboBoxSystemic.SelectedValue = c.Systemic2;
+                    }
+                    else
+                    {
                         comboBoxInsufficientInfo.SelectedValue = "";
                         comboBoxSpontaneous.SelectedValue = "";
                         comboBoxProcedural.SelectedValue = "";
@@ -673,9 +741,20 @@ namespace CardiacAdmissionAdjudication
             }
             else
             {
-                c.Adjudicator2 = Environment.UserName;
-                c.Spontaneous2 = comboBoxSpontaneous.Text;
                 c.Adjudication2Complete = true;
+                c.Adjudicator2 = Environment.UserName;
+
+                c.InsufficientInfo2 = comboBoxInsufficientInfo.Text;
+                c.Spontaneous2 = comboBoxSpontaneous.Text;
+                c.Procedural2 = comboBoxProcedural.Text;
+                c.Secondary2 = comboBoxSecondary.Text;
+                c.SymptomsOfIschaemia2 = comboBoxSymptomsOfIschaemia.Text;
+                c.SignsOfIschaemia2 = comboBoxSignsOfIschaemia.Text;
+                c.SupplyDemandImbalance2 = comboBoxSupplyDemandImbalance.Text;
+                c.PrimaryMechanism2 = comboBoxPrimaryMechanism.Text;
+                c.SuspectedCAD2 = comboBoxSuspectedCAD.Text;
+                c.Cardiac2 = comboBoxCardiac.Text;
+                c.Systemic2 = comboBoxSystemic.Text;
             }
 
             adjudicationCases.Save();
