@@ -111,7 +111,49 @@ namespace CardiacAdmissionAdjudication
 
             if (IsFirstAdjudicator)
             {
-                lines.Add("Id\tAdjudicator\tDiastolicBP\tSpontaneous");
+                StringBuilder sb = new StringBuilder();
+                sb.Append("Id");
+                sb.Append("\tAdjudicator1");
+                sb.Append("\tSuspectedACS1");
+                sb.Append("\tECG12Lead");
+                sb.Append("\tECGNormalAbnormal");
+                sb.Append("\tECGMyocardialIschaemia");
+                sb.Append("\tECGSubsequentIschaemia");
+                sb.Append("\tECGSTElevation");
+                sb.Append("\tECGSTDepression");
+                sb.Append("\tECGTWaveInversion");
+                sb.Append("\tECGQRSAbnormalities");
+                sb.Append("\tECGPathlogicalQWave");
+                sb.Append("\tRhythum");
+                sb.Append("\tMechanism");
+                sb.Append("\tCulpritVessel");
+                sb.Append("\tSmoking");
+                sb.Append("\tInitialObs");
+                sb.Append("\tOxygenSat");
+                sb.Append("\tOxygenTherapy");
+                sb.Append("\tRespiratoryRate");
+                sb.Append("\tSystolicBP");
+                sb.Append("\tDiastolicBP");
+                sb.Append("\tHeartRate");
+                sb.Append("\tTemperature");
+                sb.Append("\tAlert");
+                sb.Append("\tKillipClass");
+                sb.Append("\tCardiacArrest");
+                sb.Append("\tACSTreatmentInED");
+                sb.Append("\tInsufficientInfo");
+                sb.Append("\tSpontaneous");
+                sb.Append("\tProcedural");
+                sb.Append("\tSecondary");
+                sb.Append("\tSymptomsOfIschaemia");
+                sb.Append("\tSignsOfIschaemia");
+                sb.Append("\tSupplyDemandImbalance");
+                sb.Append("\tPrimaryMechanism");
+                sb.Append("\tSuspectedCAD");
+                sb.Append("\tCardiac");
+                sb.Append("\tSystemic");
+
+                lines.Add(sb.ToString());
+
                 foreach (AdjudicationCase c in cases)
                 {
                     if (c.Adjudication1Complete)
