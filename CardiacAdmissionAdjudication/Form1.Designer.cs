@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelSuspectedACS = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,22 +56,22 @@
             this.comboBoxPathologicalQWave = new System.Windows.Forms.ComboBox();
             this.labelPathologicalQWave = new System.Windows.Forms.Label();
             this.comboBoxTWaveInversion = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
+            this.labelTWaveInversion = new System.Windows.Forms.Label();
             this.comboBoxSTElevation = new System.Windows.Forms.ComboBox();
-            this.label38 = new System.Windows.Forms.Label();
+            this.labelSTElevation = new System.Windows.Forms.Label();
             this.comboBoxRhythm = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
+            this.labelRhythm = new System.Windows.Forms.Label();
             this.comboBoxQRSAbnormalities = new System.Windows.Forms.ComboBox();
-            this.label36 = new System.Windows.Forms.Label();
+            this.labelQRSAbnormalities = new System.Windows.Forms.Label();
             this.comboBoxSTDepression = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.labelSTDepression = new System.Windows.Forms.Label();
             this.comboBoxMyocardialIschaemia = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.comboBoxSubsequentIschaemia = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.labelSubsequentIschaemia = new System.Windows.Forms.Label();
             this.comboBoxECGNormal = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.labelECGNormal = new System.Windows.Forms.Label();
             this.comboBox12LeadECG = new System.Windows.Forms.ComboBox();
             this.label12LeadECG = new System.Windows.Forms.Label();
             this.richTextBoxECGMUSEText = new System.Windows.Forms.RichTextBox();
@@ -102,7 +102,7 @@
             this.comboBoxSmoking = new System.Windows.Forms.ComboBox();
             this.textBoxTemperature = new System.Windows.Forms.TextBox();
             this.comboBoxOxygenTherapy = new System.Windows.Forms.ComboBox();
-            this.label45 = new System.Windows.Forms.Label();
+            this.labelSmoking = new System.Windows.Forms.Label();
             this.labelTemperature = new System.Windows.Forms.Label();
             this.labelOxygenTherapy = new System.Windows.Forms.Label();
             this.comboBoxACSTreatmentInED = new System.Windows.Forms.ComboBox();
@@ -114,13 +114,13 @@
             this.textBoxCath = new System.Windows.Forms.TextBox();
             this.comboBoxSymptomsOfIschaemia = new System.Windows.Forms.ComboBox();
             this.labelSymptomsOfIschaemia = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.labelSecondary = new System.Windows.Forms.Label();
+            this.labelProcedural = new System.Windows.Forms.Label();
+            this.labelSpontaneous = new System.Windows.Forms.Label();
+            this.labelInsufficientInfo = new System.Windows.Forms.Label();
             this.labelCardiacArrest = new System.Windows.Forms.Label();
             this.labelDiastolicBP = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.labelInitialObs = new System.Windows.Forms.Label();
             this.comboBoxProcedural = new System.Windows.Forms.ComboBox();
             this.comboBoxSpontaneous = new System.Windows.Forms.ComboBox();
             this.comboBoxInsufficientInfo = new System.Windows.Forms.ComboBox();
@@ -128,9 +128,9 @@
             this.textBoxDiastolicBP = new System.Windows.Forms.TextBox();
             this.comboBoxInitialObs = new System.Windows.Forms.ComboBox();
             this.comboBoxCulpritVessel = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.labelCulpritVessel = new System.Windows.Forms.Label();
             this.comboBoxMechanism = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.labelMechanism = new System.Windows.Forms.Label();
             this.textBoxLAD = new System.Windows.Forms.TextBox();
             this.textBoxLMS = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -179,14 +179,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Arrival Date";
             // 
-            // label3
+            // labelSuspectedACS
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Suspected ACS";
+            this.labelSuspectedACS.AutoSize = true;
+            this.labelSuspectedACS.Location = new System.Drawing.Point(12, 96);
+            this.labelSuspectedACS.Name = "labelSuspectedACS";
+            this.labelSuspectedACS.Size = new System.Drawing.Size(86, 15);
+            this.labelSuspectedACS.TabIndex = 2;
+            this.labelSuspectedACS.Text = "Suspected ACS";
             // 
             // label4
             // 
@@ -365,22 +365,22 @@
             this.tabPage1.Controls.Add(this.comboBoxPathologicalQWave);
             this.tabPage1.Controls.Add(this.labelPathologicalQWave);
             this.tabPage1.Controls.Add(this.comboBoxTWaveInversion);
-            this.tabPage1.Controls.Add(this.label39);
+            this.tabPage1.Controls.Add(this.labelTWaveInversion);
             this.tabPage1.Controls.Add(this.comboBoxSTElevation);
-            this.tabPage1.Controls.Add(this.label38);
+            this.tabPage1.Controls.Add(this.labelSTElevation);
             this.tabPage1.Controls.Add(this.comboBoxRhythm);
-            this.tabPage1.Controls.Add(this.label37);
+            this.tabPage1.Controls.Add(this.labelRhythm);
             this.tabPage1.Controls.Add(this.comboBoxQRSAbnormalities);
-            this.tabPage1.Controls.Add(this.label36);
+            this.tabPage1.Controls.Add(this.labelQRSAbnormalities);
             this.tabPage1.Controls.Add(this.comboBoxSTDepression);
-            this.tabPage1.Controls.Add(this.label34);
+            this.tabPage1.Controls.Add(this.labelSTDepression);
             this.tabPage1.Controls.Add(this.comboBoxMyocardialIschaemia);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.comboBoxSubsequentIschaemia);
             this.tabPage1.Controls.Add(this.label33);
             this.tabPage1.Controls.Add(this.labelSubsequentIschaemia);
             this.tabPage1.Controls.Add(this.comboBoxECGNormal);
-            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.labelECGNormal);
             this.tabPage1.Controls.Add(this.comboBox12LeadECG);
             this.tabPage1.Controls.Add(this.label12LeadECG);
             this.tabPage1.Controls.Add(this.richTextBoxECGMUSEText);
@@ -388,7 +388,7 @@
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1040, 279);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ECG";
@@ -398,7 +398,7 @@
             // 
             this.comboBoxPathologicalQWave.FormattingEnabled = true;
             this.comboBoxPathologicalQWave.Location = new System.Drawing.Point(765, 134);
-            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPathologicalQWave.Name = "comboBoxPathologicalQWave";
             this.comboBoxPathologicalQWave.Size = new System.Drawing.Size(80, 23);
             this.comboBoxPathologicalQWave.TabIndex = 25;
@@ -417,102 +417,102 @@
             // 
             this.comboBoxTWaveInversion.FormattingEnabled = true;
             this.comboBoxTWaveInversion.Location = new System.Drawing.Point(570, 132);
-            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTWaveInversion.Name = "comboBoxTWaveInversion";
             this.comboBoxTWaveInversion.Size = new System.Drawing.Size(66, 23);
             this.comboBoxTWaveInversion.TabIndex = 23;
             // 
-            // label39
+            // labelTWaveInversion
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(456, 134);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(96, 15);
-            this.label39.TabIndex = 22;
-            this.label39.Text = "T-wave inversion";
+            this.labelTWaveInversion.AutoSize = true;
+            this.labelTWaveInversion.Location = new System.Drawing.Point(456, 134);
+            this.labelTWaveInversion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTWaveInversion.Name = "labelTWaveInversion";
+            this.labelTWaveInversion.Size = new System.Drawing.Size(96, 15);
+            this.labelTWaveInversion.TabIndex = 22;
+            this.labelTWaveInversion.Text = "T-wave inversion";
             // 
             // comboBoxSTElevation
             // 
             this.comboBoxSTElevation.FormattingEnabled = true;
             this.comboBoxSTElevation.Location = new System.Drawing.Point(375, 132);
-            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSTElevation.Name = "comboBoxSTElevation";
             this.comboBoxSTElevation.Size = new System.Drawing.Size(66, 23);
             this.comboBoxSTElevation.TabIndex = 21;
             // 
-            // label38
+            // labelSTElevation
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(246, 132);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(70, 15);
-            this.label38.TabIndex = 20;
-            this.label38.Text = "ST elevation";
+            this.labelSTElevation.AutoSize = true;
+            this.labelSTElevation.Location = new System.Drawing.Point(246, 132);
+            this.labelSTElevation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSTElevation.Name = "labelSTElevation";
+            this.labelSTElevation.Size = new System.Drawing.Size(70, 15);
+            this.labelSTElevation.TabIndex = 20;
+            this.labelSTElevation.Text = "ST elevation";
             // 
             // comboBoxRhythm
             // 
             this.comboBoxRhythm.FormattingEnabled = true;
             this.comboBoxRhythm.Location = new System.Drawing.Point(903, 103);
-            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRhythm.Name = "comboBoxRhythm";
             this.comboBoxRhythm.Size = new System.Drawing.Size(129, 23);
             this.comboBoxRhythm.TabIndex = 19;
             // 
-            // label37
+            // labelRhythm
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(847, 104);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(49, 15);
-            this.label37.TabIndex = 18;
-            this.label37.Text = "Rhythm";
+            this.labelRhythm.AutoSize = true;
+            this.labelRhythm.Location = new System.Drawing.Point(847, 104);
+            this.labelRhythm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRhythm.Name = "labelRhythm";
+            this.labelRhythm.Size = new System.Drawing.Size(49, 15);
+            this.labelRhythm.TabIndex = 18;
+            this.labelRhythm.Text = "Rhythm";
             // 
             // comboBoxQRSAbnormalities
             // 
             this.comboBoxQRSAbnormalities.FormattingEnabled = true;
             this.comboBoxQRSAbnormalities.Location = new System.Drawing.Point(764, 103);
-            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxQRSAbnormalities.Name = "comboBoxQRSAbnormalities";
             this.comboBoxQRSAbnormalities.Size = new System.Drawing.Size(80, 23);
             this.comboBoxQRSAbnormalities.TabIndex = 17;
             // 
-            // label36
+            // labelQRSAbnormalities
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(639, 104);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(104, 15);
-            this.label36.TabIndex = 16;
-            this.label36.Text = "QRS abnormalities";
+            this.labelQRSAbnormalities.AutoSize = true;
+            this.labelQRSAbnormalities.Location = new System.Drawing.Point(639, 104);
+            this.labelQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelQRSAbnormalities.Name = "labelQRSAbnormalities";
+            this.labelQRSAbnormalities.Size = new System.Drawing.Size(104, 15);
+            this.labelQRSAbnormalities.TabIndex = 16;
+            this.labelQRSAbnormalities.Text = "QRS abnormalities";
             // 
             // comboBoxSTDepression
             // 
             this.comboBoxSTDepression.FormattingEnabled = true;
             this.comboBoxSTDepression.Location = new System.Drawing.Point(570, 100);
-            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSTDepression.Name = "comboBoxSTDepression";
             this.comboBoxSTDepression.Size = new System.Drawing.Size(66, 23);
             this.comboBoxSTDepression.TabIndex = 14;
             // 
-            // label34
+            // labelSTDepression
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(456, 104);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 15);
-            this.label34.TabIndex = 13;
-            this.label34.Text = "ST depression";
+            this.labelSTDepression.AutoSize = true;
+            this.labelSTDepression.Location = new System.Drawing.Point(456, 104);
+            this.labelSTDepression.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSTDepression.Name = "labelSTDepression";
+            this.labelSTDepression.Size = new System.Drawing.Size(79, 15);
+            this.labelSTDepression.TabIndex = 13;
+            this.labelSTDepression.Text = "ST depression";
             // 
             // comboBoxMyocardialIschaemia
             // 
             this.comboBoxMyocardialIschaemia.FormattingEnabled = true;
             this.comboBoxMyocardialIschaemia.Location = new System.Drawing.Point(375, 100);
-            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMyocardialIschaemia.Name = "comboBoxMyocardialIschaemia";
             this.comboBoxMyocardialIschaemia.Size = new System.Drawing.Size(66, 23);
             this.comboBoxMyocardialIschaemia.TabIndex = 12;
@@ -532,7 +532,7 @@
             // 
             this.comboBoxSubsequentIschaemia.FormattingEnabled = true;
             this.comboBoxSubsequentIschaemia.Location = new System.Drawing.Point(152, 165);
-            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSubsequentIschaemia.Name = "comboBoxSubsequentIschaemia";
             this.comboBoxSubsequentIschaemia.Size = new System.Drawing.Size(112, 23);
             this.comboBoxSubsequentIschaemia.TabIndex = 10;
@@ -561,26 +561,26 @@
             // 
             this.comboBoxECGNormal.FormattingEnabled = true;
             this.comboBoxECGNormal.Location = new System.Drawing.Point(102, 132);
-            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxECGNormal.Name = "comboBoxECGNormal";
             this.comboBoxECGNormal.Size = new System.Drawing.Size(129, 23);
             this.comboBoxECGNormal.TabIndex = 6;
             // 
-            // label31
+            // labelECGNormal
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(20, 134);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(77, 15);
-            this.label31.TabIndex = 5;
-            this.label31.Text = "ECG Normal?";
+            this.labelECGNormal.AutoSize = true;
+            this.labelECGNormal.Location = new System.Drawing.Point(20, 134);
+            this.labelECGNormal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelECGNormal.Name = "labelECGNormal";
+            this.labelECGNormal.Size = new System.Drawing.Size(77, 15);
+            this.labelECGNormal.TabIndex = 5;
+            this.labelECGNormal.Text = "ECG Normal?";
             // 
             // comboBox12LeadECG
             // 
             this.comboBox12LeadECG.FormattingEnabled = true;
             this.comboBox12LeadECG.Location = new System.Drawing.Point(102, 100);
-            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox12LeadECG.Name = "comboBox12LeadECG";
             this.comboBox12LeadECG.Size = new System.Drawing.Size(129, 23);
             this.comboBox12LeadECG.TabIndex = 4;
@@ -598,7 +598,7 @@
             // richTextBoxECGMUSEText
             // 
             this.richTextBoxECGMUSEText.Location = new System.Drawing.Point(17, 37);
-            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxECGMUSEText.Name = "richTextBoxECGMUSEText";
             this.richTextBoxECGMUSEText.Size = new System.Drawing.Size(1003, 57);
             this.richTextBoxECGMUSEText.TabIndex = 2;
@@ -607,7 +607,7 @@
             // textBoxECGTimeFromPresentation
             // 
             this.textBoxECGTimeFromPresentation.Location = new System.Drawing.Point(168, 13);
-            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxECGTimeFromPresentation.Name = "textBoxECGTimeFromPresentation";
             this.textBoxECGTimeFromPresentation.Size = new System.Drawing.Size(106, 23);
             this.textBoxECGTimeFromPresentation.TabIndex = 1;
@@ -648,7 +648,7 @@
             this.tabPage2.Controls.Add(this.comboBoxSmoking);
             this.tabPage2.Controls.Add(this.textBoxTemperature);
             this.tabPage2.Controls.Add(this.comboBoxOxygenTherapy);
-            this.tabPage2.Controls.Add(this.label45);
+            this.tabPage2.Controls.Add(this.labelSmoking);
             this.tabPage2.Controls.Add(this.labelTemperature);
             this.tabPage2.Controls.Add(this.labelOxygenTherapy);
             this.tabPage2.Controls.Add(this.comboBoxACSTreatmentInED);
@@ -660,13 +660,13 @@
             this.tabPage2.Controls.Add(this.textBoxCath);
             this.tabPage2.Controls.Add(this.comboBoxSymptomsOfIschaemia);
             this.tabPage2.Controls.Add(this.labelSymptomsOfIschaemia);
-            this.tabPage2.Controls.Add(this.label27);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.labelSecondary);
+            this.tabPage2.Controls.Add(this.labelProcedural);
+            this.tabPage2.Controls.Add(this.labelSpontaneous);
+            this.tabPage2.Controls.Add(this.labelInsufficientInfo);
             this.tabPage2.Controls.Add(this.labelCardiacArrest);
             this.tabPage2.Controls.Add(this.labelDiastolicBP);
-            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.labelInitialObs);
             this.tabPage2.Controls.Add(this.comboBoxProcedural);
             this.tabPage2.Controls.Add(this.comboBoxSpontaneous);
             this.tabPage2.Controls.Add(this.comboBoxInsufficientInfo);
@@ -674,9 +674,9 @@
             this.tabPage2.Controls.Add(this.textBoxDiastolicBP);
             this.tabPage2.Controls.Add(this.comboBoxInitialObs);
             this.tabPage2.Controls.Add(this.comboBoxCulpritVessel);
-            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.labelCulpritVessel);
             this.tabPage2.Controls.Add(this.comboBoxMechanism);
-            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.labelMechanism);
             this.tabPage2.Controls.Add(this.textBoxLAD);
             this.tabPage2.Controls.Add(this.textBoxLMS);
             this.tabPage2.Controls.Add(this.label18);
@@ -691,7 +691,7 @@
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1040, 279);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Admission Details";
@@ -710,7 +710,7 @@
             // 
             this.comboBoxCardiac.FormattingEnabled = true;
             this.comboBoxCardiac.Location = new System.Drawing.Point(841, 226);
-            this.comboBoxCardiac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCardiac.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCardiac.Name = "comboBoxCardiac";
             this.comboBoxCardiac.Size = new System.Drawing.Size(129, 23);
             this.comboBoxCardiac.TabIndex = 76;
@@ -729,7 +729,7 @@
             // 
             this.comboBoxSuspectedCAD.FormattingEnabled = true;
             this.comboBoxSuspectedCAD.Location = new System.Drawing.Point(841, 197);
-            this.comboBoxSuspectedCAD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSuspectedCAD.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSuspectedCAD.Name = "comboBoxSuspectedCAD";
             this.comboBoxSuspectedCAD.Size = new System.Drawing.Size(129, 23);
             this.comboBoxSuspectedCAD.TabIndex = 74;
@@ -748,7 +748,7 @@
             // 
             this.comboBoxSystemic.FormattingEnabled = true;
             this.comboBoxSystemic.Location = new System.Drawing.Point(841, 254);
-            this.comboBoxSystemic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSystemic.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSystemic.Name = "comboBoxSystemic";
             this.comboBoxSystemic.Size = new System.Drawing.Size(129, 23);
             this.comboBoxSystemic.TabIndex = 72;
@@ -767,7 +767,7 @@
             // 
             this.comboBoxPrimaryMechanism.FormattingEnabled = true;
             this.comboBoxPrimaryMechanism.Location = new System.Drawing.Point(612, 254);
-            this.comboBoxPrimaryMechanism.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPrimaryMechanism.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrimaryMechanism.Name = "comboBoxPrimaryMechanism";
             this.comboBoxPrimaryMechanism.Size = new System.Drawing.Size(129, 23);
             this.comboBoxPrimaryMechanism.TabIndex = 70;
@@ -786,7 +786,7 @@
             // 
             this.comboBoxSupplyDemandImbalance.FormattingEnabled = true;
             this.comboBoxSupplyDemandImbalance.Location = new System.Drawing.Point(573, 225);
-            this.comboBoxSupplyDemandImbalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSupplyDemandImbalance.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSupplyDemandImbalance.Name = "comboBoxSupplyDemandImbalance";
             this.comboBoxSupplyDemandImbalance.Size = new System.Drawing.Size(99, 23);
             this.comboBoxSupplyDemandImbalance.TabIndex = 68;
@@ -806,7 +806,7 @@
             // 
             this.comboBoxSignsOfIschaemia.FormattingEnabled = true;
             this.comboBoxSignsOfIschaemia.Location = new System.Drawing.Point(573, 198);
-            this.comboBoxSignsOfIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSignsOfIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSignsOfIschaemia.Name = "comboBoxSignsOfIschaemia";
             this.comboBoxSignsOfIschaemia.Size = new System.Drawing.Size(92, 23);
             this.comboBoxSignsOfIschaemia.TabIndex = 66;
@@ -825,7 +825,7 @@
             // 
             this.comboBoxKillipClass.FormattingEnabled = true;
             this.comboBoxKillipClass.Location = new System.Drawing.Point(940, 135);
-            this.comboBoxKillipClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxKillipClass.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKillipClass.Name = "comboBoxKillipClass";
             this.comboBoxKillipClass.Size = new System.Drawing.Size(87, 23);
             this.comboBoxKillipClass.TabIndex = 64;
@@ -844,7 +844,7 @@
             // 
             this.comboBoxAlert.FormattingEnabled = true;
             this.comboBoxAlert.Location = new System.Drawing.Point(776, 135);
-            this.comboBoxAlert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAlert.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAlert.Name = "comboBoxAlert";
             this.comboBoxAlert.Size = new System.Drawing.Size(77, 23);
             this.comboBoxAlert.TabIndex = 62;
@@ -862,7 +862,7 @@
             // textBoxSystolicBP
             // 
             this.textBoxSystolicBP.Location = new System.Drawing.Point(940, 103);
-            this.textBoxSystolicBP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSystolicBP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSystolicBP.Name = "textBoxSystolicBP";
             this.textBoxSystolicBP.Size = new System.Drawing.Size(76, 23);
             this.textBoxSystolicBP.TabIndex = 60;
@@ -880,7 +880,7 @@
             // textBoxRespiratoryRate
             // 
             this.textBoxRespiratoryRate.Location = new System.Drawing.Point(776, 104);
-            this.textBoxRespiratoryRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRespiratoryRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRespiratoryRate.Name = "textBoxRespiratoryRate";
             this.textBoxRespiratoryRate.Size = new System.Drawing.Size(73, 23);
             this.textBoxRespiratoryRate.TabIndex = 57;
@@ -899,7 +899,7 @@
             // 
             this.comboBoxSmoking.FormattingEnabled = true;
             this.comboBoxSmoking.Location = new System.Drawing.Point(573, 162);
-            this.comboBoxSmoking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSmoking.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSmoking.Name = "comboBoxSmoking";
             this.comboBoxSmoking.Size = new System.Drawing.Size(92, 23);
             this.comboBoxSmoking.TabIndex = 55;
@@ -907,7 +907,7 @@
             // textBoxTemperature
             // 
             this.textBoxTemperature.Location = new System.Drawing.Point(573, 134);
-            this.textBoxTemperature.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTemperature.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTemperature.Name = "textBoxTemperature";
             this.textBoxTemperature.Size = new System.Drawing.Size(89, 23);
             this.textBoxTemperature.TabIndex = 54;
@@ -916,20 +916,20 @@
             // 
             this.comboBoxOxygenTherapy.FormattingEnabled = true;
             this.comboBoxOxygenTherapy.Location = new System.Drawing.Point(573, 103);
-            this.comboBoxOxygenTherapy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxOxygenTherapy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxOxygenTherapy.Name = "comboBoxOxygenTherapy";
             this.comboBoxOxygenTherapy.Size = new System.Drawing.Size(89, 23);
             this.comboBoxOxygenTherapy.TabIndex = 53;
             // 
-            // label45
+            // labelSmoking
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(510, 167);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(54, 15);
-            this.label45.TabIndex = 52;
-            this.label45.Text = "Smoking";
+            this.labelSmoking.AutoSize = true;
+            this.labelSmoking.Location = new System.Drawing.Point(510, 167);
+            this.labelSmoking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSmoking.Name = "labelSmoking";
+            this.labelSmoking.Size = new System.Drawing.Size(54, 15);
+            this.labelSmoking.TabIndex = 52;
+            this.labelSmoking.Text = "Smoking";
             // 
             // labelTemperature
             // 
@@ -955,7 +955,7 @@
             // 
             this.comboBoxACSTreatmentInED.FormattingEnabled = true;
             this.comboBoxACSTreatmentInED.Location = new System.Drawing.Point(341, 167);
-            this.comboBoxACSTreatmentInED.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxACSTreatmentInED.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxACSTreatmentInED.Name = "comboBoxACSTreatmentInED";
             this.comboBoxACSTreatmentInED.Size = new System.Drawing.Size(129, 23);
             this.comboBoxACSTreatmentInED.TabIndex = 49;
@@ -963,7 +963,7 @@
             // textBoxHeartRate
             // 
             this.textBoxHeartRate.Location = new System.Drawing.Point(341, 136);
-            this.textBoxHeartRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxHeartRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHeartRate.Name = "textBoxHeartRate";
             this.textBoxHeartRate.Size = new System.Drawing.Size(106, 23);
             this.textBoxHeartRate.TabIndex = 47;
@@ -971,7 +971,7 @@
             // textBoxOxygenSat
             // 
             this.textBoxOxygenSat.Location = new System.Drawing.Point(341, 107);
-            this.textBoxOxygenSat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOxygenSat.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOxygenSat.Name = "textBoxOxygenSat";
             this.textBoxOxygenSat.Size = new System.Drawing.Size(88, 23);
             this.textBoxOxygenSat.TabIndex = 46;
@@ -1009,7 +1009,7 @@
             // textBoxCath
             // 
             this.textBoxCath.Location = new System.Drawing.Point(77, 7);
-            this.textBoxCath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCath.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCath.Name = "textBoxCath";
             this.textBoxCath.Size = new System.Drawing.Size(75, 23);
             this.textBoxCath.TabIndex = 42;
@@ -1031,41 +1031,41 @@
             this.labelSymptomsOfIschaemia.TabIndex = 40;
             this.labelSymptomsOfIschaemia.Text = "Symptoms of ischaemia";
             // 
-            // label27
+            // labelSecondary
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(252, 198);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(62, 15);
-            this.label27.TabIndex = 38;
-            this.label27.Text = "Secondary";
+            this.labelSecondary.AutoSize = true;
+            this.labelSecondary.Location = new System.Drawing.Point(252, 198);
+            this.labelSecondary.Name = "labelSecondary";
+            this.labelSecondary.Size = new System.Drawing.Size(62, 15);
+            this.labelSecondary.TabIndex = 38;
+            this.labelSecondary.Text = "Secondary";
             // 
-            // label26
+            // labelProcedural
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(27, 253);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(64, 15);
-            this.label26.TabIndex = 37;
-            this.label26.Text = "Procedural";
+            this.labelProcedural.AutoSize = true;
+            this.labelProcedural.Location = new System.Drawing.Point(27, 253);
+            this.labelProcedural.Name = "labelProcedural";
+            this.labelProcedural.Size = new System.Drawing.Size(64, 15);
+            this.labelProcedural.TabIndex = 37;
+            this.labelProcedural.Text = "Procedural";
             // 
-            // label25
+            // labelSpontaneous
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(24, 225);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 15);
-            this.label25.TabIndex = 36;
-            this.label25.Text = "Spontaneous";
+            this.labelSpontaneous.AutoSize = true;
+            this.labelSpontaneous.Location = new System.Drawing.Point(24, 225);
+            this.labelSpontaneous.Name = "labelSpontaneous";
+            this.labelSpontaneous.Size = new System.Drawing.Size(76, 15);
+            this.labelSpontaneous.TabIndex = 36;
+            this.labelSpontaneous.Text = "Spontaneous";
             // 
-            // label24
+            // labelInsufficientInfo
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(24, 196);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(90, 15);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "Insufficient info";
+            this.labelInsufficientInfo.AutoSize = true;
+            this.labelInsufficientInfo.Location = new System.Drawing.Point(24, 196);
+            this.labelInsufficientInfo.Name = "labelInsufficientInfo";
+            this.labelInsufficientInfo.Size = new System.Drawing.Size(90, 15);
+            this.labelInsufficientInfo.TabIndex = 35;
+            this.labelInsufficientInfo.Text = "Insufficient info";
             // 
             // labelCardiacArrest
             // 
@@ -1085,14 +1085,14 @@
             this.labelDiastolicBP.TabIndex = 33;
             this.labelDiastolicBP.Text = "Diastolic BP";
             // 
-            // label21
+            // labelInitialObs
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(24, 109);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 15);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "Initial obs";
+            this.labelInitialObs.AutoSize = true;
+            this.labelInitialObs.Location = new System.Drawing.Point(24, 109);
+            this.labelInitialObs.Name = "labelInitialObs";
+            this.labelInitialObs.Size = new System.Drawing.Size(58, 15);
+            this.labelInitialObs.TabIndex = 32;
+            this.labelInitialObs.Text = "Initial obs";
             // 
             // comboBoxProcedural
             // 
@@ -1150,14 +1150,14 @@
             this.comboBoxCulpritVessel.Size = new System.Drawing.Size(121, 23);
             this.comboBoxCulpritVessel.TabIndex = 16;
             // 
-            // label20
+            // labelCulpritVessel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(238, 71);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(77, 15);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "Culprit vessel";
+            this.labelCulpritVessel.AutoSize = true;
+            this.labelCulpritVessel.Location = new System.Drawing.Point(238, 71);
+            this.labelCulpritVessel.Name = "labelCulpritVessel";
+            this.labelCulpritVessel.Size = new System.Drawing.Size(77, 15);
+            this.labelCulpritVessel.TabIndex = 15;
+            this.labelCulpritVessel.Text = "Culprit vessel";
             // 
             // comboBoxMechanism
             // 
@@ -1167,14 +1167,14 @@
             this.comboBoxMechanism.Size = new System.Drawing.Size(121, 23);
             this.comboBoxMechanism.TabIndex = 14;
             // 
-            // label19
+            // labelMechanism
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(27, 71);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 15);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "Mechanism";
+            this.labelMechanism.AutoSize = true;
+            this.labelMechanism.Location = new System.Drawing.Point(27, 71);
+            this.labelMechanism.Name = "labelMechanism";
+            this.labelMechanism.Size = new System.Drawing.Size(69, 15);
+            this.labelMechanism.TabIndex = 13;
+            this.labelMechanism.Text = "Mechanism";
             // 
             // textBoxLAD
             // 
@@ -1311,7 +1311,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Location = new System.Drawing.Point(17, 730);
-            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(78, 20);
             this.buttonLoad.TabIndex = 32;
@@ -1322,7 +1322,7 @@
             // buttonSave
             // 
             this.buttonSave.Location = new System.Drawing.Point(106, 730);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 20);
             this.buttonSave.TabIndex = 33;
@@ -1343,7 +1343,7 @@
             // 
             this.richTextBoxEDNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxEDNotes.Location = new System.Drawing.Point(0, 0);
-            this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxEDNotes.Name = "richTextBoxEDNotes";
             this.richTextBoxEDNotes.Size = new System.Drawing.Size(352, 212);
             this.richTextBoxEDNotes.TabIndex = 35;
@@ -1352,7 +1352,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Location = new System.Drawing.Point(18, 185);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -1401,7 +1401,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelSuspectedACS);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1424,7 +1424,7 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
+        private Label labelSuspectedACS;
         private Label label4;
         private Label label5;
         private Label label6;
@@ -1457,12 +1457,12 @@
         private TextBox textBoxDaysFromPresentation;
         private Label label16;
         private TextBox textBoxRCA;
-        private Label label26;
-        private Label label25;
-        private Label label24;
+        private Label labelProcedural;
+        private Label labelSpontaneous;
+        private Label labelInsufficientInfo;
         private Label labelCardiacArrest;
         private Label labelDiastolicBP;
-        private Label label21;
+        private Label labelInitialObs;
         private ComboBox comboBoxProcedural;
         private ComboBox comboBoxSpontaneous;
         private ComboBox comboBoxInsufficientInfo;
@@ -1470,9 +1470,9 @@
         private TextBox textBoxDiastolicBP;
         private ComboBox comboBoxInitialObs;
         private ComboBox comboBoxCulpritVessel;
-        private Label label20;
+        private Label labelCulpritVessel;
         private ComboBox comboBoxMechanism;
-        private Label label19;
+        private Label labelMechanism;
         private TextBox textBoxLAD;
         private TextBox textBoxLMS;
         private Label label18;
@@ -1480,7 +1480,7 @@
         private RichTextBox richTextTomcatText;
         private ComboBox comboBoxSymptomsOfIschaemia;
         private Label labelSymptomsOfIschaemia;
-        private Label label27;
+        private Label labelSecondary;
         private DataGridView dataGridViewTroponinTests;
         private Button buttonLoad;
         private Button buttonSave;
@@ -1489,25 +1489,25 @@
         private Label label33;
         private Label labelSubsequentIschaemia;
         private ComboBox comboBoxECGNormal;
-        private Label label31;
+        private Label labelECGNormal;
         private ComboBox comboBox12LeadECG;
         private Label label12LeadECG;
         private RichTextBox richTextBoxECGMUSEText;
         private TextBox textBoxECGTimeFromPresentation;
         private Label label29;
-        private Label label36;
+        private Label labelQRSAbnormalities;
         private ComboBox comboBoxSTDepression;
-        private Label label34;
+        private Label labelSTDepression;
         private ComboBox comboBoxMyocardialIschaemia;
         private Label label30;
         private ComboBox comboBoxPathologicalQWave;
         private Label labelPathologicalQWave;
         private ComboBox comboBoxTWaveInversion;
-        private Label label39;
+        private Label labelTWaveInversion;
         private ComboBox comboBoxSTElevation;
-        private Label label38;
+        private Label labelSTElevation;
         private ComboBox comboBoxRhythm;
-        private Label label37;
+        private Label labelRhythm;
         private ComboBox comboBoxQRSAbnormalities;
         private ComboBox comboBoxKillipClass;
         private Label labelKillipClass;
@@ -1520,7 +1520,7 @@
         private ComboBox comboBoxSmoking;
         private TextBox textBoxTemperature;
         private ComboBox comboBoxOxygenTherapy;
-        private Label label45;
+        private Label labelSmoking;
         private Label labelTemperature;
         private Label labelOxygenTherapy;
         private ComboBox comboBoxACSTreatmentInED;
