@@ -108,7 +108,7 @@ namespace CardiacAdmissionAdjudication
             SuspectedACS = columns[index++];
             TimeSinceOnset = columns[index++];
             ECGTimeFromPresentation = columns[index++];
-            ECGMUSEText = columns[index++];
+            ECGMUSEText = columns[index++].Replace("<NL>", "\n");
 
             TomcatCath = columns[index++];
             TomcatDaysFromPresentation = columns[index++];
@@ -116,7 +116,7 @@ namespace CardiacAdmissionAdjudication
             TomcatRCA = columns[index++];
             TomcatLMS = columns[index++];
             TomcatLAD = columns[index++];
-            TomcatText = columns[index++];
+            TomcatText = columns[index++].Replace("<NL>", "\n");
 
             TroponinTests = new List<TroponinTest>();
             EmergencyDepartmentNotes = new List<string>();
@@ -134,13 +134,13 @@ namespace CardiacAdmissionAdjudication
         public void AddEmergencyDepartmentNote(string line)
         {
             string[] columns = line.Split('\t');
-            EmergencyDepartmentNotes.Add(columns[1]);
+            EmergencyDepartmentNotes.Add(columns[1].Replace("<NL>", "\n"));
         }
 
         public void AddDischargeNote(string line)
         {
             string[] columns = line.Split('\t');
-            DischargeNotes.Add(columns[1]);
+            DischargeNotes.Add(columns[1].Replace("<NL>", "\n"));
         }
 
         public void AddFirstAdjudication(string input)

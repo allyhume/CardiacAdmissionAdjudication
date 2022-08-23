@@ -8,7 +8,7 @@ namespace CardiacAdmissionAdjudication
 {
     public interface IAdjudicationDataEntry
     {
-        Boolean IsValid();
+        bool IsValid(out string report);
 
         void Show();
         void Hide();

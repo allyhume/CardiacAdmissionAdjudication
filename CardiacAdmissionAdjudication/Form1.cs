@@ -1,4 +1,5 @@
 using System.Data;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace CardiacAdmissionAdjudication
@@ -349,12 +350,12 @@ namespace CardiacAdmissionAdjudication
 
             // Text boxes
 
-            deOxygenSat = new TextBoxDataEntry("Oxygen Sat", labelOxygenSat, textBoxOxygenSat);
-            deRespiratoryRate = new TextBoxDataEntry("Respiratory Rate", labelRespiratoryRate, textBoxRespiratoryRate);
-            deSystolicBP = new TextBoxDataEntry("Systolic BP", labelSystolicBP, textBoxSystolicBP);
-            deDiastolicBP = new TextBoxDataEntry("Diastolic BP", labelDiastolicBP, textBoxDiastolicBP);
-            deHeartRate = new TextBoxDataEntry("Heart Rate", labelHeartRate, textBoxHeartRate);
-            deTemperature = new TextBoxDataEntry("Temperature", labelTemperature, textBoxTemperature);
+            deOxygenSat = new TextBoxDataEntry("Oxygen Sat", labelOxygenSat, textBoxOxygenSat, 0, 100);
+            deRespiratoryRate = new TextBoxDataEntry("Respiratory Rate", labelRespiratoryRate, textBoxRespiratoryRate, 0, 100);
+            deSystolicBP = new TextBoxDataEntry("Systolic BP", labelSystolicBP, textBoxSystolicBP,0,300);
+            deDiastolicBP = new TextBoxDataEntry("Diastolic BP", labelDiastolicBP, textBoxDiastolicBP,0,300);
+            deHeartRate = new TextBoxDataEntry("Heart Rate", labelHeartRate, textBoxHeartRate,0,300);
+            deTemperature = new TextBoxDataEntry("Temperature", labelTemperature, textBoxTemperature,10,60);
 
             adjudication1DataEntries.Add(de12LeadECG);
             adjudication1DataEntries.Add(deECGNormal);
@@ -779,8 +780,40 @@ namespace CardiacAdmissionAdjudication
             buttonPrevious.Enabled = false;
         }
 
-        private Boolean StoreCurrentCase()
+        private bool ValidateInput()
         {
+            bool valid = true;
+
+            List<IAdjudicationDataEntry> inputsToValidate =
+                adjudicationCases.IsFirstAdjudicator ? adjudication1DataEntries : adjudication2DataEntries;
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (IAdjudicationDataEntry de in inputsToValidate)
+            {
+                string errorReport;
+
+                if (!de.IsValid(out errorReport))
+                {
+                    valid = false;
+                    sb.AppendLine(errorReport);
+                }
+            }
+
+            if (!valid)
+            {
+                MessageBox.Show(
+                    sb.ToString(), "Data entry invalid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return valid;
+        }
+
+        private bool StoreCurrentCase()
+        {
+            if (!ValidateInput()) return false;
+
             AdjudicationCase c = this.adjudicationCases.cases[currentCase];
 
             if (this.adjudicationCases.IsFirstAdjudicator)

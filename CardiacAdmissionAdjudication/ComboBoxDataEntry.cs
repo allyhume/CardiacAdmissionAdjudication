@@ -11,6 +11,9 @@ namespace CardiacAdmissionAdjudication
         private Label label;
         private ComboBox comboBox;
         string name;
+        private Color normalLabelForeColor;
+        private Color normalComboBoxBackColor;
+        private bool isVisible;
 
         public ComboBoxDataEntry(string name, Label label, ComboBox comboBox, string[] options)
         {
@@ -31,6 +34,10 @@ namespace CardiacAdmissionAdjudication
             }
             values[options.Length] = new ComboItem { ID = "", Text = "" };
             this.comboBox.DataSource = values;
+
+            normalComboBoxBackColor = comboBox.BackColor;
+            normalLabelForeColor = label.ForeColor;
+            isVisible = true;   
         }
 
         string IAdjudicationDataEntry.GetValue()
@@ -42,11 +49,37 @@ namespace CardiacAdmissionAdjudication
         {
             this.label.Hide();
             this.comboBox.Hide();
+            this.isVisible = false;
         }
 
-        bool IAdjudicationDataEntry.IsValid()
+        bool IAdjudicationDataEntry.IsValid(out string report)
         {
-            throw new NotImplementedException();
+            bool result;
+
+            // If not visible then no need to validate it
+            if (!this.isVisible)
+            {
+                result = true;
+            }
+            else
+            {
+                result = (comboBox.Text != "");
+            }
+
+            if (!result)
+            {
+                report = this.name + " : no valid selection made";
+                label.ForeColor = Color.Red;
+                comboBox.BackColor = Color.Red;
+            }
+            else
+            {
+                report = "";
+                label.ForeColor = normalLabelForeColor;
+                comboBox.BackColor = normalComboBoxBackColor;
+            }
+
+            return result;
         }
 
         void IAdjudicationDataEntry.SetEmpty()
@@ -63,6 +96,7 @@ namespace CardiacAdmissionAdjudication
         {
             this.label.Show();
             this.comboBox.Show();
+            this.isVisible = true;
         }
     }
 }
