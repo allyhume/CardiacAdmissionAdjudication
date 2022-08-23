@@ -370,17 +370,6 @@ namespace CardiacAdmissionAdjudication
             adjudication1DataEntries.Add(deMechanism);
             adjudication1DataEntries.Add(deCulpritVessel);
             adjudication1DataEntries.Add(deSmoking);
-            adjudication1DataEntries.Add(deInsufficientInfo);
-            adjudication1DataEntries.Add(deSpontaneous);
-            adjudication1DataEntries.Add(deProcedural);
-            adjudication1DataEntries.Add(deSecondary);
-            adjudication1DataEntries.Add(deSymptomsOfIschaemia);
-            adjudication1DataEntries.Add(deSignsOfIschaemia);
-            adjudication1DataEntries.Add(deSupplyDemandImbalance);
-            adjudication1DataEntries.Add(dePrimaryMechanism);
-            adjudication1DataEntries.Add(deSuspectedCAD);
-            adjudication1DataEntries.Add(deCardiac);
-            adjudication1DataEntries.Add(deSystemic);
             adjudication1DataEntries.Add(deInitialObs);
             adjudication1DataEntries.Add(deOxygenTherapy);
             adjudication1DataEntries.Add(deAlert);
@@ -661,10 +650,26 @@ namespace CardiacAdmissionAdjudication
                     }
                     else
                     {
-                        foreach( IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
+                        foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
                         {
                             dataEntry.SetEmpty();
                         }
+                        foreach (IAdjudicationDataEntry dataEntry in adjudication2DataEntries)
+                        {
+                            dataEntry.SetEmpty();
+                        }
+
+                        deSuspectedACS.SetValue(c.SuspectedACS1);
+                    }
+
+                    // All entry points must be editable
+                    foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
+                    {
+                        dataEntry.SetEditable(true);
+                    }
+                    foreach (IAdjudicationDataEntry dataEntry in adjudication2DataEntries)
+                    {
+                        dataEntry.SetEditable(true);
                     }
                 }
                 else
@@ -718,6 +723,15 @@ namespace CardiacAdmissionAdjudication
                             dataEntry.SetEmpty();
                         }
                     }
+                    // All entry points must be editable
+                    foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
+                    {
+                        dataEntry.SetEditable(false);
+                    }
+                    foreach (IAdjudicationDataEntry dataEntry in adjudication2DataEntries)
+                    {
+                        dataEntry.SetEditable(true);
+                    }
                 }
 
                 // Enable next and previous buttons
@@ -767,8 +781,12 @@ namespace CardiacAdmissionAdjudication
             troponinTestsData.Columns.Add("Result");
             dataGridViewTroponinTests.DataSource = troponinTestsData;
 
-            // Annotation 1 data
+            // Everything is set to empty
             foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
+            {
+                dataEntry.SetEmpty();
+            }
+            foreach (IAdjudicationDataEntry dataEntry in adjudication2DataEntries)
             {
                 dataEntry.SetEmpty();
             }
@@ -784,12 +802,23 @@ namespace CardiacAdmissionAdjudication
         {
             bool valid = true;
 
-            List<IAdjudicationDataEntry> inputsToValidate =
-                adjudicationCases.IsFirstAdjudicator ? adjudication1DataEntries : adjudication2DataEntries;
-
             StringBuilder sb = new StringBuilder();
 
-            foreach (IAdjudicationDataEntry de in inputsToValidate)
+            if (adjudicationCases.IsFirstAdjudicator)
+            {
+                foreach (IAdjudicationDataEntry de in adjudication1DataEntries)
+                {
+                    string errorReport;
+
+                    if (!de.IsValid(out errorReport))
+                    {
+                        valid = false;
+                        sb.AppendLine(errorReport);
+                    }
+                }
+            }
+
+            foreach (IAdjudicationDataEntry de in adjudication2DataEntries)
             {
                 string errorReport;
 

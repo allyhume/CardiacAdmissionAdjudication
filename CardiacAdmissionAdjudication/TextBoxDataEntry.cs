@@ -34,6 +34,7 @@
             textBox.Hide();
             label.Hide();
             isVisible = false;
+            textBox.Text = "";
         }
 
         bool IAdjudicationDataEntry.IsValid(out string report)
@@ -84,6 +85,11 @@
             }
 
             return result;
+        }
+
+        void IAdjudicationDataEntry.SetEditable(bool editable)
+        {
+            textBox.ReadOnly = !editable;
         }
 
         void IAdjudicationDataEntry.SetEmpty()

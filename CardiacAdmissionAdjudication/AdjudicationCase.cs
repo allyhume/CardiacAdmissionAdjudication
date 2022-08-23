@@ -122,6 +122,9 @@ namespace CardiacAdmissionAdjudication
             EmergencyDepartmentNotes = new List<string>();
             DischargeNotes = new List<string>();
 
+            // Populate the adjudication 1 suspected ACS with the data from file
+            SuspectedACS1 = SuspectedACS;
+
             Adjudication1Complete = false;
             Adjudication2Complete = false;
         }
