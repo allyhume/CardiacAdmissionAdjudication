@@ -54,9 +54,13 @@ namespace CardiacAdmissionAdjudication
         private List<IAdjudicationDataEntry> adjudication1DataEntries = new List<IAdjudicationDataEntry>();
         private List<IAdjudicationDataEntry> adjudication2DataEntries = new List<IAdjudicationDataEntry>();
 
+        private bool dynamicallyHandleSelectionChanges = true;
+
         public Form1(AdjudicationCases cases)
         {
             InitializeComponent();
+
+            dynamicallyHandleSelectionChanges = false;
 
             this.adjudicationCases = cases;
 
@@ -395,6 +399,8 @@ namespace CardiacAdmissionAdjudication
             adjudication2DataEntries.Add(deSuspectedCAD);
             adjudication2DataEntries.Add(deCardiac);
             adjudication2DataEntries.Add(deSystemic);
+
+            dynamicallyHandleSelectionChanges = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -403,13 +409,190 @@ namespace CardiacAdmissionAdjudication
             DisplayCurrentCase();
         }
 
+
+        /// <summary>
+        /// Shows or hides the various components based on the application logic of
+        /// which combinations are valid together.
+        /// </summary>
         private void ShowHideComponents()
         {
+            // Ignore if not currently dynamically handling selection changes.
+            // We need this or things become a recursive mess
+            if (!dynamicallyHandleSelectionChanges) return;
+
             // This can be called by the contructor of these objects - ignore these invokations
             if (deSecondary == null) return;
             if (deSymptomsOfIschaemia == null) return;
             if (deInitialObs == null) return;
             if (deSubsequentIschaemia == null) return;
+            if (de12LeadECG == null) return;
+            if (deECGNormal == null) return;
+
+            dynamicallyHandleSelectionChanges = false; ;
+
+            // 12 Lead ECG set to No hides all other ECG options as there is no ECG.
+            if (de12LeadECG.GetValue() == "No")
+            {
+                deECGNormal.Hide();
+                deMyocardialIschaemia.Hide();
+                deSTElevation.Hide();
+                deSTDepression.Hide();
+                deTWaveInversion.Hide();
+                deQRSAbnormalities.Hide();
+                deRhythm.Hide();
+                dePathologicalQWave.Hide();
+                deSubsequentIschaemia.Hide();
+            }
+            else
+            {
+                deECGNormal.Show();
+                deMyocardialIschaemia.Show();
+                deSTElevation.Show();
+                deSTDepression.Show();
+                deTWaveInversion.Show();
+                deQRSAbnormalities.Show();
+                deRhythm.Show();
+                dePathologicalQWave.Show();
+                deSubsequentIschaemia.Show();
+            }
+
+
+            // If ECG is normal then all the other options ECG options are set to
+            // No or None and Rhythm is set to SR
+            if (deECGNormal.GetValue() == "Normal")
+            {
+                deMyocardialIschaemia.SetValue("No");
+                deSTElevation.SetValue("No");
+                deSTDepression.SetValue("No");
+                deTWaveInversion.SetValue("No");
+                deQRSAbnormalities.SetValue("None");
+                dePathologicalQWave.SetValue("No");
+                deRhythm.SetValue("SR");
+
+                deMyocardialIschaemia.SetEditable(false);
+                deSTElevation.SetEditable(false);
+                deSTDepression.SetEditable(false);
+                deTWaveInversion.SetEditable(false);
+                deQRSAbnormalities.SetEditable(false);
+                dePathologicalQWave.SetEditable(false);
+                deRhythm.SetEditable(false);
+            }
+            else
+            {
+                deMyocardialIschaemia.SetEditable(true);
+                deSTElevation.SetEditable(true);
+                deSTDepression.SetEditable(true);
+                deTWaveInversion.SetEditable(true);
+                deQRSAbnormalities.SetEditable(true);
+                dePathologicalQWave.SetEditable(true);
+                deRhythm.SetEditable(true);
+            }
+
+            // When Myocardial Ischaemia is No then ask if there was a subsequent
+            // ischaemia.
+
+            if (deMyocardialIschaemia.GetValue() == "No")
+            {
+                deSubsequentIschaemia.Show();
+            }
+            else
+            {
+                deSubsequentIschaemia.Hide();
+            }
+
+            // Initial Obs = No means Initial Obs hide oxygen *, respiratory rate,
+            // * BP, heart rate, and temperature.
+            if (deInitialObs.GetValue() == "Yes")
+            {
+                deOxygenSat.Show();
+                deOxygenTherapy.Show();
+                deRespiratoryRate.Show();
+                deSystolicBP.Show();
+                deDiastolicBP.Show();
+                deHeartRate.Show();
+                deTemperature.Show();
+            }
+            else
+            {
+                deOxygenSat.Hide();
+                deOxygenTherapy.Hide();
+                deRespiratoryRate.Hide();
+                deSystolicBP.Hide();
+                deDiastolicBP.Hide();
+                deHeartRate.Hide();
+                deTemperature.Hide();
+            }
+
+
+            // Select exactlty one thing from insufficient info, spontaneous, procedural and secondary.
+            // If insufficient info = 'Yes' the other 3 are hidden.
+            // For the other three, if one is not No there others are all set to No (with corresponding
+            // further hiding)
+            if (deInsufficientInfo.GetValue() == "Yes")
+            {
+                deSpontaneous.Hide();
+                deProcedural.Hide();
+                deSecondary.Hide();
+            }
+            else
+            {
+                deSpontaneous.Show();
+                deProcedural.Show();
+                deSecondary.Show();
+
+                bool isSomethingSpecified = false;
+
+                if (deSpontaneous.GetValue() != "No" && deSpontaneous.GetValue() != "")
+                {
+                    deInsufficientInfo.SetValue("No");
+                    deProcedural.SetValue("No");
+                    deSecondary.SetValue("No");
+
+                    deInsufficientInfo.SetEditable(false);
+                    deProcedural.SetEditable(false);
+                    deSecondary.SetEditable(false);
+
+                    isSomethingSpecified = true;
+                }
+
+                if (deProcedural.GetValue() != "No" && deProcedural.GetValue() != "")
+                {
+                    deInsufficientInfo.SetValue("No");
+                    deSpontaneous.SetValue("No");
+                    deSecondary.SetValue("No");
+                    isSomethingSpecified = true;
+
+                    deInsufficientInfo.SetEditable(false);
+                    deSpontaneous.SetEditable(false);
+                    deSecondary.SetEditable(false);
+
+                }
+
+                if (deSecondary.GetValue() != "No" && deSecondary.GetValue() != "")
+                {
+                    deInsufficientInfo.SetValue("No");
+                    deSpontaneous.SetValue("No");
+                    deProcedural.SetValue("No");
+                    isSomethingSpecified = true;
+
+                    deInsufficientInfo.SetEditable(false);
+                    deSpontaneous.SetEditable(false);
+                    deProcedural.SetEditable(false);
+                }
+
+                // If nothing specified then all are editable
+                if (!isSomethingSpecified)
+                {
+                    deInsufficientInfo.SetEditable(true);
+                    deSpontaneous.SetEditable(true);
+                    deProcedural.SetEditable(true);
+                    deSecondary.SetEditable(true);
+                }
+            }
+
+            // Symptoms of Ischaemia, signs of ischaemia and supply demand imbalance are
+            // only asked for when Secondary = 'Type 2'. If supply demand imbalance is
+            // 'Yes' then also ask for primary mechanism.
 
             if (deSecondary.GetValue() == "Type 2")
             {
@@ -417,7 +600,7 @@ namespace CardiacAdmissionAdjudication
                 deSignsOfIschaemia.Show();
                 deSupplyDemandImbalance.Show();
 
-                if (comboBoxSupplyDemandImbalance.SelectedValue.ToString() == "Yes")
+                if (deSupplyDemandImbalance.GetValue() == "Yes")
                 {
                     dePrimaryMechanism.Show();
                 }
@@ -434,6 +617,9 @@ namespace CardiacAdmissionAdjudication
                 dePrimaryMechanism.Hide();
             }
 
+            // Suspected CAD, Cardiac and Systemic are only asked for when Secondary
+            // is one of Type 2; Acute Myocardial Injury; or Chronic Myocardial Injury.
+
             if (deSecondary.GetValue() == "Type 2"  ||
                 deSecondary.GetValue() == "Acute Myocardial Injury"  ||
                 deSecondary.GetValue() == "Chronic Myocardial Injury")
@@ -449,44 +635,7 @@ namespace CardiacAdmissionAdjudication
                 deSystemic.Hide();
             }
 
-            if (deInitialObs.GetValue() == "Yes")
-            {
-                deOxygenSat.Show();
-                deOxygenTherapy.Show();
-                deRespiratoryRate.Show();
-                deSystolicBP.Show();
-                deDiastolicBP.Show();
-                deHeartRate.Show();  
-                deTemperature.Show();
-                deAlert.Show();
-                deKillipClass.Show();
-                deCardiacArrest.Show();
-                deACSTreatmentInED.Show();
-            }
-            else
-            {
-                deOxygenSat.Hide();
-                deOxygenTherapy.Hide();
-                deRespiratoryRate.Hide();
-                deSystolicBP.Hide();
-                deDiastolicBP.Hide();
-                deHeartRate.Hide();
-                deTemperature.Hide();
-                deAlert.Hide();
-                deKillipClass.Hide();
-                deCardiacArrest.Hide();
-                deACSTreatmentInED.Hide();
-
-            }
-
-            if (deMyocardialIschaemia.GetValue() == "No")
-            {
-                deSubsequentIschaemia.Show();
-            }
-            else
-            {
-                deSubsequentIschaemia.Hide();
-            }
+            dynamicallyHandleSelectionChanges = true;
         }
 
         private void buttonPrevious_Click(object sender, EventArgs e)
@@ -536,6 +685,8 @@ namespace CardiacAdmissionAdjudication
 
         private void DisplayCurrentCase()
         {
+            dynamicallyHandleSelectionChanges = false;
+
             if (this.adjudicationCases.cases.Count == 0)
             {
                 DisplayEmptyCase();
@@ -763,11 +914,15 @@ namespace CardiacAdmissionAdjudication
                 labelProgress.Text = progressText;
             }
 
+            dynamicallyHandleSelectionChanges = true;
+
             ShowHideComponents();
         }
 
         private void DisplayEmptyCase()
         {
+            dynamicallyHandleSelectionChanges = false;
+
             textBoxId.Text = "";
             textBoxArrivalDate.Text = "";
             textBoxPrimarySymptom.Text = "";
@@ -796,6 +951,8 @@ namespace CardiacAdmissionAdjudication
 
             buttonNext.Enabled = false; 
             buttonPrevious.Enabled = false;
+
+            dynamicallyHandleSelectionChanges = true;
         }
 
         private bool ValidateInput()
@@ -961,6 +1118,37 @@ namespace CardiacAdmissionAdjudication
         }
 
         private void comboBoxMyocardialIschaemia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBox12LeadECG_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+
+        }
+
+        private void comboBoxECGNormal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxSupplyDemandImbalance_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxInsufficientInfo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxSpontaneous_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxProcedural_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowHideComponents();
         }
