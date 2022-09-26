@@ -583,10 +583,11 @@ namespace CardiacAdmissionAdjudication
                 // If nothing specified then all are editable
                 if (!isSomethingSpecified)
                 {
-                    deInsufficientInfo.SetEmpty();
-                    deSpontaneous.SetEmpty();
-                    deProcedural.SetEmpty();
-                    deSecondary.SetEmpty();
+                    // These calls ensure the current value is stored before making editable
+                    deInsufficientInfo.SetValue(deInsufficientInfo.GetValue());
+                    deSpontaneous.SetValue(deSpontaneous.GetValue());
+                    deProcedural.SetValue(deProcedural.GetValue());
+                    deSecondary.SetValue(deSecondary.GetValue());
 
                     deInsufficientInfo.SetEditable(true);
                     deSpontaneous.SetEditable(true);
