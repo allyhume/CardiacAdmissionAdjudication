@@ -345,7 +345,7 @@ namespace CardiacAdmissionAdjudication
                 new string[] { "Yes", "No" });
 
 
-            // Suspected ACS - not sure what to put here - think it is a yes or no
+            // Suspected ACS
             deSuspectedACS = new ComboBoxDataEntry(
                 "Suspected ACS",
                 labelSuspectedACS,
@@ -583,6 +583,11 @@ namespace CardiacAdmissionAdjudication
                 // If nothing specified then all are editable
                 if (!isSomethingSpecified)
                 {
+                    deInsufficientInfo.SetEmpty();
+                    deSpontaneous.SetEmpty();
+                    deProcedural.SetEmpty();
+                    deSecondary.SetEmpty();
+
                     deInsufficientInfo.SetEditable(true);
                     deSpontaneous.SetEditable(true);
                     deProcedural.SetEditable(true);
@@ -699,9 +704,11 @@ namespace CardiacAdmissionAdjudication
                 textBoxArrivalDate.Text = c.ArrivalDate;
                 textBoxPrimarySymptom.Text = c.PrimarySymptom;
                 textBoxTimeSinceOnset.Text = c.TimeSinceOnset;
-                comboBoxSuspectedACS.SelectedValue = c.SuspectedACS;
                 textBoxAge.Text = c.Age;
                 textBoxSex.Text = c.Sex;
+                textBoxHaemoglobin.Text = c.Haemoglobin;
+                textBoxCreatinine.Text = c.Creatinine;
+                textBoxEGFR.Text = c.eGRF;
 
                 DataTable troponinTestsData = new DataTable("Troponin Tests");
                 troponinTestsData.Columns.Add("Time from presentation");
@@ -725,6 +732,11 @@ namespace CardiacAdmissionAdjudication
                 dataGridViewTroponinTests.AllowUserToDeleteRows = false;
                 dataGridViewTroponinTests.ReadOnly = true;
                 dataGridViewTroponinTests.BackgroundColor = Color.White;
+
+                if (dataGridViewTroponinTests.Columns.Count > 0)
+                {
+                    dataGridViewTroponinTests.Columns[0].Width = 250;
+                }
 
                 // Display notes
                 string notes = "";
@@ -823,7 +835,7 @@ namespace CardiacAdmissionAdjudication
                         dataEntry.SetEditable(true);
                     }
                 }
-                else
+                else // Second adjudicator
                 {
                     deSuspectedACS.SetValue(c.SuspectedACS1);
                     de12LeadECG.SetValue(c.ECG12Lead);
@@ -874,7 +886,8 @@ namespace CardiacAdmissionAdjudication
                             dataEntry.SetEmpty();
                         }
                     }
-                    // All entry points must be editable
+                    // Only adjudicate 2 data entry points are editable
+                    deSuspectedACS.SetEditable(false); // debug so I can check this easily
                     foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
                     {
                         dataEntry.SetEditable(false);
@@ -927,9 +940,11 @@ namespace CardiacAdmissionAdjudication
             textBoxArrivalDate.Text = "";
             textBoxPrimarySymptom.Text = "";
             textBoxTimeSinceOnset.Text = "";
-            comboBoxSuspectedACS.SelectedValue = "";
             textBoxAge.Text = "";
             textBoxSex.Text = "";
+            textBoxHaemoglobin.Text = "";
+            textBoxCreatinine.Text = "";
+            textBoxEGFR.Text = "";
 
             DataTable troponinTestsData = new DataTable("Troponin Tests");
             troponinTestsData.Columns.Add("Time from presentation");

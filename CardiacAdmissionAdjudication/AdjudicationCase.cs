@@ -16,6 +16,9 @@ namespace CardiacAdmissionAdjudication
         public string TimeSinceOnset;
         public string Age;
         public string Sex;
+        public string Haemoglobin;
+        public string Creatinine;
+        public string eGRF;
 
         public List<TroponinTest> TroponinTests;
         public List<string> EmergencyDepartmentNotes;
@@ -107,6 +110,10 @@ namespace CardiacAdmissionAdjudication
             PrimarySymptom = columns[index++];
             SuspectedACS = columns[index++];
             TimeSinceOnset = columns[index++];
+            Haemoglobin = columns[index++];
+            Creatinine = columns[index++];
+            eGRF = columns[index++];
+
             ECGTimeFromPresentation = columns[index++];
             ECGMUSEText = columns[index++].Replace("<NL>", "\n");
 

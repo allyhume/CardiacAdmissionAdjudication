@@ -16,6 +16,7 @@ namespace CardiacAdmissionAdjudication
         private bool isVisible;
         string[] options;
         bool editable;
+        string? value;
 
         public ComboBoxDataEntry(string name, Label label, ComboBox comboBox, string[] options)
         {
@@ -27,6 +28,7 @@ namespace CardiacAdmissionAdjudication
             this.comboBox.DisplayMember = "Text";
             this.comboBox.ValueMember = "ID";
             this.editable = true;
+            this.value = "";
 
             //cb.DropDownStyle = ComboBoxStyle.DropDownList; // Stops typing in the combo box
             //cb.FlatStyle = FlatStyle.Flat;                 // Stops it being grey background
@@ -90,38 +92,40 @@ namespace CardiacAdmissionAdjudication
 
         void IAdjudicationDataEntry.SetEditable(bool editable)
         {
-            if (this.editable != editable)
+            // Do nothing if editable and was already editable - we need to do work for non-editable stuff
+            // even if we were previously non-editable as the value may have changed.
+            if (editable && this.editable) return;
+
+            if (editable)
             {
-                if (editable)
+                ComboItem[] values = new ComboItem[options.Length + 1];
+                for (int i = 0; i < options.Length; i++)
                 {
-                    string v = this.comboBox.Text;
-                    ComboItem[] values = new ComboItem[options.Length + 1];
-                    for (int i = 0; i < options.Length; i++)
-                    {
-                        values[i] = new ComboItem { ID = options[i], Text = options[i] };
-                    }
-                    values[options.Length] = new ComboItem { ID = "", Text = "" };
-                    this.comboBox.DataSource = values;
-                    this.comboBox.SelectedValue = v;
+                    values[i] = new ComboItem { ID = options[i], Text = options[i] };
                 }
-                else
-                {
-                    ComboItem[] values = new ComboItem[1];
-                    values[0] = new ComboItem { ID = comboBox.Text, Text = comboBox.Text };
-                    this.comboBox.DataSource = values;
-                }
-                this.editable = editable;
+                values[options.Length] = new ComboItem { ID = "", Text = "" };
+                this.comboBox.DataSource = values;
+                this.comboBox.SelectedValue = this.value;
             }
+            else
+            {
+                ComboItem[] values = new ComboItem[1];
+                values[0] = new ComboItem { ID = this.value, Text = this.value };
+                this.comboBox.DataSource = values;
+            }
+            this.editable = editable;
         }
 
         void IAdjudicationDataEntry.SetEmpty()
         {
             this.comboBox.SelectedValue = "";
+            this.value = "";
         }
 
         void IAdjudicationDataEntry.SetValue(string? value)
         {
-            this.comboBox.SelectedValue = (value == null) ? "" : value;
+            this.value = (value == null) ? "" : value;
+            this.comboBox.SelectedValue = this.value;
         }
 
         void IAdjudicationDataEntry.Show()
