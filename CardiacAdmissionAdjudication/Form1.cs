@@ -957,6 +957,9 @@ namespace CardiacAdmissionAdjudication
                 labelProgress.Text = progressText;
             }
 
+            // Always go to ECG tab when displaying new case
+            DataEntryTab.SelectedTab = tabPageECG;
+
             dynamicallyHandleSelectionChanges = true;
 
             ShowHideComponents();
