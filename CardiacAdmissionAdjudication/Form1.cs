@@ -686,7 +686,14 @@ namespace CardiacAdmissionAdjudication
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            // TODO - check if saved first and warn if not saved etc
+            if (!IsCurrentCaseSaved())
+            {
+                if (MessageBox.Show("Do you want to load without saving the current case?", "Load", MessageBoxButtons.YesNo)
+                        == System.Windows.Forms.DialogResult.No)
+                {
+                    return;
+                }
+            }
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
