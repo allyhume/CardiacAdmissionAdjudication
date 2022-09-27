@@ -76,7 +76,6 @@
             this.textBoxECGTimeFromPresentation = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPageTOMCAT = new System.Windows.Forms.TabPage();
-            this.textBoxCath = new System.Windows.Forms.TextBox();
             this.comboBoxCulpritVessel = new System.Windows.Forms.ComboBox();
             this.labelCulpritVessel = new System.Windows.Forms.Label();
             this.comboBoxMechanism = new System.Windows.Forms.ComboBox();
@@ -92,7 +91,6 @@
             this.textBoxDaysFromPresentation = new System.Windows.Forms.TextBox();
             this.textBoxLCx = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabPageObservations = new System.Windows.Forms.TabPage();
             this.labelInitialObs = new System.Windows.Forms.Label();
             this.comboBoxInitialObs = new System.Windows.Forms.ComboBox();
@@ -628,7 +626,6 @@
             // 
             // tabPageTOMCAT
             // 
-            this.tabPageTOMCAT.Controls.Add(this.textBoxCath);
             this.tabPageTOMCAT.Controls.Add(this.comboBoxCulpritVessel);
             this.tabPageTOMCAT.Controls.Add(this.labelCulpritVessel);
             this.tabPageTOMCAT.Controls.Add(this.comboBoxMechanism);
@@ -644,7 +641,6 @@
             this.tabPageTOMCAT.Controls.Add(this.textBoxDaysFromPresentation);
             this.tabPageTOMCAT.Controls.Add(this.textBoxLCx);
             this.tabPageTOMCAT.Controls.Add(this.label14);
-            this.tabPageTOMCAT.Controls.Add(this.label13);
             this.tabPageTOMCAT.Location = new System.Drawing.Point(4, 24);
             this.tabPageTOMCAT.Name = "tabPageTOMCAT";
             this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3);
@@ -652,15 +648,6 @@
             this.tabPageTOMCAT.TabIndex = 1;
             this.tabPageTOMCAT.Text = "TOMCAT";
             this.tabPageTOMCAT.UseVisualStyleBackColor = true;
-            // 
-            // textBoxCath
-            // 
-            this.textBoxCath.Location = new System.Drawing.Point(44, 8);
-            this.textBoxCath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCath.Name = "textBoxCath";
-            this.textBoxCath.Size = new System.Drawing.Size(75, 23);
-            this.textBoxCath.TabIndex = 42;
-            this.textBoxCath.TabStop = false;
             // 
             // comboBoxCulpritVessel
             // 
@@ -698,7 +685,7 @@
             // 
             // textBoxLAD
             // 
-            this.textBoxLAD.Location = new System.Drawing.Point(378, 34);
+            this.textBoxLAD.Location = new System.Drawing.Point(240, 36);
             this.textBoxLAD.Name = "textBoxLAD";
             this.textBoxLAD.Size = new System.Drawing.Size(75, 23);
             this.textBoxLAD.TabIndex = 12;
@@ -706,7 +693,7 @@
             // 
             // textBoxLMS
             // 
-            this.textBoxLMS.Location = new System.Drawing.Point(378, 7);
+            this.textBoxLMS.Location = new System.Drawing.Point(240, 7);
             this.textBoxLMS.Name = "textBoxLMS";
             this.textBoxLMS.Size = new System.Drawing.Size(75, 23);
             this.textBoxLMS.TabIndex = 11;
@@ -715,7 +702,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(332, 36);
+            this.label18.Location = new System.Drawing.Point(186, 37);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(29, 15);
             this.label18.TabIndex = 10;
@@ -724,7 +711,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(332, 10);
+            this.label17.Location = new System.Drawing.Point(185, 10);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(30, 15);
             this.label17.TabIndex = 9;
@@ -745,7 +732,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(144, 41);
+            this.label16.Location = new System.Drawing.Point(7, 39);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 15);
             this.label16.TabIndex = 7;
@@ -753,7 +740,7 @@
             // 
             // textBoxRCA
             // 
-            this.textBoxRCA.Location = new System.Drawing.Point(241, 36);
+            this.textBoxRCA.Location = new System.Drawing.Point(85, 36);
             this.textBoxRCA.Name = "textBoxRCA";
             this.textBoxRCA.Size = new System.Drawing.Size(75, 23);
             this.textBoxRCA.TabIndex = 6;
@@ -762,7 +749,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(144, 7);
+            this.label15.Location = new System.Drawing.Point(6, 3);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 30);
             this.label15.TabIndex = 5;
@@ -770,7 +757,7 @@
             // 
             // textBoxDaysFromPresentation
             // 
-            this.textBoxDaysFromPresentation.Location = new System.Drawing.Point(241, 7);
+            this.textBoxDaysFromPresentation.Location = new System.Drawing.Point(85, 6);
             this.textBoxDaysFromPresentation.Name = "textBoxDaysFromPresentation";
             this.textBoxDaysFromPresentation.Size = new System.Drawing.Size(75, 23);
             this.textBoxDaysFromPresentation.TabIndex = 4;
@@ -778,7 +765,7 @@
             // 
             // textBoxLCx
             // 
-            this.textBoxLCx.Location = new System.Drawing.Point(44, 36);
+            this.textBoxLCx.Location = new System.Drawing.Point(378, 7);
             this.textBoxLCx.Name = "textBoxLCx";
             this.textBoxLCx.Size = new System.Drawing.Size(75, 23);
             this.textBoxLCx.TabIndex = 3;
@@ -787,20 +774,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 36);
+            this.label14.Location = new System.Drawing.Point(334, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 15);
             this.label14.TabIndex = 1;
             this.label14.Text = "LCx";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 15);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Cath";
             // 
             // tabPageObservations
             // 
@@ -853,7 +831,7 @@
             this.comboBoxInitialObs.Location = new System.Drawing.Point(80, 14);
             this.comboBoxInitialObs.Name = "comboBoxInitialObs";
             this.comboBoxInitialObs.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxInitialObs.TabIndex = 17;
+            this.comboBoxInitialObs.TabIndex = 1;
             this.comboBoxInitialObs.SelectedIndexChanged += new System.EventHandler(this.comboBoxInitialObs_SelectedIndexChanged);
             // 
             // labelOxygenSat
@@ -872,7 +850,7 @@
             this.textBoxOxygenSat.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOxygenSat.Name = "textBoxOxygenSat";
             this.textBoxOxygenSat.Size = new System.Drawing.Size(90, 23);
-            this.textBoxOxygenSat.TabIndex = 46;
+            this.textBoxOxygenSat.TabIndex = 2;
             // 
             // labelOxygenTherapy
             // 
@@ -891,7 +869,7 @@
             this.comboBoxOxygenTherapy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxOxygenTherapy.Name = "comboBoxOxygenTherapy";
             this.comboBoxOxygenTherapy.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxOxygenTherapy.TabIndex = 53;
+            this.comboBoxOxygenTherapy.TabIndex = 3;
             // 
             // labelRespiratoryRate
             // 
@@ -909,7 +887,7 @@
             this.textBoxRespiratoryRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRespiratoryRate.Name = "textBoxRespiratoryRate";
             this.textBoxRespiratoryRate.Size = new System.Drawing.Size(90, 23);
-            this.textBoxRespiratoryRate.TabIndex = 57;
+            this.textBoxRespiratoryRate.TabIndex = 4;
             // 
             // labelSystolicBP
             // 
@@ -927,7 +905,7 @@
             this.textBoxSystolicBP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSystolicBP.Name = "textBoxSystolicBP";
             this.textBoxSystolicBP.Size = new System.Drawing.Size(90, 23);
-            this.textBoxSystolicBP.TabIndex = 60;
+            this.textBoxSystolicBP.TabIndex = 5;
             // 
             // labelDiastolicBP
             // 
@@ -943,7 +921,7 @@
             this.textBoxDiastolicBP.Location = new System.Drawing.Point(266, 49);
             this.textBoxDiastolicBP.Name = "textBoxDiastolicBP";
             this.textBoxDiastolicBP.Size = new System.Drawing.Size(90, 23);
-            this.textBoxDiastolicBP.TabIndex = 18;
+            this.textBoxDiastolicBP.TabIndex = 6;
             // 
             // labelHeartRate
             // 
@@ -962,7 +940,7 @@
             this.comboBoxSmoking.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSmoking.Name = "comboBoxSmoking";
             this.comboBoxSmoking.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSmoking.TabIndex = 55;
+            this.comboBoxSmoking.TabIndex = 13;
             // 
             // comboBoxKillipClass
             // 
@@ -971,7 +949,7 @@
             this.comboBoxKillipClass.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKillipClass.Name = "comboBoxKillipClass";
             this.comboBoxKillipClass.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxKillipClass.TabIndex = 64;
+            this.comboBoxKillipClass.TabIndex = 10;
             // 
             // comboBoxACSTreatmentInED
             // 
@@ -980,7 +958,7 @@
             this.comboBoxACSTreatmentInED.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxACSTreatmentInED.Name = "comboBoxACSTreatmentInED";
             this.comboBoxACSTreatmentInED.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxACSTreatmentInED.TabIndex = 49;
+            this.comboBoxACSTreatmentInED.TabIndex = 12;
             // 
             // labelSmoking
             // 
@@ -998,7 +976,7 @@
             this.textBoxHeartRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHeartRate.Name = "textBoxHeartRate";
             this.textBoxHeartRate.Size = new System.Drawing.Size(90, 23);
-            this.textBoxHeartRate.TabIndex = 47;
+            this.textBoxHeartRate.TabIndex = 7;
             // 
             // labelACSTreatmentInED
             // 
@@ -1027,7 +1005,7 @@
             this.comboBoxAlert.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAlert.Name = "comboBoxAlert";
             this.comboBoxAlert.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxAlert.TabIndex = 62;
+            this.comboBoxAlert.TabIndex = 9;
             // 
             // labelKillipClass
             // 
@@ -1045,7 +1023,7 @@
             this.textBoxTemperature.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTemperature.Name = "textBoxTemperature";
             this.textBoxTemperature.Size = new System.Drawing.Size(90, 23);
-            this.textBoxTemperature.TabIndex = 54;
+            this.textBoxTemperature.TabIndex = 8;
             // 
             // labelAlert
             // 
@@ -1072,7 +1050,7 @@
             this.comboBoxCardiacArrest.Location = new System.Drawing.Point(473, 88);
             this.comboBoxCardiacArrest.Name = "comboBoxCardiacArrest";
             this.comboBoxCardiacArrest.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxCardiacArrest.TabIndex = 19;
+            this.comboBoxCardiacArrest.TabIndex = 11;
             // 
             // tabPageAdjudication
             // 
@@ -1112,7 +1090,7 @@
             this.comboBoxSecondary.Location = new System.Drawing.Point(340, 15);
             this.comboBoxSecondary.Name = "comboBoxSecondary";
             this.comboBoxSecondary.Size = new System.Drawing.Size(175, 23);
-            this.comboBoxSecondary.TabIndex = 77;
+            this.comboBoxSecondary.TabIndex = 4;
             this.comboBoxSecondary.SelectedIndexChanged += new System.EventHandler(this.comboBoxSecondary_SelectedIndexChanged);
             // 
             // labelSupplyDemandImbalance
@@ -1133,7 +1111,7 @@
             this.comboBoxCardiac.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCardiac.Name = "comboBoxCardiac";
             this.comboBoxCardiac.Size = new System.Drawing.Size(176, 23);
-            this.comboBoxCardiac.TabIndex = 76;
+            this.comboBoxCardiac.TabIndex = 10;
             // 
             // comboBoxInsufficientInfo
             // 
@@ -1141,7 +1119,7 @@
             this.comboBoxInsufficientInfo.Location = new System.Drawing.Point(100, 12);
             this.comboBoxInsufficientInfo.Name = "comboBoxInsufficientInfo";
             this.comboBoxInsufficientInfo.Size = new System.Drawing.Size(95, 23);
-            this.comboBoxInsufficientInfo.TabIndex = 20;
+            this.comboBoxInsufficientInfo.TabIndex = 1;
             this.comboBoxInsufficientInfo.SelectedIndexChanged += new System.EventHandler(this.comboBoxInsufficientInfo_SelectedIndexChanged);
             // 
             // comboBoxSpontaneous
@@ -1150,7 +1128,7 @@
             this.comboBoxSpontaneous.Location = new System.Drawing.Point(100, 41);
             this.comboBoxSpontaneous.Name = "comboBoxSpontaneous";
             this.comboBoxSpontaneous.Size = new System.Drawing.Size(95, 23);
-            this.comboBoxSpontaneous.TabIndex = 21;
+            this.comboBoxSpontaneous.TabIndex = 2;
             this.comboBoxSpontaneous.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpontaneous_SelectedIndexChanged);
             // 
             // labelCardiac
@@ -1169,7 +1147,7 @@
             this.comboBoxProcedural.Location = new System.Drawing.Point(100, 73);
             this.comboBoxProcedural.Name = "comboBoxProcedural";
             this.comboBoxProcedural.Size = new System.Drawing.Size(95, 23);
-            this.comboBoxProcedural.TabIndex = 31;
+            this.comboBoxProcedural.TabIndex = 3;
             this.comboBoxProcedural.SelectedIndexChanged += new System.EventHandler(this.comboBoxProcedural_SelectedIndexChanged);
             // 
             // labelInsufficientInfo
@@ -1188,7 +1166,7 @@
             this.comboBoxSuspectedCAD.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSuspectedCAD.Name = "comboBoxSuspectedCAD";
             this.comboBoxSuspectedCAD.Size = new System.Drawing.Size(176, 23);
-            this.comboBoxSuspectedCAD.TabIndex = 74;
+            this.comboBoxSuspectedCAD.TabIndex = 9;
             // 
             // labelSpontaneous
             // 
@@ -1243,7 +1221,7 @@
             this.comboBoxSystemic.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSystemic.Name = "comboBoxSystemic";
             this.comboBoxSystemic.Size = new System.Drawing.Size(176, 23);
-            this.comboBoxSystemic.TabIndex = 72;
+            this.comboBoxSystemic.TabIndex = 11;
             // 
             // comboBoxSymptomsOfIschaemia
             // 
@@ -1251,7 +1229,7 @@
             this.comboBoxSymptomsOfIschaemia.Location = new System.Drawing.Point(341, 73);
             this.comboBoxSymptomsOfIschaemia.Name = "comboBoxSymptomsOfIschaemia";
             this.comboBoxSymptomsOfIschaemia.Size = new System.Drawing.Size(91, 23);
-            this.comboBoxSymptomsOfIschaemia.TabIndex = 41;
+            this.comboBoxSymptomsOfIschaemia.TabIndex = 6;
             // 
             // labelSignsOfIschaemia
             // 
@@ -1280,7 +1258,7 @@
             this.comboBoxSignsOfIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSignsOfIschaemia.Name = "comboBoxSignsOfIschaemia";
             this.comboBoxSignsOfIschaemia.Size = new System.Drawing.Size(92, 23);
-            this.comboBoxSignsOfIschaemia.TabIndex = 66;
+            this.comboBoxSignsOfIschaemia.TabIndex = 5;
             // 
             // comboBoxSupplyDemandImbalance
             // 
@@ -1289,7 +1267,7 @@
             this.comboBoxSupplyDemandImbalance.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSupplyDemandImbalance.Name = "comboBoxSupplyDemandImbalance";
             this.comboBoxSupplyDemandImbalance.Size = new System.Drawing.Size(150, 23);
-            this.comboBoxSupplyDemandImbalance.TabIndex = 68;
+            this.comboBoxSupplyDemandImbalance.TabIndex = 7;
             this.comboBoxSupplyDemandImbalance.SelectedIndexChanged += new System.EventHandler(this.comboBoxSupplyDemandImbalance_SelectedIndexChanged);
             // 
             // comboBoxPrimaryMechanism
@@ -1299,7 +1277,7 @@
             this.comboBoxPrimaryMechanism.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrimaryMechanism.Name = "comboBoxPrimaryMechanism";
             this.comboBoxPrimaryMechanism.Size = new System.Drawing.Size(150, 23);
-            this.comboBoxPrimaryMechanism.TabIndex = 70;
+            this.comboBoxPrimaryMechanism.TabIndex = 8;
             // 
             // labelPrimaryMechanism
             // 
@@ -1317,7 +1295,8 @@
             this.buttonPrevious.Location = new System.Drawing.Point(164, 735);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(78, 24);
-            this.buttonPrevious.TabIndex = 29;
+            this.buttonPrevious.TabIndex = 0;
+            this.buttonPrevious.TabStop = false;
             this.buttonPrevious.Text = "Previous";
             this.buttonPrevious.UseVisualStyleBackColor = true;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
@@ -1328,7 +1307,7 @@
             this.buttonNext.Location = new System.Drawing.Point(248, 735);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(78, 24);
-            this.buttonNext.TabIndex = 30;
+            this.buttonNext.TabIndex = 4;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
@@ -1339,6 +1318,7 @@
             this.dataGridViewTroponinTests.AllowUserToDeleteRows = false;
             this.dataGridViewTroponinTests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTroponinTests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTroponinTests.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewTroponinTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTroponinTests.Location = new System.Drawing.Point(656, 4);
@@ -1359,6 +1339,7 @@
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(78, 24);
             this.buttonLoad.TabIndex = 32;
+            this.buttonLoad.TabStop = false;
             this.buttonLoad.Text = "Load...";
             this.buttonLoad.UseVisualStyleBackColor = true;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
@@ -1370,7 +1351,7 @@
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 24);
-            this.buttonSave.TabIndex = 33;
+            this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -1416,6 +1397,7 @@
             this.splitContainer1.SplitterDistance = 523;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 36;
+            this.splitContainer1.TabStop = false;
             // 
             // Form1
             // 
@@ -1453,6 +1435,7 @@
             this.Name = "Form1";
             this.Text = "Cardiology Adjudication Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += this.Form1_FormClosing;
             this.DataEntryTab.ResumeLayout(false);
             this.tabPageECG.ResumeLayout(false);
             this.tabPageECG.PerformLayout();
@@ -1500,7 +1483,6 @@
         private TabPage tabPageTOMCAT;
         private TextBox textBoxLCx;
         private Label label14;
-        private Label label13;
         private Button buttonPrevious;
         private Button buttonNext;
         private Label label15;
@@ -1579,7 +1561,6 @@
         private Label labelACSTreatmentInED;
         private Label labelHeartRate;
         private Label labelOxygenSat;
-        private TextBox textBoxCath;
         private Label labelSignsOfIschaemia;
         private Label labelSupplyDemandImbalance;
         private ComboBox comboBoxSignsOfIschaemia;

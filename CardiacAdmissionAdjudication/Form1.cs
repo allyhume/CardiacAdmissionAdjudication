@@ -409,6 +409,18 @@ namespace CardiacAdmissionAdjudication
             DisplayCurrentCase();
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!IsCurrentCaseSaved())
+            {
+                if (MessageBox.Show("Do you want to exit without saving the current case?", "Exit", MessageBoxButtons.YesNo) 
+                    == System.Windows.Forms.DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
 
         /// <summary>
         /// Shows or hides the various components based on the application logic of
@@ -646,7 +658,12 @@ namespace CardiacAdmissionAdjudication
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
-            if (StoreCurrentCase())
+            if (IsCurrentCaseSaved())
+            {
+                if (currentCase > 0) currentCase--;
+                DisplayCurrentCase();
+            }
+            else if (StoreCurrentCase())
             {
                 if (currentCase > 0) currentCase--;
                 DisplayCurrentCase();
@@ -655,7 +672,12 @@ namespace CardiacAdmissionAdjudication
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            if (StoreCurrentCase())
+            if (IsCurrentCaseSaved())
+            {
+                if (currentCase < adjudicationCases.cases.Count() - 1) currentCase++;
+                DisplayCurrentCase();
+            }
+            else if (StoreCurrentCase())
             {
                 if (currentCase < adjudicationCases.cases.Count() - 1) currentCase++;
                 DisplayCurrentCase();
@@ -712,17 +734,16 @@ namespace CardiacAdmissionAdjudication
                 textBoxEGFR.Text = c.eGRF;
 
                 DataTable troponinTestsData = new DataTable("Troponin Tests");
-                troponinTestsData.Columns.Add("Time from presentation");
+                troponinTestsData.Columns.Add("Hour");
                 troponinTestsData.Columns.Add("Result");
+                troponinTestsData.Columns.Add("Status");
+
                 foreach (TroponinTest tt in c.TroponinTests)
                 {
                     DataRow row = troponinTestsData.NewRow();
-                    row["Time from presentation"] = tt.TimeFromPresentation;
+                    row["Hour"] = tt.TimeFromPresentation;
                     row["Result"] = tt.Result;
-                    if (tt.InvalidResultFlag == "Y")
-                    {
-                        row["Result"] = "INVALID";
-                    }
+                    row["Status"] = tt.Status;
                     troponinTestsData.Rows.Add(row);
                 }
                 dataGridViewTroponinTests.DataSource = troponinTestsData;
@@ -734,10 +755,12 @@ namespace CardiacAdmissionAdjudication
                 dataGridViewTroponinTests.ReadOnly = true;
                 dataGridViewTroponinTests.BackgroundColor = Color.White;
 
-                if (dataGridViewTroponinTests.Columns.Count > 0)
-                {
-                    dataGridViewTroponinTests.Columns[0].Width = 250;
-                }
+                //if (dataGridViewTroponinTests.Columns.Count > 0)
+                //{
+                //    dataGridViewTroponinTests.Columns[0].Width = 180;
+                //    dataGridViewTroponinTests.Columns[1].Width = 70; 
+                //    dataGridViewTroponinTests.Columns[2].Width = 150;
+               // }
 
                 // Display notes
                 string notes = "";
@@ -762,7 +785,6 @@ namespace CardiacAdmissionAdjudication
                 richTextBoxECGMUSEText.Text = c.ECGMUSEText;
 
                 // Tomcat data
-                textBoxCath.Text = c.TomcatCath;
                 textBoxDaysFromPresentation.Text = c.TomcatDaysFromPresentation; 
                 textBoxLCx.Text = c.TomcatLCx;
                 textBoxRCA.Text = c.TomcatRCA;
@@ -1010,6 +1032,133 @@ namespace CardiacAdmissionAdjudication
             }
 
             return valid;
+        }
+
+        private bool IsCurrentCaseSaved()
+        {
+            // If no cases then we consider it saved
+            if (this.adjudicationCases.cases.Count == 0) return true;
+
+            AdjudicationCase c = this.adjudicationCases.cases[currentCase];
+
+            if (this.adjudicationCases.IsFirstAdjudicator)
+            {
+                // If nothing has been saved then we consider if saved if we are
+                // still on all the default values so nothing has been entered
+                if (!c.Adjudication1Complete)
+                {
+                    if (deSuspectedACS.GetValue() != c.SuspectedACS) return false;
+                    if ("" != de12LeadECG.GetValue()) return false;
+                    if ("" != deECGNormal.GetValue()) return false;
+                    if ("" != deMyocardialIschaemia.GetValue()) return false;
+                    if ("" != deSubsequentIschaemia.GetValue()) return false;
+                    if ("" != deSTElevation.GetValue()) return false;
+                    if ("" != deSTDepression.GetValue()) return false;
+                    if ("" != deTWaveInversion.GetValue()) return false;
+                    if ("" != deQRSAbnormalities.GetValue()) return false;
+                    if ("" != dePathologicalQWave.GetValue()) return false;
+                    if ("" != deRhythm.GetValue()) return false;
+                    if ("" != deMechanism.GetValue()) return false;
+                    if ("" != deCulpritVessel.GetValue()) return false;
+                    if ("" != deSmoking.GetValue()) return false;
+                    if ("" != deInitialObs.GetValue()) return false;
+                    if ("" != deOxygenSat.GetValue()) return false;
+                    if ("" != deOxygenTherapy.GetValue()) return false;
+                    if ("" != deRespiratoryRate.GetValue()) return false;
+                    if ("" != deSystolicBP.GetValue()) return false;
+                    if ("" != deDiastolicBP.GetValue()) return false;
+                    if ("" != deHeartRate.GetValue()) return false;
+                    if ("" != deTemperature.GetValue()) return false;
+                    if ("" != deAlert.GetValue()) return false;
+                    if ("" != deKillipClass.GetValue()) return false;
+                    if ("" != deCardiacArrest.GetValue()) return false;
+                    if ("" != deACSTreatmentInED.GetValue()) return false;
+                    if ("" != deInsufficientInfo.GetValue()) return false;
+                    if ("" != deSpontaneous.GetValue()) return false;
+                    if ("" != deProcedural.GetValue()) return false;
+                    if ("" != deSecondary.GetValue()) return false;
+                    if ("" != deSymptomsOfIschaemia.GetValue()) return false;
+                    if ("" != deSignsOfIschaemia.GetValue()) return false;
+                    if ("" != deSupplyDemandImbalance.GetValue()) return false;
+                    if ("" != dePrimaryMechanism.GetValue()) return false;
+                    if ("" != deSuspectedCAD.GetValue()) return false;
+                    if ("" != deCardiac.GetValue()) return false;
+                    if ("" != deSystemic.GetValue()) return false;
+                }
+                else
+                {
+                    if (c.SuspectedACS1 != deSuspectedACS.GetValue()) return false;
+                    if (c.ECG12Lead != de12LeadECG.GetValue()) return false;
+                    if (c.ECGNormalAbnormal != deECGNormal.GetValue()) return false;
+                    if (c.ECGMyocardialIschaemia != deMyocardialIschaemia.GetValue()) return false;
+                    if (c.ECGSubsequentIschaemia != deSubsequentIschaemia.GetValue()) return false;
+                    if (c.ECGSTElevation != deSTElevation.GetValue()) return false;
+                    if (c.ECGSTDepression != deSTDepression.GetValue()) return false;
+                    if (c.ECGTWaveInversion != deTWaveInversion.GetValue()) return false;
+                    if (c.ECGQRSAbnormalities != deQRSAbnormalities.GetValue()) return false;
+                    if (c.ECGPathlogicalQWave != dePathologicalQWave.GetValue()) return false;
+                    if (c.Rhythum != deRhythm.GetValue()) return false;
+                    if (c.Mechanism != deMechanism.GetValue()) return false;
+                    if (c.CulpritVessel != deCulpritVessel.GetValue()) return false;
+                    if (c.Smoking != deSmoking.GetValue()) return false;
+                    if (c.InitialObs != deInitialObs.GetValue()) return false;
+                    if (c.OxygenSat != deOxygenSat.GetValue()) return false;
+                    if (c.OxygenTherapy != deOxygenTherapy.GetValue()) return false;
+                    if (c.RespiratoryRate != deRespiratoryRate.GetValue()) return false;
+                    if (c.SystolicBP != deSystolicBP.GetValue()) return false;
+                    if (c.DiastolicBP != deDiastolicBP.GetValue()) return false;
+                    if (c.HeartRate != deHeartRate.GetValue()) return false;
+                    if (c.Temperature != deTemperature.GetValue()) return false;
+                    if (c.Alert != deAlert.GetValue()) return false;
+                    if (c.KillipClass != deKillipClass.GetValue()) return false;
+                    if (c.CardiacArrest != deCardiacArrest.GetValue()) return false;
+                    if (c.ACSTreatmentInED != deACSTreatmentInED.GetValue()) return false;
+                    if (c.InsufficientInfo != deInsufficientInfo.GetValue()) return false;
+                    if (c.Spontaneous != deSpontaneous.GetValue()) return false;
+                    if (c.Procedural != deProcedural.GetValue()) return false;
+                    if (c.Secondary != deSecondary.GetValue()) return false;
+                    if (c.SymptomsOfIschaemia != deSymptomsOfIschaemia.GetValue()) return false;
+                    if (c.SignsOfIschaemia != deSignsOfIschaemia.GetValue()) return false;
+                    if (c.SupplyDemandImbalance != deSupplyDemandImbalance.GetValue()) return false;
+                    if (c.PrimaryMechanism != dePrimaryMechanism.GetValue()) return false;
+                    if (c.SuspectedCAD != deSuspectedCAD.GetValue()) return false;
+                    if (c.Cardiac != deCardiac.GetValue()) return false;
+                    if (c.Systemic != deSystemic.GetValue()) return false;
+                }
+            }
+            else
+            {
+                if (!c.Adjudication2Complete)
+                {
+                    if ("" != deInsufficientInfo.GetValue()) return false;
+                    if ("" != deSpontaneous.GetValue()) return false;
+                    if ("" != deProcedural.GetValue()) return false;
+                    if ("" != deSecondary.GetValue()) return false;
+                    if ("" != deSymptomsOfIschaemia.GetValue()) return false;
+                    if ("" != deSignsOfIschaemia.GetValue()) return false;
+                    if ("" != deSupplyDemandImbalance.GetValue()) return false;
+                    if ("" != dePrimaryMechanism.GetValue()) return false;
+                    if ("" != deSuspectedCAD.GetValue()) return false;
+                    if ("" != deCardiac.GetValue()) return false;
+                    if ("" != deSystemic.GetValue()) return false;
+                }
+                else
+                { 
+                    if (c.InsufficientInfo2 != deInsufficientInfo.GetValue()) return false;
+                    if (c.Spontaneous2 != deSpontaneous.GetValue()) return false;
+                    if (c.Procedural2 != deProcedural.GetValue()) return false;
+                    if (c.Secondary2 != deSecondary.GetValue()) return false;
+                    if (c.SymptomsOfIschaemia2 != deSymptomsOfIschaemia.GetValue()) return false;
+                    if (c.SignsOfIschaemia2 != deSignsOfIschaemia.GetValue()) return false;
+                    if (c.SupplyDemandImbalance2 != deSupplyDemandImbalance.GetValue()) return false;
+                    if (c.PrimaryMechanism2 != dePrimaryMechanism.GetValue()) return false;
+                    if (c.SuspectedCAD2 != deSuspectedCAD.GetValue()) return false;
+                    if (c.Cardiac2 != deCardiac.GetValue()) return false;
+                    if (c.Systemic2 != deSystemic.GetValue()) return false;
+                }
+            }
+
+            return true;
         }
 
         private bool StoreCurrentCase()

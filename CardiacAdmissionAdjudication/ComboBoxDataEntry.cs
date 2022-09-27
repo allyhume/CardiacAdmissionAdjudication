@@ -30,8 +30,7 @@ namespace CardiacAdmissionAdjudication
             this.editable = true;
             this.value = "";
 
-            //cb.DropDownStyle = ComboBoxStyle.DropDownList; // Stops typing in the combo box
-            //cb.FlatStyle = FlatStyle.Flat;                 // Stops it being grey background
+            this.comboBox.DropDownStyle = ComboBoxStyle.DropDownList; // Stops typing in the combo box
 
             ComboItem[] values = new ComboItem[options.Length+1];
 

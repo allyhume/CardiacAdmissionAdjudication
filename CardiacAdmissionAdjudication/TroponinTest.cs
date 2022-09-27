@@ -10,7 +10,7 @@ namespace CardiacAdmissionAdjudication
     {
         public int TimeFromPresentation;
         public String Result;
-        public String InvalidResultFlag;
+        public String Status;
 
         public TroponinTest(String row)
         {
@@ -18,7 +18,7 @@ namespace CardiacAdmissionAdjudication
 
             TimeFromPresentation = Convert.ToInt32(columns[1]);
             Result = columns[2];
-            InvalidResultFlag = columns[3];
+            Status = columns[3];
         }
     }
 }

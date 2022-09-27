@@ -27,7 +27,6 @@ namespace CardiacAdmissionAdjudication
         public string ECGTimeFromPresentation;
         public string ECGMUSEText;
 
-        public string TomcatCath;
         public string TomcatDaysFromPresentation;
         public string TomcatLCx;
         public string TomcatRCA;
@@ -117,7 +116,6 @@ namespace CardiacAdmissionAdjudication
             ECGTimeFromPresentation = columns[index++];
             ECGMUSEText = columns[index++].Replace("<NL>", "\n");
 
-            TomcatCath = columns[index++];
             TomcatDaysFromPresentation = columns[index++];
             TomcatLCx = columns[index++];
             TomcatRCA = columns[index++];
@@ -144,13 +142,37 @@ namespace CardiacAdmissionAdjudication
         public void AddEmergencyDepartmentNote(string line)
         {
             string[] columns = line.Split('\t');
-            EmergencyDepartmentNotes.Add(columns[1].Replace("<NL>", "\n"));
+
+            string spacer = "";
+            if (EmergencyDepartmentNotes.Count > 0)
+            {
+                spacer = "\n\n";
+            }
+
+            EmergencyDepartmentNotes.Add(
+                spacer +
+                columns[1] + " " +    // Date 
+                columns[2] + " " +    // Time
+                columns[3] + "\n\n" + // Note Type
+                columns[4].Replace("<<NL>>", "\n"));
         }
 
         public void AddDischargeNote(string line)
         {
             string[] columns = line.Split('\t');
-            DischargeNotes.Add(columns[1].Replace("<NL>", "\n"));
+
+            string spacer = "";
+            if (DischargeNotes.Count > 0)
+            {
+                spacer = "\n\n";
+            }
+
+            DischargeNotes.Add(
+                spacer + 
+                columns[1] + " " +    // Date 
+                columns[2] + " " +    // Time
+                columns[3] + "\n\n" + // Note Type
+                columns[4].Replace("<<NL>>", "\n"));
         }
 
         public void AddFirstAdjudication(string input)
