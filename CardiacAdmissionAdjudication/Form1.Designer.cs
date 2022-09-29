@@ -1321,6 +1321,7 @@
             this.dataGridViewTroponinTests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTroponinTests.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewTroponinTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTroponinTests.Enabled = false;
             this.dataGridViewTroponinTests.Location = new System.Drawing.Point(656, 4);
             this.dataGridViewTroponinTests.MultiSelect = false;
             this.dataGridViewTroponinTests.Name = "dataGridViewTroponinTests";
@@ -1435,7 +1436,6 @@
             this.Name = "Form1";
             this.Text = "Cardiology Adjudication Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.FormClosing += this.Form1_FormClosing;
             this.DataEntryTab.ResumeLayout(false);
             this.tabPageECG.ResumeLayout(false);
             this.tabPageECG.PerformLayout();

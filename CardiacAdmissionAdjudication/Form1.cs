@@ -742,14 +742,14 @@ namespace CardiacAdmissionAdjudication
 
                 DataTable troponinTestsData = new DataTable("Troponin Tests");
                 troponinTestsData.Columns.Add("Hour");
-                troponinTestsData.Columns.Add("Result");
+                troponinTestsData.Columns.Add("Troponin");
                 troponinTestsData.Columns.Add("Status");
 
                 foreach (TroponinTest tt in c.TroponinTests)
                 {
                     DataRow row = troponinTestsData.NewRow();
                     row["Hour"] = tt.TimeFromPresentation;
-                    row["Result"] = tt.Result;
+                    row["Troponin"] = tt.Result;
                     row["Status"] = tt.Status;
                     troponinTestsData.Rows.Add(row);
                 }
@@ -761,13 +761,14 @@ namespace CardiacAdmissionAdjudication
                 dataGridViewTroponinTests.AllowUserToDeleteRows = false;
                 dataGridViewTroponinTests.ReadOnly = true;
                 dataGridViewTroponinTests.BackgroundColor = Color.White;
+                dataGridViewTroponinTests.ClearSelection();
 
                 //if (dataGridViewTroponinTests.Columns.Count > 0)
                 //{
                 //    dataGridViewTroponinTests.Columns[0].Width = 180;
                 //    dataGridViewTroponinTests.Columns[1].Width = 70; 
                 //    dataGridViewTroponinTests.Columns[2].Width = 150;
-               // }
+                // }
 
                 // Display notes
                 string notes = "";
@@ -980,8 +981,7 @@ namespace CardiacAdmissionAdjudication
             textBoxEGFR.Text = "";
 
             DataTable troponinTestsData = new DataTable("Troponin Tests");
-            troponinTestsData.Columns.Add("Time from presentation");
-            troponinTestsData.Columns.Add("Result");
+
             dataGridViewTroponinTests.DataSource = troponinTestsData;
 
             // Everything is set to empty
