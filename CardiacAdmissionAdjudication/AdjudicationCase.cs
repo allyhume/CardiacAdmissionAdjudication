@@ -26,6 +26,7 @@ namespace CardiacAdmissionAdjudication
 
         public string ECGTimeFromPresentation;
         public string ECGMUSEText;
+        public string ECGPDF;
 
         public string TomcatDaysFromPresentation;
         public string TomcatLCx;
@@ -115,6 +116,7 @@ namespace CardiacAdmissionAdjudication
 
             ECGTimeFromPresentation = columns[index++];
             ECGMUSEText = columns[index++].Replace("<NL>", "\n");
+            ECGPDF = columns[index++];
 
             TomcatDaysFromPresentation = columns[index++];
             TomcatLCx = columns[index++];

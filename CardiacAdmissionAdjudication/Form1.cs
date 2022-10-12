@@ -56,6 +56,8 @@ namespace CardiacAdmissionAdjudication
 
         private bool dynamicallyHandleSelectionChanges = true;
 
+        private System.Diagnostics.Process? pdfViewerProcess;
+
         public Form1(AdjudicationCases cases)
         {
             InitializeComponent();
@@ -401,6 +403,8 @@ namespace CardiacAdmissionAdjudication
             adjudication2DataEntries.Add(deSystemic);
 
             dynamicallyHandleSelectionChanges = true;
+
+            pdfViewerProcess = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -662,11 +666,13 @@ namespace CardiacAdmissionAdjudication
             {
                 if (currentCase > 0) currentCase--;
                 DisplayCurrentCase();
+                DisplayECGPDF();
             }
             else if (StoreCurrentCase())
             {
                 if (currentCase > 0) currentCase--;
                 DisplayCurrentCase();
+                DisplayECGPDF();
             }
         }
 
@@ -676,11 +682,13 @@ namespace CardiacAdmissionAdjudication
             {
                 if (currentCase < adjudicationCases.cases.Count() - 1) currentCase++;
                 DisplayCurrentCase();
+                DisplayECGPDF();
             }
             else if (StoreCurrentCase())
             {
                 if (currentCase < adjudicationCases.cases.Count() - 1) currentCase++;
                 DisplayCurrentCase();
+                DisplayECGPDF();
             }
         }
 
@@ -702,6 +710,7 @@ namespace CardiacAdmissionAdjudication
 
                 SetCurrentCase();
                 DisplayCurrentCase();
+                DisplayECGPDF();
             }
         }
 
@@ -716,6 +725,19 @@ namespace CardiacAdmissionAdjudication
         private void SetCurrentCase()
         {
             currentCase = adjudicationCases.FirstNonAdjudicatedCase();
+        }
+
+        private void DisplayECGPDF()
+        {
+            if (this.adjudicationCases.cases.Count != 0)
+            {
+                AdjudicationCase c = this.adjudicationCases.cases[currentCase];
+
+                this.pdfViewerProcess = new System.Diagnostics.Process();
+                this.pdfViewerProcess.StartInfo.UseShellExecute = true;
+                this.pdfViewerProcess.StartInfo.FileName = c.ECGPDF;
+                this.pdfViewerProcess.Start();
+            }
         }
 
         private void DisplayCurrentCase()
@@ -762,13 +784,6 @@ namespace CardiacAdmissionAdjudication
                 dataGridViewTroponinTests.ReadOnly = true;
                 dataGridViewTroponinTests.BackgroundColor = Color.White;
                 dataGridViewTroponinTests.ClearSelection();
-
-                //if (dataGridViewTroponinTests.Columns.Count > 0)
-                //{
-                //    dataGridViewTroponinTests.Columns[0].Width = 180;
-                //    dataGridViewTroponinTests.Columns[1].Width = 70; 
-                //    dataGridViewTroponinTests.Columns[2].Width = 150;
-                // }
 
                 // Display notes
                 string notes = "";
@@ -1053,7 +1068,7 @@ namespace CardiacAdmissionAdjudication
 
             if (this.adjudicationCases.IsFirstAdjudicator)
             {
-                // If nothing has been saved then we consider if saved if we are
+                // If nothing has been saved then we consider it saved if we are
                 // still on all the default values so nothing has been entered
                 if (!c.Adjudication1Complete)
                 {
