@@ -815,6 +815,24 @@ namespace CardiacAdmissionAdjudication
                 textBoxLAD.Text = c.TomcatLAD;
                 richTextTomcatText.Text = c.TomcatText;
 
+                // If no Tomcat data hide the tomcat inputs
+                if (c.TomcatDaysFromPresentation == "" &&
+                    c.TomcatLCx == "" &&
+                    c.TomcatRCA == "" &&
+                    c.TomcatLMS == "" &&
+                    c.TomcatLAD == "" &&
+                    c.TomcatText == "" )
+                {
+                    deCulpritVessel.Hide();
+                    deMechanism.Hide();    
+                }
+                else
+                {
+                    deCulpritVessel.Show();
+                    deMechanism.Show();
+                }
+
+
                 if (this.adjudicationCases.IsFirstAdjudicator)
                 {
                     if (c.Adjudication1Complete)
