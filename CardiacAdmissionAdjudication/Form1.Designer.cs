@@ -148,17 +148,14 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelProgress = new System.Windows.Forms.Label();
             this.richTextBoxEDNotes = new System.Windows.Forms.RichTextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DataEntryTab.SuspendLayout();
             this.tabPageECG.SuspendLayout();
             this.tabPageTOMCAT.SuspendLayout();
             this.tabPageObservations.SuspendLayout();
             this.tabPageAdjudication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -337,9 +334,9 @@
             this.richTextBoxDischargeNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(0, 0);
+            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(541, 3);
             this.richTextBoxDischargeNotes.Name = "richTextBoxDischargeNotes";
-            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(555, 488);
+            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(533, 477);
             this.richTextBoxDischargeNotes.TabIndex = 27;
             this.richTextBoxDischargeNotes.TabStop = false;
             this.richTextBoxDischargeNotes.Text = "";
@@ -1376,42 +1373,37 @@
             this.richTextBoxEDNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxEDNotes.Location = new System.Drawing.Point(0, 0);
+            this.richTextBoxEDNotes.Location = new System.Drawing.Point(2, 2);
             this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxEDNotes.Name = "richTextBoxEDNotes";
-            this.richTextBoxEDNotes.Size = new System.Drawing.Size(524, 488);
+            this.richTextBoxEDNotes.Size = new System.Drawing.Size(534, 479);
             this.richTextBoxEDNotes.TabIndex = 35;
             this.richTextBoxEDNotes.TabStop = false;
             this.richTextBoxEDNotes.Text = "";
             // 
-            // splitContainer1
+            // tableLayoutPanel1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(9, 82);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.richTextBoxEDNotes);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.richTextBoxDischargeNotes);
-            this.splitContainer1.Size = new System.Drawing.Size(1077, 486);
-            this.splitContainer1.SplitterDistance = 522;
-            this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 36;
-            this.splitContainer1.TabStop = false;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxEDNotes, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxDischargeNotes, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 84);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1077, 483);
+            this.tableLayoutPanel1.TabIndex = 101;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 761);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
@@ -1452,10 +1444,7 @@
             this.tabPageAdjudication.ResumeLayout(false);
             this.tabPageAdjudication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1581,8 +1570,8 @@
         private ComboBox comboBoxCardiac;
         private ComboBox comboBoxSecondary;
         private RichTextBox richTextBoxEDNotes;
-        private SplitContainer splitContainer1;
         private TabPage tabPageObservations;
         private TabPage tabPageAdjudication;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
