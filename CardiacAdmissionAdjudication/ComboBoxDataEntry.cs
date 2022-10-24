@@ -133,5 +133,11 @@ namespace CardiacAdmissionAdjudication
             this.comboBox.Show();
             this.isVisible = true;
         }
+
+        void IAdjudicationDataEntry.SetValid()
+        {
+            label.ForeColor = normalLabelForeColor;
+            comboBox.BackColor = normalComboBoxBackColor;
+        }
     }
 }

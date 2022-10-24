@@ -962,6 +962,16 @@ namespace CardiacAdmissionAdjudication
                     }
                 }
 
+                // Ensure all data entry points are set flagging as invalid (in red)
+                foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
+                {
+                    dataEntry.SetValid();
+                }
+                foreach (IAdjudicationDataEntry dataEntry in adjudication2DataEntries)
+                {
+                    dataEntry.SetValid();
+                }
+
                 // Enable next and previous buttons
                 buttonNext.Enabled = (currentCase < adjudicationCases.cases.Count - 1);
                 buttonPrevious.Enabled = (currentCase > 0);

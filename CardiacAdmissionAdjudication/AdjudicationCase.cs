@@ -115,7 +115,7 @@ namespace CardiacAdmissionAdjudication
             eGRF = columns[index++];
 
             ECGTimeFromPresentation = columns[index++];
-            ECGMUSEText = columns[index++].Replace("<NL>", "\n");
+            ECGMUSEText = columns[index++].Replace("<<NL>>", "\n").Replace("<<TAB>>", "\t");
             ECGPDF = columns[index++];
 
             TomcatDaysFromPresentation = columns[index++];
@@ -123,7 +123,7 @@ namespace CardiacAdmissionAdjudication
             TomcatRCA = columns[index++];
             TomcatLMS = columns[index++];
             TomcatLAD = columns[index++];
-            TomcatText = columns[index++].Replace("<NL>", "\n");
+            TomcatText = columns[index++].Replace("<<NL>>", "\n").Replace("<<TAB>>", "\t");
 
             TroponinTests = new List<TroponinTest>();
             EmergencyDepartmentNotes = new List<string>();
@@ -156,7 +156,7 @@ namespace CardiacAdmissionAdjudication
                 columns[1] + " " +    // Date 
                 columns[2] + " " +    // Time
                 columns[3] + "\n\n" + // Note Type
-                columns[4].Replace("<<NL>>", "\n"));
+                columns[4].Replace("<<NL>>", "\n").Replace("<<TAB>>","\t"));
         }
 
         public void AddDischargeNote(string line)
@@ -174,7 +174,7 @@ namespace CardiacAdmissionAdjudication
                 columns[1] + " " +    // Date 
                 columns[2] + " " +    // Time
                 columns[3] + "\n\n" + // Note Type
-                columns[4].Replace("<<NL>>", "\n"));
+                columns[4].Replace("<<NL>>", "\n").Replace("<<TAB>>", "\t"));
         }
 
         public void AddFirstAdjudication(string input)

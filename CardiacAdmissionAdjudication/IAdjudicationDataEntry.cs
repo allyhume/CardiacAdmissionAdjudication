@@ -21,5 +21,7 @@ namespace CardiacAdmissionAdjudication
 
         void SetEditable(bool editable);
 
+        void SetValid();
+
     }
 }

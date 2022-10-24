@@ -108,5 +108,11 @@
             label.Show();
             isVisible = true;
         }
+
+        void IAdjudicationDataEntry.SetValid()
+        {
+            label.ForeColor = normalLabelForeColor;
+            textBox.BackColor = normalTextBoxBackColor;
+        }
     }
 }
