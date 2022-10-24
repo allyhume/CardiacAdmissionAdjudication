@@ -339,7 +339,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxDischargeNotes.Name = "richTextBoxDischargeNotes";
-            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(553, 488);
+            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(555, 488);
             this.richTextBoxDischargeNotes.TabIndex = 27;
             this.richTextBoxDischargeNotes.TabStop = false;
             this.richTextBoxDischargeNotes.Text = "";
@@ -386,7 +386,7 @@
             this.tabPageECG.Controls.Add(this.label29);
             this.tabPageECG.Location = new System.Drawing.Point(4, 24);
             this.tabPageECG.Name = "tabPageECG";
-            this.tabPageECG.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageECG.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageECG.Size = new System.Drawing.Size(1074, 133);
             this.tabPageECG.TabIndex = 0;
             this.tabPageECG.Text = "ECG";
@@ -396,7 +396,7 @@
             // 
             this.comboBoxPathologicalQWave.FormattingEnabled = true;
             this.comboBoxPathologicalQWave.Location = new System.Drawing.Point(372, 105);
-            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPathologicalQWave.Name = "comboBoxPathologicalQWave";
             this.comboBoxPathologicalQWave.Size = new System.Drawing.Size(80, 23);
             this.comboBoxPathologicalQWave.TabIndex = 9;
@@ -415,7 +415,7 @@
             // 
             this.comboBoxTWaveInversion.FormattingEnabled = true;
             this.comboBoxTWaveInversion.Location = new System.Drawing.Point(783, 78);
-            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTWaveInversion.Name = "comboBoxTWaveInversion";
             this.comboBoxTWaveInversion.Size = new System.Drawing.Size(66, 23);
             this.comboBoxTWaveInversion.TabIndex = 6;
@@ -434,7 +434,7 @@
             // 
             this.comboBoxSTElevation.FormattingEnabled = true;
             this.comboBoxSTElevation.Location = new System.Drawing.Point(598, 78);
-            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSTElevation.Name = "comboBoxSTElevation";
             this.comboBoxSTElevation.Size = new System.Drawing.Size(66, 23);
             this.comboBoxSTElevation.TabIndex = 5;
@@ -453,7 +453,7 @@
             // 
             this.comboBoxRhythm.FormattingEnabled = true;
             this.comboBoxRhythm.Location = new System.Drawing.Point(921, 78);
-            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRhythm.Name = "comboBoxRhythm";
             this.comboBoxRhythm.Size = new System.Drawing.Size(148, 23);
             this.comboBoxRhythm.TabIndex = 7;
@@ -472,7 +472,7 @@
             // 
             this.comboBoxQRSAbnormalities.FormattingEnabled = true;
             this.comboBoxQRSAbnormalities.Location = new System.Drawing.Point(148, 105);
-            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxQRSAbnormalities.Name = "comboBoxQRSAbnormalities";
             this.comboBoxQRSAbnormalities.Size = new System.Drawing.Size(94, 23);
             this.comboBoxQRSAbnormalities.TabIndex = 8;
@@ -491,7 +491,7 @@
             // 
             this.comboBoxSTDepression.FormattingEnabled = true;
             this.comboBoxSTDepression.Location = new System.Drawing.Point(372, 78);
-            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSTDepression.Name = "comboBoxSTDepression";
             this.comboBoxSTDepression.Size = new System.Drawing.Size(80, 23);
             this.comboBoxSTDepression.TabIndex = 4;
@@ -510,7 +510,7 @@
             // 
             this.comboBoxMyocardialIschaemia.FormattingEnabled = true;
             this.comboBoxMyocardialIschaemia.Location = new System.Drawing.Point(148, 78);
-            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMyocardialIschaemia.Name = "comboBoxMyocardialIschaemia";
             this.comboBoxMyocardialIschaemia.Size = new System.Drawing.Size(94, 23);
             this.comboBoxMyocardialIschaemia.TabIndex = 3;
@@ -530,7 +530,7 @@
             // 
             this.comboBoxSubsequentIschaemia.FormattingEnabled = true;
             this.comboBoxSubsequentIschaemia.Location = new System.Drawing.Point(598, 105);
-            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSubsequentIschaemia.Name = "comboBoxSubsequentIschaemia";
             this.comboBoxSubsequentIschaemia.Size = new System.Drawing.Size(66, 23);
             this.comboBoxSubsequentIschaemia.TabIndex = 10;
@@ -559,7 +559,7 @@
             // 
             this.comboBoxECGNormal.FormattingEnabled = true;
             this.comboBoxECGNormal.Location = new System.Drawing.Point(148, 54);
-            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxECGNormal.Name = "comboBoxECGNormal";
             this.comboBoxECGNormal.Size = new System.Drawing.Size(129, 23);
             this.comboBoxECGNormal.TabIndex = 2;
@@ -579,7 +579,7 @@
             // 
             this.comboBox12LeadECG.FormattingEnabled = true;
             this.comboBox12LeadECG.Location = new System.Drawing.Point(148, 27);
-            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox12LeadECG.Name = "comboBox12LeadECG";
             this.comboBox12LeadECG.Size = new System.Drawing.Size(129, 23);
             this.comboBox12LeadECG.TabIndex = 1;
@@ -600,7 +600,7 @@
             this.richTextBoxECGMUSEText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxECGMUSEText.Location = new System.Drawing.Point(295, 5);
-            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxECGMUSEText.Name = "richTextBoxECGMUSEText";
             this.richTextBoxECGMUSEText.Size = new System.Drawing.Size(777, 67);
             this.richTextBoxECGMUSEText.TabIndex = 2;
@@ -610,7 +610,7 @@
             // textBoxECGTimeFromPresentation
             // 
             this.textBoxECGTimeFromPresentation.Location = new System.Drawing.Point(148, 2);
-            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxECGTimeFromPresentation.Name = "textBoxECGTimeFromPresentation";
             this.textBoxECGTimeFromPresentation.Size = new System.Drawing.Size(129, 23);
             this.textBoxECGTimeFromPresentation.TabIndex = 1;
@@ -645,7 +645,7 @@
             this.tabPageTOMCAT.Controls.Add(this.label14);
             this.tabPageTOMCAT.Location = new System.Drawing.Point(4, 24);
             this.tabPageTOMCAT.Name = "tabPageTOMCAT";
-            this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageTOMCAT.Size = new System.Drawing.Size(1074, 133);
             this.tabPageTOMCAT.TabIndex = 1;
             this.tabPageTOMCAT.Text = "TOMCAT";
@@ -811,7 +811,7 @@
             this.tabPageObservations.Controls.Add(this.labelCardiacArrest);
             this.tabPageObservations.Controls.Add(this.comboBoxCardiacArrest);
             this.tabPageObservations.Location = new System.Drawing.Point(4, 24);
-            this.tabPageObservations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageObservations.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageObservations.Name = "tabPageObservations";
             this.tabPageObservations.Size = new System.Drawing.Size(1074, 133);
             this.tabPageObservations.TabIndex = 2;
@@ -849,7 +849,7 @@
             // textBoxOxygenSat
             // 
             this.textBoxOxygenSat.Location = new System.Drawing.Point(266, 14);
-            this.textBoxOxygenSat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOxygenSat.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOxygenSat.Name = "textBoxOxygenSat";
             this.textBoxOxygenSat.Size = new System.Drawing.Size(90, 23);
             this.textBoxOxygenSat.TabIndex = 2;
@@ -868,7 +868,7 @@
             // 
             this.comboBoxOxygenTherapy.FormattingEnabled = true;
             this.comboBoxOxygenTherapy.Location = new System.Drawing.Point(473, 14);
-            this.comboBoxOxygenTherapy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxOxygenTherapy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxOxygenTherapy.Name = "comboBoxOxygenTherapy";
             this.comboBoxOxygenTherapy.Size = new System.Drawing.Size(90, 23);
             this.comboBoxOxygenTherapy.TabIndex = 3;
@@ -886,7 +886,7 @@
             // textBoxRespiratoryRate
             // 
             this.textBoxRespiratoryRate.Location = new System.Drawing.Point(696, 14);
-            this.textBoxRespiratoryRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRespiratoryRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRespiratoryRate.Name = "textBoxRespiratoryRate";
             this.textBoxRespiratoryRate.Size = new System.Drawing.Size(90, 23);
             this.textBoxRespiratoryRate.TabIndex = 4;
@@ -904,7 +904,7 @@
             // textBoxSystolicBP
             // 
             this.textBoxSystolicBP.Location = new System.Drawing.Point(80, 49);
-            this.textBoxSystolicBP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSystolicBP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSystolicBP.Name = "textBoxSystolicBP";
             this.textBoxSystolicBP.Size = new System.Drawing.Size(90, 23);
             this.textBoxSystolicBP.TabIndex = 5;
@@ -939,7 +939,7 @@
             // 
             this.comboBoxSmoking.FormattingEnabled = true;
             this.comboBoxSmoking.Location = new System.Drawing.Point(861, 88);
-            this.comboBoxSmoking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSmoking.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSmoking.Name = "comboBoxSmoking";
             this.comboBoxSmoking.Size = new System.Drawing.Size(90, 23);
             this.comboBoxSmoking.TabIndex = 13;
@@ -948,7 +948,7 @@
             // 
             this.comboBoxKillipClass.FormattingEnabled = true;
             this.comboBoxKillipClass.Location = new System.Drawing.Point(266, 88);
-            this.comboBoxKillipClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxKillipClass.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKillipClass.Name = "comboBoxKillipClass";
             this.comboBoxKillipClass.Size = new System.Drawing.Size(90, 23);
             this.comboBoxKillipClass.TabIndex = 10;
@@ -957,7 +957,7 @@
             // 
             this.comboBoxACSTreatmentInED.FormattingEnabled = true;
             this.comboBoxACSTreatmentInED.Location = new System.Drawing.Point(696, 88);
-            this.comboBoxACSTreatmentInED.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxACSTreatmentInED.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxACSTreatmentInED.Name = "comboBoxACSTreatmentInED";
             this.comboBoxACSTreatmentInED.Size = new System.Drawing.Size(90, 23);
             this.comboBoxACSTreatmentInED.TabIndex = 12;
@@ -975,7 +975,7 @@
             // textBoxHeartRate
             // 
             this.textBoxHeartRate.Location = new System.Drawing.Point(473, 49);
-            this.textBoxHeartRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxHeartRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHeartRate.Name = "textBoxHeartRate";
             this.textBoxHeartRate.Size = new System.Drawing.Size(90, 23);
             this.textBoxHeartRate.TabIndex = 7;
@@ -1004,7 +1004,7 @@
             // 
             this.comboBoxAlert.FormattingEnabled = true;
             this.comboBoxAlert.Location = new System.Drawing.Point(80, 88);
-            this.comboBoxAlert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAlert.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAlert.Name = "comboBoxAlert";
             this.comboBoxAlert.Size = new System.Drawing.Size(90, 23);
             this.comboBoxAlert.TabIndex = 9;
@@ -1022,7 +1022,7 @@
             // textBoxTemperature
             // 
             this.textBoxTemperature.Location = new System.Drawing.Point(696, 49);
-            this.textBoxTemperature.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTemperature.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTemperature.Name = "textBoxTemperature";
             this.textBoxTemperature.Size = new System.Drawing.Size(90, 23);
             this.textBoxTemperature.TabIndex = 8;
@@ -1079,7 +1079,7 @@
             this.tabPageAdjudication.Controls.Add(this.comboBoxPrimaryMechanism);
             this.tabPageAdjudication.Controls.Add(this.labelPrimaryMechanism);
             this.tabPageAdjudication.Location = new System.Drawing.Point(4, 24);
-            this.tabPageAdjudication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdjudication.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAdjudication.Name = "tabPageAdjudication";
             this.tabPageAdjudication.Size = new System.Drawing.Size(1074, 133);
             this.tabPageAdjudication.TabIndex = 3;
@@ -1110,10 +1110,11 @@
             // 
             this.comboBoxCardiac.FormattingEnabled = true;
             this.comboBoxCardiac.Location = new System.Drawing.Point(890, 43);
-            this.comboBoxCardiac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCardiac.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCardiac.Name = "comboBoxCardiac";
             this.comboBoxCardiac.Size = new System.Drawing.Size(176, 23);
             this.comboBoxCardiac.TabIndex = 10;
+            this.comboBoxCardiac.SelectedIndexChanged += new System.EventHandler(this.comboBoxCardiac_SelectedIndexChanged);
             // 
             // comboBoxInsufficientInfo
             // 
@@ -1165,7 +1166,7 @@
             // 
             this.comboBoxSuspectedCAD.FormattingEnabled = true;
             this.comboBoxSuspectedCAD.Location = new System.Drawing.Point(890, 14);
-            this.comboBoxSuspectedCAD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSuspectedCAD.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSuspectedCAD.Name = "comboBoxSuspectedCAD";
             this.comboBoxSuspectedCAD.Size = new System.Drawing.Size(176, 23);
             this.comboBoxSuspectedCAD.TabIndex = 9;
@@ -1220,10 +1221,11 @@
             // 
             this.comboBoxSystemic.FormattingEnabled = true;
             this.comboBoxSystemic.Location = new System.Drawing.Point(890, 73);
-            this.comboBoxSystemic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSystemic.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSystemic.Name = "comboBoxSystemic";
             this.comboBoxSystemic.Size = new System.Drawing.Size(176, 23);
             this.comboBoxSystemic.TabIndex = 11;
+            this.comboBoxSystemic.SelectedIndexChanged += new System.EventHandler(this.comboBoxSystemic_SelectedIndexChanged);
             // 
             // comboBoxSymptomsOfIschaemia
             // 
@@ -1257,7 +1259,7 @@
             // 
             this.comboBoxSignsOfIschaemia.FormattingEnabled = true;
             this.comboBoxSignsOfIschaemia.Location = new System.Drawing.Point(341, 42);
-            this.comboBoxSignsOfIschaemia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSignsOfIschaemia.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSignsOfIschaemia.Name = "comboBoxSignsOfIschaemia";
             this.comboBoxSignsOfIschaemia.Size = new System.Drawing.Size(92, 23);
             this.comboBoxSignsOfIschaemia.TabIndex = 5;
@@ -1266,7 +1268,7 @@
             // 
             this.comboBoxSupplyDemandImbalance.FormattingEnabled = true;
             this.comboBoxSupplyDemandImbalance.Location = new System.Drawing.Point(644, 12);
-            this.comboBoxSupplyDemandImbalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSupplyDemandImbalance.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSupplyDemandImbalance.Name = "comboBoxSupplyDemandImbalance";
             this.comboBoxSupplyDemandImbalance.Size = new System.Drawing.Size(150, 23);
             this.comboBoxSupplyDemandImbalance.TabIndex = 7;
@@ -1276,7 +1278,7 @@
             // 
             this.comboBoxPrimaryMechanism.FormattingEnabled = true;
             this.comboBoxPrimaryMechanism.Location = new System.Drawing.Point(644, 47);
-            this.comboBoxPrimaryMechanism.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPrimaryMechanism.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrimaryMechanism.Name = "comboBoxPrimaryMechanism";
             this.comboBoxPrimaryMechanism.Size = new System.Drawing.Size(150, 23);
             this.comboBoxPrimaryMechanism.TabIndex = 8;
@@ -1338,7 +1340,7 @@
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonLoad.Location = new System.Drawing.Point(4, 735);
-            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(78, 24);
             this.buttonLoad.TabIndex = 32;
@@ -1351,7 +1353,7 @@
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSave.Location = new System.Drawing.Point(86, 735);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 24);
             this.buttonSave.TabIndex = 3;
@@ -1375,7 +1377,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxEDNotes.Location = new System.Drawing.Point(0, 0);
-            this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxEDNotes.Name = "richTextBoxEDNotes";
             this.richTextBoxEDNotes.Size = new System.Drawing.Size(524, 488);
             this.richTextBoxEDNotes.TabIndex = 35;
@@ -1388,7 +1390,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(9, 82);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1

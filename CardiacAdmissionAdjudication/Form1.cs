@@ -292,8 +292,7 @@ namespace CardiacAdmissionAdjudication
                     "chronic kidney disease",
                     "pulmonary embolism",
                     "sepsis",
-                    "GI",
-                    "bleed",
+                    "GI bleed",
                     "COPD",
                     "other" });
 
@@ -649,6 +648,32 @@ namespace CardiacAdmissionAdjudication
                 deSuspectedCAD.Show();
                 deCardiac.Show();
                 deSystemic.Show();
+
+                bool isCardiacOrSystemicSpecified = false;
+
+                if (deCardiac.GetValue() != "" && deCardiac.GetValue() != "No")
+                {
+                    isCardiacOrSystemicSpecified = true;
+                    deSystemic.SetValue("No");
+                    deSystemic.SetEditable(false);
+                }
+
+                if (deSystemic.GetValue() != "" && deSystemic.GetValue() != "No")
+                {
+                    isCardiacOrSystemicSpecified = true;
+                    deCardiac.SetValue("No");
+                    deCardiac.SetEditable(false);
+                }
+
+                if (!isCardiacOrSystemicSpecified)
+                {
+                    // These calls ensure the current value is stored before making editable
+                    deCardiac.SetValue(deCardiac.GetValue());
+                    deSystemic.SetValue(deSystemic.GetValue());
+
+                    deCardiac.SetEditable(true);
+                    deSystemic.SetEditable(true);
+                }
             }
             else
             {
@@ -1367,6 +1392,16 @@ namespace CardiacAdmissionAdjudication
         }
 
         private void comboBoxProcedural_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxCardiac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxSystemic_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowHideComponents();
         }
