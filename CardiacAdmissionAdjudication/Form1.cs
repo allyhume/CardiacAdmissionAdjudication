@@ -1102,6 +1102,13 @@ namespace CardiacAdmissionAdjudication
                 }
             }
 
+            // Only one of Cardiac or Systemic can be 'No'
+            if (deCardiac.GetValue() == "No" && deSystemic.GetValue() == "No")
+            {
+                sb.AppendLine("One of Cardiac or Systemic must not be No.");
+                valid = false;
+            }
+
             if (!valid)
             {
                 MessageBox.Show(
