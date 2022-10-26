@@ -337,13 +337,13 @@ namespace CardiacAdmissionAdjudication
                 "Cardiac Arrest",
                 labelCardiacArrest,
                 comboBoxCardiacArrest,
-                new string[] { "Yes", "No" });
+                new string[] { "Yes", "No", "Unknown" });
 
             deACSTreatmentInED = new ComboBoxDataEntry(
                 "ACS Treatment In ED",
                 labelACSTreatmentInED,
                 comboBoxACSTreatmentInED,
-                new string[] { "Yes", "No" });
+                new string[] { "Yes", "No", "Unknown" });
 
 
             // Suspected ACS
@@ -351,7 +351,7 @@ namespace CardiacAdmissionAdjudication
                 "Suspected ACS",
                 labelSuspectedACS,
                 comboBoxSuspectedACS,
-                new string[] { "Yes", "No" });
+                new string[] { "Yes", "No", "Unknown" });
 
             // Text boxes
 
@@ -910,8 +910,6 @@ namespace CardiacAdmissionAdjudication
                         {
                             dataEntry.SetEmpty();
                         }
-
-                        deSuspectedACS.SetValue(c.SuspectedACS1);
                     }
 
                     // All entry points must be editable
@@ -976,7 +974,6 @@ namespace CardiacAdmissionAdjudication
                         }
                     }
                     // Only adjudicate 2 data entry points are editable
-                    deSuspectedACS.SetEditable(false); // debug so I can check this easily
                     foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
                     {
                         dataEntry.SetEditable(false);
