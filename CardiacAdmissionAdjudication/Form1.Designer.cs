@@ -150,7 +150,8 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelProgress = new System.Windows.Forms.Label();
             this.richTextBoxEDNotes = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new TableLayoutPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DataEntryTab.SuspendLayout();
             this.tabPageECG.SuspendLayout();
             this.tabPageTOMCAT.SuspendLayout();
@@ -158,6 +159,10 @@
             this.tabPageAdjudication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -345,9 +350,9 @@
             this.richTextBoxDischargeNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(541, 3);
+            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(550, 3);
             this.richTextBoxDischargeNotes.Name = "richTextBoxDischargeNotes";
-            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(533, 477);
+            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(541, 460);
             this.richTextBoxDischargeNotes.TabIndex = 27;
             this.richTextBoxDischargeNotes.TabStop = false;
             this.richTextBoxDischargeNotes.Text = "";
@@ -360,10 +365,10 @@
             this.DataEntryTab.Controls.Add(this.tabPageTOMCAT);
             this.DataEntryTab.Controls.Add(this.tabPageObservations);
             this.DataEntryTab.Controls.Add(this.tabPageAdjudication);
-            this.DataEntryTab.Location = new System.Drawing.Point(4, 573);
+            this.DataEntryTab.Location = new System.Drawing.Point(3, 6);
             this.DataEntryTab.Name = "DataEntryTab";
             this.DataEntryTab.SelectedIndex = 0;
-            this.DataEntryTab.Size = new System.Drawing.Size(1082, 161);
+            this.DataEntryTab.Size = new System.Drawing.Size(1094, 161);
             this.DataEntryTab.TabIndex = 2;
             // 
             // tabPageECG
@@ -395,7 +400,7 @@
             this.tabPageECG.Location = new System.Drawing.Point(4, 24);
             this.tabPageECG.Name = "tabPageECG";
             this.tabPageECG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageECG.Size = new System.Drawing.Size(1074, 133);
+            this.tabPageECG.Size = new System.Drawing.Size(1086, 133);
             this.tabPageECG.TabIndex = 0;
             this.tabPageECG.Text = "ECG";
             this.tabPageECG.UseVisualStyleBackColor = true;
@@ -656,7 +661,7 @@
             this.tabPageTOMCAT.Location = new System.Drawing.Point(4, 24);
             this.tabPageTOMCAT.Name = "tabPageTOMCAT";
             this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTOMCAT.Size = new System.Drawing.Size(1074, 133);
+            this.tabPageTOMCAT.Size = new System.Drawing.Size(1165, 133);
             this.tabPageTOMCAT.TabIndex = 1;
             this.tabPageTOMCAT.Text = "TOMCAT";
             this.tabPageTOMCAT.UseVisualStyleBackColor = true;
@@ -829,7 +834,7 @@
             this.tabPageObservations.Location = new System.Drawing.Point(4, 24);
             this.tabPageObservations.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageObservations.Name = "tabPageObservations";
-            this.tabPageObservations.Size = new System.Drawing.Size(1074, 133);
+            this.tabPageObservations.Size = new System.Drawing.Size(1165, 133);
             this.tabPageObservations.TabIndex = 2;
             this.tabPageObservations.Text = "Observations";
             this.tabPageObservations.UseVisualStyleBackColor = true;
@@ -1099,7 +1104,7 @@
             this.tabPageAdjudication.Location = new System.Drawing.Point(4, 24);
             this.tabPageAdjudication.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAdjudication.Name = "tabPageAdjudication";
-            this.tabPageAdjudication.Size = new System.Drawing.Size(1074, 133);
+            this.tabPageAdjudication.Size = new System.Drawing.Size(1086, 133);
             this.tabPageAdjudication.TabIndex = 3;
             this.tabPageAdjudication.Text = "Adjudication";
             this.tabPageAdjudication.UseVisualStyleBackColor = true;
@@ -1333,7 +1338,7 @@
             // buttonPrevious
             // 
             this.buttonPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPrevious.Location = new System.Drawing.Point(164, 735);
+            this.buttonPrevious.Location = new System.Drawing.Point(164, 738);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(78, 24);
             this.buttonPrevious.TabIndex = 0;
@@ -1345,7 +1350,7 @@
             // buttonNext
             // 
             this.buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNext.Location = new System.Drawing.Point(248, 735);
+            this.buttonNext.Location = new System.Drawing.Point(248, 738);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(78, 24);
             this.buttonNext.TabIndex = 4;
@@ -1369,14 +1374,14 @@
             this.dataGridViewTroponinTests.ReadOnly = true;
             this.dataGridViewTroponinTests.RowHeadersWidth = 62;
             this.dataGridViewTroponinTests.RowTemplate.Height = 25;
-            this.dataGridViewTroponinTests.Size = new System.Drawing.Size(429, 76);
+            this.dataGridViewTroponinTests.Size = new System.Drawing.Size(448, 76);
             this.dataGridViewTroponinTests.TabIndex = 31;
             this.dataGridViewTroponinTests.TabStop = false;
             // 
             // buttonLoad
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLoad.Location = new System.Drawing.Point(4, 735);
+            this.buttonLoad.Location = new System.Drawing.Point(4, 738);
             this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(78, 24);
@@ -1389,7 +1394,7 @@
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSave.Location = new System.Drawing.Point(86, 735);
+            this.buttonSave.Location = new System.Drawing.Point(86, 738);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 24);
@@ -1402,7 +1407,7 @@
             // 
             this.labelProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelProgress.AutoSize = true;
-            this.labelProgress.Location = new System.Drawing.Point(328, 737);
+            this.labelProgress.Location = new System.Drawing.Point(328, 740);
             this.labelProgress.Name = "labelProgress";
             this.labelProgress.Size = new System.Drawing.Size(77, 15);
             this.labelProgress.TabIndex = 34;
@@ -1416,7 +1421,7 @@
             this.richTextBoxEDNotes.Location = new System.Drawing.Point(2, 2);
             this.richTextBoxEDNotes.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxEDNotes.Name = "richTextBoxEDNotes";
-            this.richTextBoxEDNotes.Size = new System.Drawing.Size(534, 479);
+            this.richTextBoxEDNotes.Size = new System.Drawing.Size(543, 462);
             this.richTextBoxEDNotes.TabIndex = 35;
             this.richTextBoxEDNotes.TabStop = false;
             this.richTextBoxEDNotes.Text = "";
@@ -1426,31 +1431,52 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.richTextBoxEDNotes, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxDischargeNotes, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 84);
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxEDNotes, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1077, 483);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1094, 466);
             this.tableLayoutPanel1.TabIndex = 101;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(4, 86);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.DataEntryTab);
+            this.splitContainer1.Size = new System.Drawing.Size(1100, 646);
+            this.splitContainer1.SplitterDistance = 472;
+            this.splitContainer1.TabIndex = 102;
+            this.splitContainer1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 761);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1113, 764);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.dataGridViewTroponinTests);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
-            this.Controls.Add(this.DataEntryTab);
             this.Controls.Add(this.textBoxSex);
             this.Controls.Add(this.textBoxAge);
             this.Controls.Add(this.comboBoxSuspectedACS);
@@ -1485,6 +1511,11 @@
             this.tabPageAdjudication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1612,6 +1643,7 @@
         private RichTextBox richTextBoxEDNotes;
         private TabPage tabPageObservations;
         private TabPage tabPageAdjudication;
+        private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label labelClinicalDiagnosis;
         private ComboBox comboBoxClinicalDiagnosis;
