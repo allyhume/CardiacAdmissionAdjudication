@@ -36,6 +36,7 @@ namespace CardiacAdmissionAdjudication
 
         private IAdjudicationDataEntry deCardiac;
         private IAdjudicationDataEntry deSystemic;
+        private IAdjudicationDataEntry deClinicalDiagnosis;
         private IAdjudicationDataEntry deInitialObs;
         private IAdjudicationDataEntry deOxygenTherapy;
         private IAdjudicationDataEntry deAlert;
@@ -245,23 +246,23 @@ namespace CardiacAdmissionAdjudication
                 labelPrimaryMechanism,
                 comboBoxPrimaryMechanism,
                 new string[] {
-                    "tachycardia",
-                    "hypotension",
-                    "hypoxaemia",
-                    "anaemia",
-                    "malignant hypertension",
+                    "Tachycardia",
+                    "Hypotension",
+                    "Hypoxaemia",
+                    "Anaemia",
+                    "Malignant hypertension",
                     "LVH",
-                    "coronary embolism",
-                    "coronary vasospasm" });
+                    "Coronary embolism",
+                    "Coronary vasospasm" });
 
             deSuspectedCAD = new ComboBoxDataEntry(
                 "Suspected CAD",
                 labelSuspectedCAD,
                 comboBoxSuspectedCAD,
                 new string[] {
-                    "known",
-                    "high-probability",
-                    "low-probability" });
+                    "Known",
+                    "High-probability",
+                    "Low-probability" });
 
             deCardiac = new ComboBoxDataEntry(
                 "Cardiac",
@@ -269,17 +270,20 @@ namespace CardiacAdmissionAdjudication
                 comboBoxCardiac,
                 new string[] {
                     "No",
-                    "myopericarditis",
-                    "acute heart failure",
-                    "chronic heart failure",
-                    "hypertensive heart disease",
-                    "cardiomyopathy other",
-                    "valvular heart disease",
-                    "tachyarrhythmia",
-                    "recent MI",
-                    "acute aortic dissection",
-                    "takotsubo cardiomyopathy",
-                    "other" });
+                    "Myopericarditis",
+                    "Acute heart failure",
+                    "Chronic heart failure",
+                    "Hypertensive heart disease",
+                    "Cardiomyopathy other",
+                    "Valvular heart disease",
+                    "Tachyarrhythmia",
+                    "Recent MI",
+                    "Acute aortic dissection",
+                    "Takotsubo cardiomyopathy",
+                    "Chronic ischaemic heart disease",
+                    "Age-related",
+                    "Unknown chronic injury",
+                    "Other" });
 
             deSystemic = new ComboBoxDataEntry(
                 "Systemic",
@@ -287,14 +291,73 @@ namespace CardiacAdmissionAdjudication
                 comboBoxSystemic,
                 new string[] {
                     "No",
-                    "other",
-                    "acute kidney injury",
-                    "chronic kidney disease",
-                    "pulmonary embolism",
-                    "sepsis",
+                    "Acute kidney injury",
+                    "Chronic kidney disease",
+                    "Pulmonary embolism",
+                    "Sepsis",
                     "GI bleed",
                     "COPD",
-                    "other" });
+                    "Other" });
+
+            deClinicalDiagnosis = new ComboBoxDataEntry(
+                "Clinical Diagnosis",
+                labelClinicalDiagnosis,
+                comboBoxClinicalDiagnosis,
+                new string[] {
+                    "Anaemia"
+                    ,"Angina - stable"
+                    ,"Angina - unstable"
+                    ,"Anxiety"
+                    ,"Aortic aneurysm"
+                    ,"Asthma"
+                    ,"Atrial fibrillation"
+                    ,"Arrhythmia other"
+                    ,"Bleeding - gastrointestinal"
+                    ,"Bleeding - other"
+                    ,"Bronchiectasis"
+                    ,"Cancer lung"
+                    ,"Cancer other"
+                    ,"Cardiomyopathy - hypertrophic"
+                    ,"Cardiomyopathy - dilated"
+                    ,"Cardiomyopathy - other"
+                    ,"Cholecystitis"
+                    ,"COPD"
+                    ,"Dementia"
+                    ,"Diabetic complication"
+                    ,"Duodenitis"
+                    ,"Fall and immobility"
+                    ,"Functional neurological disorder"
+                    ,"Gastritis"
+                    ,"Gastroesophageal reflux"
+                    ,"Heart failure"
+                    ,"Hypertensive crisis"
+                    ,"Infection other"
+                    ,"Inflammatory bowel disease"
+                    ,"Interstitial lung disease"
+                    ,"Musculoskeletal chest pain"
+                    ,"Myocarditis"
+                    ,"Myocardial infarction"
+                    ,"Oesophagitis"
+                    ,"Oesophageal spasm"
+                    ,"Other"
+                    ,"Overdose or poisoning"
+                    ,"Pancreatitis"
+                    ,"Peptic ulcer disease"
+                    ,"Perforation of viscus"
+                    ,"Pericarditis"
+                    ,"Pleural effusion"
+                    ,"Pleuritis"
+                    ,"Pneumonia"
+                    ,"Pneumothorax"
+                    ,"Pulmonary embolus"
+                    ,"Pulmonary hypertension"
+                    ,"Shingles"
+                    ,"Subarachnoid haemorrhage"
+                    ,"Stroke"
+                    ,"Trauma"
+                    ,"Vasculitis"
+                    ,"Viral infection - COVID"
+                    ,"Viral infection - other" });
 
             // Physiological parameters
 
@@ -400,6 +463,7 @@ namespace CardiacAdmissionAdjudication
             adjudication2DataEntries.Add(deSuspectedCAD);
             adjudication2DataEntries.Add(deCardiac);
             adjudication2DataEntries.Add(deSystemic);
+            adjudication2DataEntries.Add(deClinicalDiagnosis);
 
             dynamicallyHandleSelectionChanges = true;
 
@@ -899,6 +963,7 @@ namespace CardiacAdmissionAdjudication
                         deSuspectedCAD.SetValue(c.SuspectedCAD);
                         deCardiac.SetValue(c.Cardiac);
                         deSystemic.SetValue(c.Systemic);
+                        deClinicalDiagnosis.SetValue(c.ClinicalDiagnosis);
                     }
                     else
                     {
@@ -965,6 +1030,7 @@ namespace CardiacAdmissionAdjudication
                         deSuspectedCAD.SetValue(c.SuspectedCAD2);
                         deCardiac.SetValue(c.Cardiac2);
                         deSystemic.SetValue(c.Systemic2);
+                        deClinicalDiagnosis.SetValue(c.ClinicalDiagnosis2);
                     }
                     else
                     {
@@ -1129,7 +1195,7 @@ namespace CardiacAdmissionAdjudication
                 // still on all the default values so nothing has been entered
                 if (!c.Adjudication1Complete)
                 {
-                    if (deSuspectedACS.GetValue() != c.SuspectedACS) return false;
+                    if ("" != deSuspectedACS.GetValue()) return false;
                     if ("" != de12LeadECG.GetValue()) return false;
                     if ("" != deECGNormal.GetValue()) return false;
                     if ("" != deMyocardialIschaemia.GetValue()) return false;
@@ -1166,6 +1232,7 @@ namespace CardiacAdmissionAdjudication
                     if ("" != deSuspectedCAD.GetValue()) return false;
                     if ("" != deCardiac.GetValue()) return false;
                     if ("" != deSystemic.GetValue()) return false;
+                    if ("" != deClinicalDiagnosis.GetValue()) return false;
                 }
                 else
                 {
@@ -1206,6 +1273,8 @@ namespace CardiacAdmissionAdjudication
                     if (c.SuspectedCAD != deSuspectedCAD.GetValue()) return false;
                     if (c.Cardiac != deCardiac.GetValue()) return false;
                     if (c.Systemic != deSystemic.GetValue()) return false;
+                    if (c.ClinicalDiagnosis != deClinicalDiagnosis.GetValue()) return false;
+
                 }
             }
             else
@@ -1223,6 +1292,7 @@ namespace CardiacAdmissionAdjudication
                     if ("" != deSuspectedCAD.GetValue()) return false;
                     if ("" != deCardiac.GetValue()) return false;
                     if ("" != deSystemic.GetValue()) return false;
+                    if ("" != deClinicalDiagnosis.GetValue()) return false;
                 }
                 else
                 { 
@@ -1237,6 +1307,7 @@ namespace CardiacAdmissionAdjudication
                     if (c.SuspectedCAD2 != deSuspectedCAD.GetValue()) return false;
                     if (c.Cardiac2 != deCardiac.GetValue()) return false;
                     if (c.Systemic2 != deSystemic.GetValue()) return false;
+                    if (c.ClinicalDiagnosis2 != deClinicalDiagnosis.GetValue()) return false;
                 }
             }
 
@@ -1291,6 +1362,7 @@ namespace CardiacAdmissionAdjudication
                 c.SuspectedCAD = deSuspectedCAD.GetValue();
                 c.Cardiac = deCardiac.GetValue();
                 c.Systemic = deSystemic.GetValue();
+                c.ClinicalDiagnosis = deClinicalDiagnosis.GetValue();
             }
             else
             {
@@ -1308,6 +1380,7 @@ namespace CardiacAdmissionAdjudication
                 c.SuspectedCAD2 = deSuspectedCAD.GetValue();
                 c.Cardiac2 = deCardiac.GetValue();
                 c.Systemic2 = deSystemic.GetValue();
+                c.ClinicalDiagnosis2 = deClinicalDiagnosis.GetValue();
             }
 
             adjudicationCases.Save();

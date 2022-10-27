@@ -81,6 +81,7 @@ namespace CardiacAdmissionAdjudication
         public string? SuspectedCAD;
         public string? Cardiac;
         public string? Systemic;
+        public string? ClinicalDiagnosis;
 
         // Adjudication 2 data
         public string? Adjudicator2;
@@ -97,6 +98,7 @@ namespace CardiacAdmissionAdjudication
         public string? SuspectedCAD2;
         public string? Cardiac2;
         public string? Systemic2;
+        public string? ClinicalDiagnosis2;
 
         public AdjudicationCase(string input)
         {
@@ -128,9 +130,6 @@ namespace CardiacAdmissionAdjudication
             TroponinTests = new List<TroponinTest>();
             EmergencyDepartmentNotes = new List<string>();
             DischargeNotes = new List<string>();
-
-            // Populate the adjudication 1 suspected ACS with the data from file
-            SuspectedACS1 = SuspectedACS;
 
             Adjudication1Complete = false;
             Adjudication2Complete = false;
@@ -223,6 +222,7 @@ namespace CardiacAdmissionAdjudication
             SuspectedCAD = columns[index++];
             Cardiac = columns[index++];
             Systemic = columns[index++];
+            ClinicalDiagnosis = columns[index++];
         }
 
         public void AddSecondAdjudication(string input)
@@ -245,6 +245,7 @@ namespace CardiacAdmissionAdjudication
             SuspectedCAD2 = columns[index++];
             Cardiac2 = columns[index++];
             Systemic2 = columns[index++];
+            ClinicalDiagnosis2 = columns[index++];
         }
 
         public string GetAnnotation1TSV()
@@ -289,6 +290,7 @@ namespace CardiacAdmissionAdjudication
             sb.Append("\t" + SuspectedCAD);
             sb.Append("\t" + Cardiac);
             sb.Append("\t" + Systemic);
+            sb.Append("\t" + ClinicalDiagnosis);
 
             return sb.ToString();
         }
@@ -309,6 +311,7 @@ namespace CardiacAdmissionAdjudication
             sb.Append("\t" + SuspectedCAD2);
             sb.Append("\t" + Cardiac2);
             sb.Append("\t" + Systemic2);
+            sb.Append("\t" + ClinicalDiagnosis2);
 
             return sb.ToString();
         }
