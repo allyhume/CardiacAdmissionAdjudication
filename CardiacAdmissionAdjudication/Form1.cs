@@ -1074,7 +1074,7 @@ namespace CardiacAdmissionAdjudication
                     progressText += this.adjudicationCases.cases.Count;
                     progressText += " (";
                     progressText += this.adjudicationCases.FirstAdjudicatorCompletedCount();
-                    progressText += " adjuicated)";
+                    progressText += " adjudicated)";
                 }
                 else
                 {
@@ -1084,7 +1084,7 @@ namespace CardiacAdmissionAdjudication
                     progressText += this.adjudicationCases.cases.Count;
                     progressText += " (";
                     progressText += this.adjudicationCases.SecondAdjudicatorCompletedCount();
-                    progressText += " adjuicated)";
+                    progressText += " adjudicated)";
                 }
                 labelProgress.Text = progressText;
             }
