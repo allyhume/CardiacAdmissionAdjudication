@@ -49,8 +49,8 @@ namespace CardiacAdmissionAdjudication
         public string? ECGSTDepression;
         public string? ECGTWaveInversion;
         public string? ECGQRSAbnormalities;
-        public string? ECGPathlogicalQWave;
-        public string? Rhythum;
+        public string? ECGPathologicalQWave;
+        public string? Rhythm;
 
         public string? Mechanism;
         public string? CulpritVessel;
@@ -83,9 +83,31 @@ namespace CardiacAdmissionAdjudication
         public string? Systemic;
         public string? ClinicalDiagnosis;
 
+        public string? SymptomsDescribed;
+        public string? SymptomCrescendoAngina;
+        public string? SymptomPainRadiatingToRightShoulder;
+        public string? SymptomVomiting;
+        public string? SymptomSweatingObserved;
+        public string? SymptomPainRadiatingToArmShoulderNeckJaw;
+        public string? SymptomPainWorseWithInspiration;
+        public string? SymptomPainReporducedByPalpation;
+        public string? SymptomHistory;
+
+
         // Adjudication 2 data
         public string? Adjudicator2;
         public Boolean Adjudication2Complete;
+
+        public string? ECG12Lead2;
+        public string? ECGNormalAbnormal2;
+        public string? ECGMyocardialIschaemia2;
+        public string? ECGSubsequentIschaemia2;
+        public string? ECGSTElevation2;
+        public string? ECGSTDepression2;
+        public string? ECGTWaveInversion2;
+        public string? ECGQRSAbnormalities2;
+        public string? ECGPathologicalQWave2;
+        public string? Rhythm2;
 
         public string? InsufficientInfo2;
         public string? Spontaneous2;
@@ -194,8 +216,8 @@ namespace CardiacAdmissionAdjudication
             ECGSTDepression = columns[index++];
             ECGTWaveInversion = columns[index++];
             ECGQRSAbnormalities = columns[index++];
-            ECGPathlogicalQWave = columns[index++];
-            Rhythum = columns[index++];
+            ECGPathologicalQWave = columns[index++];
+            Rhythm = columns[index++];
             Mechanism = columns[index++];
             CulpritVessel = columns[index++];
             Smoking = columns[index++];
@@ -223,6 +245,45 @@ namespace CardiacAdmissionAdjudication
             Cardiac = columns[index++];
             Systemic = columns[index++];
             ClinicalDiagnosis = columns[index++];
+
+            // If have more data to read it will be the symptom data
+            if (index < columns.Length)
+            {
+                SymptomsDescribed = columns[index++];
+                SymptomCrescendoAngina = columns[index++];
+                SymptomPainRadiatingToRightShoulder = columns[index++];
+                SymptomVomiting = columns[index++];
+                SymptomSweatingObserved = columns[index++];
+                SymptomPainRadiatingToArmShoulderNeckJaw = columns[index++];
+                SymptomPainWorseWithInspiration = columns[index++];
+                SymptomPainReporducedByPalpation = columns[index++];
+                SymptomHistory = columns[index++];
+            }
+            else
+            {
+                SymptomsDescribed = "";
+                SymptomCrescendoAngina = "";
+                SymptomPainRadiatingToRightShoulder = "";
+                SymptomVomiting = "";
+                SymptomSweatingObserved = "";
+                SymptomPainRadiatingToArmShoulderNeckJaw = "";
+                SymptomPainWorseWithInspiration = "";
+                SymptomPainReporducedByPalpation = "";
+                SymptomHistory = "";
+            }
+
+            // Default the second adjudication ECG data to be the first adjudication ECG data
+            ECG12Lead2 = ECG12Lead;
+            ECGNormalAbnormal2 = ECGNormalAbnormal;
+            ECGMyocardialIschaemia2 = ECGMyocardialIschaemia;
+            ECGSubsequentIschaemia2 = ECGSubsequentIschaemia;
+            ECGSTElevation2 = ECGSTElevation;
+            ECGSTDepression2 = ECGSTDepression;
+            ECGTWaveInversion2 = ECGTWaveInversion;
+            ECGQRSAbnormalities2 = ECGQRSAbnormalities;
+            ECGPathologicalQWave2 = ECGPathologicalQWave;
+            Rhythm2 = Rhythm;
+
         }
 
         public void AddSecondAdjudication(string input)
@@ -234,6 +295,18 @@ namespace CardiacAdmissionAdjudication
             // Id will be column 0
             int index = 1;
             Adjudicator2 = columns[index++];
+
+            ECG12Lead2 = columns[index++];
+            ECGNormalAbnormal2 = columns[index++];
+            ECGMyocardialIschaemia2 = columns[index++];
+            ECGSubsequentIschaemia2 = columns[index++];
+            ECGSTElevation2 = columns[index++];
+            ECGSTDepression2 = columns[index++];
+            ECGTWaveInversion2 = columns[index++];
+            ECGQRSAbnormalities2 = columns[index++];
+            ECGPathologicalQWave2 = columns[index++];
+            Rhythm2 = columns[index++];
+
             InsufficientInfo2 = columns[index++];
             Spontaneous2 = columns[index++];
             Procedural2 = columns[index++];
@@ -262,8 +335,8 @@ namespace CardiacAdmissionAdjudication
             sb.Append("\t" + ECGSTDepression);   
             sb.Append("\t" + ECGTWaveInversion);   
             sb.Append("\t" + ECGQRSAbnormalities);
-            sb.Append("\t" + ECGPathlogicalQWave);
-            sb.Append("\t" + Rhythum);
+            sb.Append("\t" + ECGPathologicalQWave);
+            sb.Append("\t" + Rhythm);
             sb.Append("\t" + Mechanism);
             sb.Append("\t" + CulpritVessel);
             sb.Append("\t" + Smoking);
@@ -291,6 +364,15 @@ namespace CardiacAdmissionAdjudication
             sb.Append("\t" + Cardiac);
             sb.Append("\t" + Systemic);
             sb.Append("\t" + ClinicalDiagnosis);
+            sb.Append("\t" + SymptomsDescribed);
+            sb.Append("\t" + SymptomCrescendoAngina);
+            sb.Append("\t" + SymptomPainRadiatingToRightShoulder);
+            sb.Append("\t" + SymptomVomiting);
+            sb.Append("\t" + SymptomSweatingObserved);
+            sb.Append("\t" + SymptomPainRadiatingToArmShoulderNeckJaw);
+            sb.Append("\t" + SymptomPainWorseWithInspiration);
+            sb.Append("\t" + SymptomPainReporducedByPalpation);
+            sb.Append("\t" + SymptomHistory);
 
             return sb.ToString();
         }
@@ -300,6 +382,16 @@ namespace CardiacAdmissionAdjudication
             StringBuilder sb = new StringBuilder();
             sb.Append(Id);
             sb.Append("\t" + Adjudicator2);
+            sb.Append("\t" + ECG12Lead2);
+            sb.Append("\t" + ECGNormalAbnormal2);
+            sb.Append("\t" + ECGMyocardialIschaemia2);
+            sb.Append("\t" + ECGSubsequentIschaemia2);
+            sb.Append("\t" + ECGSTElevation2);
+            sb.Append("\t" + ECGSTDepression2);
+            sb.Append("\t" + ECGTWaveInversion2);
+            sb.Append("\t" + ECGQRSAbnormalities2);
+            sb.Append("\t" + ECGPathologicalQWave2);
+            sb.Append("\t" + Rhythm2);
             sb.Append("\t" + InsufficientInfo2);
             sb.Append("\t" + Spontaneous2);
             sb.Append("\t" + Procedural2);

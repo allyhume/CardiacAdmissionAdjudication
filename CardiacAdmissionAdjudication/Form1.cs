@@ -22,6 +22,7 @@ namespace CardiacAdmissionAdjudication
         private IAdjudicationDataEntry dePathologicalQWave;
         private IAdjudicationDataEntry deRhythm;
         private IAdjudicationDataEntry deMechanism;
+
         private IAdjudicationDataEntry deCulpritVessel;
         private IAdjudicationDataEntry deSmoking;
         private IAdjudicationDataEntry deInsufficientInfo;
@@ -52,6 +53,16 @@ namespace CardiacAdmissionAdjudication
         private IAdjudicationDataEntry deHeartRate;
         private IAdjudicationDataEntry deTemperature;
 
+        private IAdjudicationDataEntry deSymptomsDescribed;
+        private IAdjudicationDataEntry deSymptomCrescendoAngina;
+        private IAdjudicationDataEntry deSymptomPainRadiatingToRightShoulder;
+        private IAdjudicationDataEntry deSymptomVomiting;
+        private IAdjudicationDataEntry deSymptomSweatingObserved;
+        private IAdjudicationDataEntry deSymptomPainRadiatingToArmShoulderNeckJaw;
+        private IAdjudicationDataEntry deSymptomPainWorseWithInspiration;
+        private IAdjudicationDataEntry deSymptomPainReporducedByPalpation;
+        private IAdjudicationDataEntry deSymptomHistory;
+
         private List<IAdjudicationDataEntry> adjudication1DataEntries = new List<IAdjudicationDataEntry>();
         private List<IAdjudicationDataEntry> adjudication2DataEntries = new List<IAdjudicationDataEntry>();
 
@@ -79,7 +90,7 @@ namespace CardiacAdmissionAdjudication
                 "12 Lead ECG",
                 label12LeadECG,
                 comboBox12LeadECG,
-                new string[] { "Yes - reviewed", "Yes - not relevant", "No" });
+                new string[] { "Yes - from notes", "Yes - from tracing", "No" });
 
             deECGNormal = new ComboBoxDataEntry(
                 "ECG Normal",
@@ -184,6 +195,63 @@ namespace CardiacAdmissionAdjudication
                     "Ex-",
                     "Never",
                     "Unknown" });
+
+            // Symptoms
+
+            deSymptomsDescribed = new ComboBoxDataEntry(
+                "Symptoms described",
+                labelSymptomsDescribed,
+                comboBoxSymptomsDescribed,
+                new string[] { "Yes", "No" });
+
+            deSymptomCrescendoAngina = new ComboBoxDataEntry(
+                "Crescendo angina",
+                labelSymptomCrescendoAngina,
+                comboBoxSymptomCrescendoAngina,
+                new string[] { "Yes", "No" });
+
+            deSymptomPainRadiatingToRightShoulder = new ComboBoxDataEntry(
+                "Pain radiating to right shoulder",
+                labelSymptomPainRadiatingToRightShoulder,
+                comboBoxSymptomPainRadiatingToRightShoulder,
+                new string[] { "Yes", "No" });
+
+            deSymptomVomiting = new ComboBoxDataEntry(
+                "Vomiting",
+                labelSymptomVomiting,
+                comboBoxSymptomVomiting,
+                new string[] { "Yes", "No" });
+
+            deSymptomSweatingObserved = new ComboBoxDataEntry(
+                "Sweating observed",
+                labelSymptomSweatingObserved,
+                comboBoxSymptomSweatingObserved,
+                new string[] { "Yes", "No" });
+
+            deSymptomPainRadiatingToArmShoulderNeckJaw = new ComboBoxDataEntry(
+                "Pain radiating to arm, shoulder, neck or jaw",
+                labelSymptomPainRadiatingToArmShoulderNeckJaw,
+                comboBoxSymptomPainRadiatingToArmShoulderNeckJaw,
+                new string[] { "Yes", "No" });
+
+            deSymptomPainWorseWithInspiration = new ComboBoxDataEntry(
+                "Pain worse with inspiration",
+                labelSymptomPainWorseWithInspiration,
+                comboBoxSymptomPainWorseWithInspiration,
+                new string[] { "Yes", "No" });
+
+            deSymptomPainReporducedByPalpation = new ComboBoxDataEntry(
+                "Pain reporduced by palpation",
+                labelSymptomPainReporducedByPalpation,
+                comboBoxSymptomPainReporducedByPalpation,
+                new string[] { "Yes", "No" });
+
+            deSymptomHistory = new ComboBoxDataEntry(
+                "Symptom history",
+                labelSymptomHistory,
+                comboBoxSymptomHistory,
+                new string[] { "Slightly suspicious","Moderately suspicious", "Highly suspicious", "Unknown"});
+
 
             // Final adjudication
 
@@ -430,16 +498,6 @@ namespace CardiacAdmissionAdjudication
             deHeartRate = new TextBoxDataEntry("Heart Rate", labelHeartRate, textBoxHeartRate,0,300);
             deTemperature = new TextBoxDataEntry("Temperature", labelTemperature, textBoxTemperature,10,60);
 
-            adjudication1DataEntries.Add(de12LeadECG);
-            adjudication1DataEntries.Add(deECGNormal);
-            adjudication1DataEntries.Add(deMyocardialIschaemia);
-            adjudication1DataEntries.Add(deSubsequentIschaemia);
-            adjudication1DataEntries.Add(deSTElevation);
-            adjudication1DataEntries.Add(deSTDepression);
-            adjudication1DataEntries.Add(deTWaveInversion);
-            adjudication1DataEntries.Add(deQRSAbnormalities);
-            adjudication1DataEntries.Add(dePathologicalQWave);
-            adjudication1DataEntries.Add(deRhythm);
             adjudication1DataEntries.Add(deMechanism);
             adjudication1DataEntries.Add(deCulpritVessel);
             adjudication1DataEntries.Add(deSmoking);
@@ -456,6 +514,16 @@ namespace CardiacAdmissionAdjudication
             adjudication1DataEntries.Add(deDiastolicBP);
             adjudication1DataEntries.Add(deHeartRate);
             adjudication1DataEntries.Add(deTemperature);
+            adjudication1DataEntries.Add(deSymptomsDescribed);
+            adjudication1DataEntries.Add(deSymptomCrescendoAngina);
+            adjudication1DataEntries.Add(deSymptomPainRadiatingToRightShoulder);
+            adjudication1DataEntries.Add(deSymptomVomiting);
+            adjudication1DataEntries.Add(deSymptomSweatingObserved);
+            adjudication1DataEntries.Add(deSymptomPainRadiatingToArmShoulderNeckJaw);
+            adjudication1DataEntries.Add(deSymptomPainWorseWithInspiration);
+            adjudication1DataEntries.Add(deSymptomPainReporducedByPalpation);
+            adjudication1DataEntries.Add(deSymptomHistory);
+
 
             adjudication2DataEntries.Add(deInsufficientInfo);
             adjudication2DataEntries.Add(deSpontaneous); 
@@ -469,6 +537,16 @@ namespace CardiacAdmissionAdjudication
             adjudication2DataEntries.Add(deCardiac);
             adjudication2DataEntries.Add(deSystemic);
             adjudication2DataEntries.Add(deClinicalDiagnosis);
+            adjudication2DataEntries.Add(de12LeadECG);
+            adjudication2DataEntries.Add(deECGNormal);
+            adjudication2DataEntries.Add(deMyocardialIschaemia);
+            adjudication2DataEntries.Add(deSubsequentIschaemia);
+            adjudication2DataEntries.Add(deSTElevation);
+            adjudication2DataEntries.Add(deSTDepression);
+            adjudication2DataEntries.Add(deTWaveInversion);
+            adjudication2DataEntries.Add(deQRSAbnormalities);
+            adjudication2DataEntries.Add(dePathologicalQWave);
+            adjudication2DataEntries.Add(deRhythm);
 
             dynamicallyHandleSelectionChanges = true;
 
@@ -751,6 +829,47 @@ namespace CardiacAdmissionAdjudication
                 deSystemic.Hide();
             }
 
+            // Symptoms tab
+
+            if (deSymptomsDescribed.GetValue() == "Yes")
+            {
+                // If any value is not set then default it to No
+
+                if (deSymptomCrescendoAngina.GetValue() == "") deSymptomCrescendoAngina.SetValue("No");
+                if (deSymptomSweatingObserved.GetValue() == "") deSymptomSweatingObserved.SetValue("No");
+                if (deSymptomVomiting.GetValue() == "") deSymptomVomiting.SetValue("No");
+                if (deSymptomPainRadiatingToArmShoulderNeckJaw.GetValue() == "") deSymptomPainRadiatingToArmShoulderNeckJaw.SetValue("No");
+                if (deSymptomPainRadiatingToRightShoulder.GetValue() == "") deSymptomPainRadiatingToRightShoulder.SetValue("No");
+                if (deSymptomPainWorseWithInspiration.GetValue() == "") deSymptomPainWorseWithInspiration.SetValue("No");
+                if (deSymptomPainReporducedByPalpation.GetValue() == "") deSymptomPainReporducedByPalpation.SetValue("No");
+
+                deSymptomCrescendoAngina.Show();
+                deSymptomSweatingObserved.Show();
+                deSymptomVomiting.Show();
+                deSymptomPainRadiatingToArmShoulderNeckJaw.Show();
+                deSymptomPainRadiatingToRightShoulder.Show();
+                deSymptomPainWorseWithInspiration.Show();
+                deSymptomPainReporducedByPalpation.Show();
+            }
+            else
+            {
+                deSymptomCrescendoAngina.SetValue("");
+                deSymptomSweatingObserved.SetValue("");
+                deSymptomVomiting.SetValue("");
+                deSymptomPainRadiatingToArmShoulderNeckJaw.SetValue("");
+                deSymptomPainRadiatingToRightShoulder.SetValue("");
+                deSymptomPainWorseWithInspiration.SetValue("");
+                deSymptomPainReporducedByPalpation.SetValue("");
+
+                deSymptomCrescendoAngina.Hide();
+                deSymptomSweatingObserved.Hide();
+                deSymptomVomiting.Hide();
+                deSymptomPainRadiatingToArmShoulderNeckJaw.Hide();
+                deSymptomPainRadiatingToRightShoulder.Hide();
+                deSymptomPainWorseWithInspiration.Hide();
+                deSymptomPainReporducedByPalpation.Hide();
+            }
+
             dynamicallyHandleSelectionChanges = true;
         }
 
@@ -940,8 +1059,8 @@ namespace CardiacAdmissionAdjudication
                         deSTDepression.SetValue(c.ECGSTDepression);
                         deTWaveInversion.SetValue(c.ECGTWaveInversion);
                         deQRSAbnormalities.SetValue(c.ECGQRSAbnormalities);
-                        dePathologicalQWave.SetValue(c.ECGPathlogicalQWave);
-                        deRhythm.SetValue(c.Rhythum);
+                        dePathologicalQWave.SetValue(c.ECGPathologicalQWave);
+                        deRhythm.SetValue(c.Rhythm);
                         deMechanism.SetValue(c.Mechanism);
                         deCulpritVessel.SetValue(c.CulpritVessel);
                         deSmoking.SetValue(c.Smoking);
@@ -969,7 +1088,17 @@ namespace CardiacAdmissionAdjudication
                         deCardiac.SetValue(c.Cardiac);
                         deSystemic.SetValue(c.Systemic);
                         deClinicalDiagnosis.SetValue(c.ClinicalDiagnosis);
-                    }
+
+                        deSymptomsDescribed.SetValue(c.SymptomsDescribed);
+                        deSymptomCrescendoAngina.SetValue(c.SymptomCrescendoAngina);
+                        deSymptomPainRadiatingToRightShoulder.SetValue(c.SymptomPainRadiatingToRightShoulder);
+                        deSymptomVomiting.SetValue(c.SymptomVomiting);
+                        deSymptomSweatingObserved.SetValue(c.SymptomSweatingObserved);
+                        deSymptomPainRadiatingToArmShoulderNeckJaw.SetValue(c.SymptomPainRadiatingToArmShoulderNeckJaw);
+                        deSymptomPainWorseWithInspiration.SetValue(c.SymptomPainWorseWithInspiration);
+                        deSymptomPainReporducedByPalpation.SetValue(c.SymptomPainReporducedByPalpation);
+                        deSymptomHistory.SetValue(c.SymptomHistory);
+    }
                     else
                     {
                         foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
@@ -995,16 +1124,6 @@ namespace CardiacAdmissionAdjudication
                 else // Second adjudicator
                 {
                     deSuspectedACS.SetValue(c.SuspectedACS1);
-                    de12LeadECG.SetValue(c.ECG12Lead);
-                    deECGNormal.SetValue(c.ECGNormalAbnormal);
-                    deMyocardialIschaemia.SetValue(c.ECGMyocardialIschaemia);
-                    deSubsequentIschaemia.SetValue(c.ECGSubsequentIschaemia);
-                    deSTElevation.SetValue(c.ECGSTElevation);
-                    deSTDepression.SetValue(c.ECGSTDepression);
-                    deTWaveInversion.SetValue(c.ECGTWaveInversion);
-                    deQRSAbnormalities.SetValue(c.ECGQRSAbnormalities);
-                    dePathologicalQWave.SetValue(c.ECGPathlogicalQWave);
-                    deRhythm.SetValue(c.Rhythum);
                     deMechanism.SetValue(c.Mechanism);
                     deCulpritVessel.SetValue(c.CulpritVessel);
                     deSmoking.SetValue(c.Smoking);
@@ -1020,6 +1139,16 @@ namespace CardiacAdmissionAdjudication
                     deKillipClass.SetValue(c.KillipClass);
                     deCardiacArrest.SetValue(c.CardiacArrest);
                     deACSTreatmentInED.SetValue(c.ACSTreatmentInED);
+
+                    deSymptomsDescribed.SetValue(c.SymptomsDescribed);
+                    deSymptomCrescendoAngina.SetValue(c.SymptomCrescendoAngina);
+                    deSymptomPainRadiatingToRightShoulder.SetValue(c.SymptomPainRadiatingToRightShoulder);
+                    deSymptomVomiting.SetValue(c.SymptomVomiting);
+                    deSymptomSweatingObserved.SetValue(c.SymptomSweatingObserved);
+                    deSymptomPainRadiatingToArmShoulderNeckJaw.SetValue(c.SymptomPainRadiatingToArmShoulderNeckJaw);
+                    deSymptomPainWorseWithInspiration.SetValue(c.SymptomPainWorseWithInspiration);
+                    deSymptomPainReporducedByPalpation.SetValue(c.SymptomPainReporducedByPalpation);
+                    deSymptomHistory.SetValue(c.SymptomHistory);
 
                     // Adjudication 2
                     if (c.Adjudication2Complete)
@@ -1044,6 +1173,21 @@ namespace CardiacAdmissionAdjudication
                             dataEntry.SetEmpty();
                         }
                     }
+
+                    // Second adjudicator can see the first adjudicators values for
+                    // ECG data
+
+                    de12LeadECG.SetValue(c.ECG12Lead2);
+                    deECGNormal.SetValue(c.ECGNormalAbnormal2);
+                    deMyocardialIschaemia.SetValue(c.ECGMyocardialIschaemia2);
+                    deSubsequentIschaemia.SetValue(c.ECGSubsequentIschaemia2);
+                    deSTElevation.SetValue(c.ECGSTElevation2);
+                    deSTDepression.SetValue(c.ECGSTDepression2);
+                    deTWaveInversion.SetValue(c.ECGTWaveInversion2);
+                    deQRSAbnormalities.SetValue(c.ECGQRSAbnormalities2);
+                    dePathologicalQWave.SetValue(c.ECGPathologicalQWave2);
+                    deRhythm.SetValue(c.Rhythm2);
+
                     // Only adjudicate 2 data entry points are editable
                     foreach (IAdjudicationDataEntry dataEntry in adjudication1DataEntries)
                     {
@@ -1094,8 +1238,8 @@ namespace CardiacAdmissionAdjudication
                 labelProgress.Text = progressText;
             }
 
-            // Always go to ECG tab when displaying new case
-            DataEntryTab.SelectedTab = tabPageECG;
+            // Always go to symptoms tab when displaying new case
+            DataEntryTab.SelectedTab = tabPageSymptoms;
 
             dynamicallyHandleSelectionChanges = true;
 
@@ -1238,6 +1382,16 @@ namespace CardiacAdmissionAdjudication
                     if ("" != deCardiac.GetValue()) return false;
                     if ("" != deSystemic.GetValue()) return false;
                     if ("" != deClinicalDiagnosis.GetValue()) return false;
+                    if ("" != deSymptomsDescribed.GetValue()) return false;
+                    if ("" != deSymptomCrescendoAngina.GetValue()) return false;
+                    if ("" != deSymptomPainRadiatingToRightShoulder.GetValue()) return false;
+                    if ("" != deSymptomVomiting.GetValue()) return false;
+                    if ("" != deSymptomSweatingObserved.GetValue()) return false;
+                    if ("" != deSymptomPainRadiatingToArmShoulderNeckJaw.GetValue()) return false;
+                    if ("" != deSymptomPainWorseWithInspiration.GetValue()) return false;
+                    if ("" != deSymptomPainReporducedByPalpation.GetValue()) return false;
+                    if ("" != deSymptomHistory.GetValue()) return false;
+
                 }
                 else
                 {
@@ -1250,8 +1404,8 @@ namespace CardiacAdmissionAdjudication
                     if (c.ECGSTDepression != deSTDepression.GetValue()) return false;
                     if (c.ECGTWaveInversion != deTWaveInversion.GetValue()) return false;
                     if (c.ECGQRSAbnormalities != deQRSAbnormalities.GetValue()) return false;
-                    if (c.ECGPathlogicalQWave != dePathologicalQWave.GetValue()) return false;
-                    if (c.Rhythum != deRhythm.GetValue()) return false;
+                    if (c.ECGPathologicalQWave != dePathologicalQWave.GetValue()) return false;
+                    if (c.Rhythm != deRhythm.GetValue()) return false;
                     if (c.Mechanism != deMechanism.GetValue()) return false;
                     if (c.CulpritVessel != deCulpritVessel.GetValue()) return false;
                     if (c.Smoking != deSmoking.GetValue()) return false;
@@ -1280,12 +1434,33 @@ namespace CardiacAdmissionAdjudication
                     if (c.Systemic != deSystemic.GetValue()) return false;
                     if (c.ClinicalDiagnosis != deClinicalDiagnosis.GetValue()) return false;
 
+                    if (c.SymptomsDescribed != deSymptomsDescribed.GetValue()) return false;
+                    if (c.SymptomCrescendoAngina != deSymptomCrescendoAngina.GetValue()) return false;
+                    if (c.SymptomPainRadiatingToRightShoulder != deSymptomPainRadiatingToRightShoulder.GetValue()) return false;
+                    if (c.SymptomVomiting != deSymptomVomiting.GetValue()) return false;
+                    if (c.SymptomSweatingObserved != deSymptomSweatingObserved.GetValue()) return false;
+                    if (c.SymptomPainRadiatingToArmShoulderNeckJaw != deSymptomPainRadiatingToArmShoulderNeckJaw.GetValue()) return false;
+                    if (c.SymptomPainWorseWithInspiration != deSymptomPainWorseWithInspiration.GetValue()) return false;
+                    if (c.SymptomPainReporducedByPalpation != deSymptomPainReporducedByPalpation.GetValue()) return false;
+                    if (c.SymptomHistory != deSymptomHistory.GetValue()) return false;
+
                 }
             }
             else
             {
                 if (!c.Adjudication2Complete)
                 {
+                    if ("" != de12LeadECG.GetValue()) return false;
+                    if ("" != deECGNormal.GetValue()) return false;
+                    if ("" != deMyocardialIschaemia.GetValue()) return false;
+                    if ("" != deSubsequentIschaemia.GetValue()) return false;
+                    if ("" != deSTElevation.GetValue()) return false;;
+                    if ("" != deSTDepression.GetValue()) return false;
+                    if ("" != deTWaveInversion.GetValue()) return false;
+                    if ("" != deQRSAbnormalities.GetValue()) return false;
+                    if ("" != dePathologicalQWave.GetValue()) return false;
+                    if ("" != deRhythm.GetValue()) return false;
+                    
                     if ("" != deInsufficientInfo.GetValue()) return false;
                     if ("" != deSpontaneous.GetValue()) return false;
                     if ("" != deProcedural.GetValue()) return false;
@@ -1300,7 +1475,18 @@ namespace CardiacAdmissionAdjudication
                     if ("" != deClinicalDiagnosis.GetValue()) return false;
                 }
                 else
-                { 
+                {
+                    if (c.ECG12Lead2 != de12LeadECG.GetValue()) return false;
+                    if (c.ECGNormalAbnormal2 != deECGNormal.GetValue()) return false;
+                    if (c.ECGMyocardialIschaemia2 != deMyocardialIschaemia.GetValue()) return false;
+                    if (c.ECGSubsequentIschaemia2 != deSubsequentIschaemia.GetValue()) return false;
+                    if (c.ECGSTElevation2 != deSTElevation.GetValue()) return false; ;
+                    if (c.ECGSTDepression2 != deSTDepression.GetValue()) return false;
+                    if (c.ECGTWaveInversion2 != deTWaveInversion.GetValue()) return false;
+                    if (c.ECGQRSAbnormalities2 != deQRSAbnormalities.GetValue()) return false;
+                    if (c.ECGPathologicalQWave2 != dePathologicalQWave.GetValue()) return false;
+                    if (c.Rhythm2 != deRhythm.GetValue()) return false;
+
                     if (c.InsufficientInfo2 != deInsufficientInfo.GetValue()) return false;
                     if (c.Spontaneous2 != deSpontaneous.GetValue()) return false;
                     if (c.Procedural2 != deProcedural.GetValue()) return false;
@@ -1339,8 +1525,8 @@ namespace CardiacAdmissionAdjudication
                 c.ECGSTDepression = deSTDepression.GetValue();
                 c.ECGTWaveInversion = deTWaveInversion.GetValue();
                 c.ECGQRSAbnormalities = deQRSAbnormalities.GetValue();
-                c.ECGPathlogicalQWave = dePathologicalQWave.GetValue();
-                c.Rhythum = deRhythm.GetValue();
+                c.ECGPathologicalQWave = dePathologicalQWave.GetValue();
+                c.Rhythm = deRhythm.GetValue();
                 c.Mechanism = deMechanism.GetValue();
                 c.CulpritVessel = deCulpritVessel.GetValue();
                 c.Smoking = deSmoking.GetValue();
@@ -1368,11 +1554,33 @@ namespace CardiacAdmissionAdjudication
                 c.Cardiac = deCardiac.GetValue();
                 c.Systemic = deSystemic.GetValue();
                 c.ClinicalDiagnosis = deClinicalDiagnosis.GetValue();
-            }
+
+                c.SymptomsDescribed = deSymptomsDescribed.GetValue();
+                c.SymptomCrescendoAngina = deSymptomCrescendoAngina.GetValue();
+                c.SymptomPainRadiatingToRightShoulder = deSymptomPainRadiatingToRightShoulder.GetValue();
+                c.SymptomVomiting = deSymptomVomiting.GetValue();
+                c.SymptomSweatingObserved = deSymptomSweatingObserved.GetValue();
+                c.SymptomPainRadiatingToArmShoulderNeckJaw = deSymptomPainRadiatingToArmShoulderNeckJaw.GetValue();
+                c.SymptomPainWorseWithInspiration = deSymptomPainWorseWithInspiration.GetValue();
+                c.SymptomPainReporducedByPalpation = deSymptomPainReporducedByPalpation.GetValue();
+                c.SymptomHistory = deSymptomHistory.GetValue();
+
+    }
             else
             {
                 c.Adjudication2Complete = true;
                 c.Adjudicator2 = Environment.UserName;
+
+                c.ECG12Lead2 = de12LeadECG.GetValue();
+                c.ECGNormalAbnormal2 = deECGNormal.GetValue();
+                c.ECGMyocardialIschaemia2 = deMyocardialIschaemia.GetValue();
+                c.ECGSubsequentIschaemia2 = deSubsequentIschaemia.GetValue();
+                c.ECGSTElevation2 = deSTElevation.GetValue();
+                c.ECGSTDepression2 = deSTDepression.GetValue();
+                c.ECGTWaveInversion2 = deTWaveInversion.GetValue();
+                c.ECGQRSAbnormalities2 = deQRSAbnormalities.GetValue();
+                c.ECGPathologicalQWave2 = dePathologicalQWave.GetValue();
+                c.Rhythm2 = deRhythm.GetValue();
 
                 c.InsufficientInfo2 = deInsufficientInfo.GetValue();
                 c.Spontaneous2 = deSpontaneous.GetValue();
@@ -1484,6 +1692,11 @@ namespace CardiacAdmissionAdjudication
         }
 
         private void comboBoxSystemic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowHideComponents();
+        }
+
+        private void comboBoxSymptomsDescribed_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowHideComponents();
         }

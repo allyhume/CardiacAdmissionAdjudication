@@ -153,6 +153,16 @@ namespace CardiacAdmissionAdjudication
                 sb.Append("\tSuspectedCAD");
                 sb.Append("\tCardiac");
                 sb.Append("\tSystemic");
+                sb.Append("\tClinicalDiagnosis");
+                sb.Append("\tSymptomsDescribed");
+                sb.Append("\tSymptomCrescendoAngina");
+                sb.Append("\tSymptomPainRadiatingToRightShoulder");
+                sb.Append("\tSymptomVomiting");
+                sb.Append("\tSymptomSweatingObserved");
+                sb.Append("\tSymptomPainRadiatingToArmShoulderNeckJaw");
+                sb.Append("\tSymptomPainWorseWithInspiration");
+                sb.Append("\tSymptomPainReporducedByPalpation");
+                sb.Append("\tSymptomHistory");
 
                 lines.Add(sb.ToString());
 
@@ -171,6 +181,19 @@ namespace CardiacAdmissionAdjudication
                 StringBuilder sb = new StringBuilder();
                 sb.Append("Id");
                 sb.Append("\tAdjudicator2");
+
+
+                sb.Append("\tECG12Lead2");
+                sb.Append("\tECGNormalAbnormal2");
+                sb.Append("\tECGMyocardialIschaemia2");
+                sb.Append("\tECGSubsequentIschaemia2");
+                sb.Append("\tECGSTElevation2");
+                sb.Append("\tECGSTDepression2");
+                sb.Append("\tECGTWaveInversion2");
+                sb.Append("\tECGQRSAbnormalities2");
+                sb.Append("\tECGPathlogicalQWave2");
+                sb.Append("\tRhythum2");
+
                 sb.Append("\tInsufficientInfo2");
                 sb.Append("\tSpontaneous2");
                 sb.Append("\tProcedural2");
@@ -182,6 +205,8 @@ namespace CardiacAdmissionAdjudication
                 sb.Append("\tSuspectedCAD2");
                 sb.Append("\tCardiac2");
                 sb.Append("\tSystemic2");
+                sb.Append("\tClinicalDiagnosis2");
+
                 lines.Add(sb.ToString());
 
                 foreach (AdjudicationCase c in cases)

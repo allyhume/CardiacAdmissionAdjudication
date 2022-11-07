@@ -50,6 +50,52 @@
             this.textBoxSex = new System.Windows.Forms.TextBox();
             this.richTextBoxDischargeNotes = new System.Windows.Forms.RichTextBox();
             this.DataEntryTab = new System.Windows.Forms.TabControl();
+            this.tabPageSymptoms = new System.Windows.Forms.TabPage();
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomPainWorseWithInspiration = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomPainReporducedByPalpation = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomHistory = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomSweatingObserved = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomsDescribed = new System.Windows.Forms.ComboBox();
+            this.labelSymptomsDescribed = new System.Windows.Forms.Label();
+            this.labelSymptomHistory = new System.Windows.Forms.Label();
+            this.labelSymptomPainReporducedByPalpation = new System.Windows.Forms.Label();
+            this.labelSymptomPainWorseWithInspiration = new System.Windows.Forms.Label();
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw = new System.Windows.Forms.Label();
+            this.comboBoxSymptomVomiting = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomPainRadiatingToRightShoulder = new System.Windows.Forms.ComboBox();
+            this.comboBoxSymptomCrescendoAngina = new System.Windows.Forms.ComboBox();
+            this.labelSymptomSweatingObserved = new System.Windows.Forms.Label();
+            this.labelSymptomVomiting = new System.Windows.Forms.Label();
+            this.labelSymptomPainRadiatingToRightShoulder = new System.Windows.Forms.Label();
+            this.labelSymptomCrescendoAngina = new System.Windows.Forms.Label();
+            this.tabPageObservations = new System.Windows.Forms.TabPage();
+            this.labelInitialObs = new System.Windows.Forms.Label();
+            this.comboBoxInitialObs = new System.Windows.Forms.ComboBox();
+            this.labelOxygenSat = new System.Windows.Forms.Label();
+            this.textBoxOxygenSat = new System.Windows.Forms.TextBox();
+            this.labelOxygenTherapy = new System.Windows.Forms.Label();
+            this.comboBoxOxygenTherapy = new System.Windows.Forms.ComboBox();
+            this.labelRespiratoryRate = new System.Windows.Forms.Label();
+            this.textBoxRespiratoryRate = new System.Windows.Forms.TextBox();
+            this.labelSystolicBP = new System.Windows.Forms.Label();
+            this.textBoxSystolicBP = new System.Windows.Forms.TextBox();
+            this.labelDiastolicBP = new System.Windows.Forms.Label();
+            this.textBoxDiastolicBP = new System.Windows.Forms.TextBox();
+            this.labelHeartRate = new System.Windows.Forms.Label();
+            this.comboBoxSmoking = new System.Windows.Forms.ComboBox();
+            this.comboBoxKillipClass = new System.Windows.Forms.ComboBox();
+            this.comboBoxACSTreatmentInED = new System.Windows.Forms.ComboBox();
+            this.labelSmoking = new System.Windows.Forms.Label();
+            this.textBoxHeartRate = new System.Windows.Forms.TextBox();
+            this.labelACSTreatmentInED = new System.Windows.Forms.Label();
+            this.labelTemperature = new System.Windows.Forms.Label();
+            this.comboBoxAlert = new System.Windows.Forms.ComboBox();
+            this.labelKillipClass = new System.Windows.Forms.Label();
+            this.textBoxTemperature = new System.Windows.Forms.TextBox();
+            this.labelAlert = new System.Windows.Forms.Label();
+            this.labelCardiacArrest = new System.Windows.Forms.Label();
+            this.comboBoxCardiacArrest = new System.Windows.Forms.ComboBox();
             this.tabPageECG = new System.Windows.Forms.TabPage();
             this.comboBoxPathologicalQWave = new System.Windows.Forms.ComboBox();
             this.labelPathologicalQWave = new System.Windows.Forms.Label();
@@ -91,33 +137,6 @@
             this.textBoxDaysFromPresentation = new System.Windows.Forms.TextBox();
             this.textBoxLCx = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.tabPageObservations = new System.Windows.Forms.TabPage();
-            this.labelInitialObs = new System.Windows.Forms.Label();
-            this.comboBoxInitialObs = new System.Windows.Forms.ComboBox();
-            this.labelOxygenSat = new System.Windows.Forms.Label();
-            this.textBoxOxygenSat = new System.Windows.Forms.TextBox();
-            this.labelOxygenTherapy = new System.Windows.Forms.Label();
-            this.comboBoxOxygenTherapy = new System.Windows.Forms.ComboBox();
-            this.labelRespiratoryRate = new System.Windows.Forms.Label();
-            this.textBoxRespiratoryRate = new System.Windows.Forms.TextBox();
-            this.labelSystolicBP = new System.Windows.Forms.Label();
-            this.textBoxSystolicBP = new System.Windows.Forms.TextBox();
-            this.labelDiastolicBP = new System.Windows.Forms.Label();
-            this.textBoxDiastolicBP = new System.Windows.Forms.TextBox();
-            this.labelHeartRate = new System.Windows.Forms.Label();
-            this.comboBoxSmoking = new System.Windows.Forms.ComboBox();
-            this.comboBoxKillipClass = new System.Windows.Forms.ComboBox();
-            this.comboBoxACSTreatmentInED = new System.Windows.Forms.ComboBox();
-            this.labelSmoking = new System.Windows.Forms.Label();
-            this.textBoxHeartRate = new System.Windows.Forms.TextBox();
-            this.labelACSTreatmentInED = new System.Windows.Forms.Label();
-            this.labelTemperature = new System.Windows.Forms.Label();
-            this.comboBoxAlert = new System.Windows.Forms.ComboBox();
-            this.labelKillipClass = new System.Windows.Forms.Label();
-            this.textBoxTemperature = new System.Windows.Forms.TextBox();
-            this.labelAlert = new System.Windows.Forms.Label();
-            this.labelCardiacArrest = new System.Windows.Forms.Label();
-            this.comboBoxCardiacArrest = new System.Windows.Forms.ComboBox();
             this.tabPageAdjudication = new System.Windows.Forms.TabPage();
             this.comboBoxClinicalDiagnosis = new System.Windows.Forms.ComboBox();
             this.labelClinicalDiagnosis = new System.Windows.Forms.Label();
@@ -150,12 +169,13 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelProgress = new System.Windows.Forms.Label();
             this.richTextBoxEDNotes = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel1 = new TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DataEntryTab.SuspendLayout();
+            this.tabPageSymptoms.SuspendLayout();
+            this.tabPageObservations.SuspendLayout();
             this.tabPageECG.SuspendLayout();
             this.tabPageTOMCAT.SuspendLayout();
-            this.tabPageObservations.SuspendLayout();
             this.tabPageAdjudication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -325,7 +345,7 @@
             this.comboBoxSuspectedACS.Location = new System.Drawing.Point(349, 4);
             this.comboBoxSuspectedACS.Name = "comboBoxSuspectedACS";
             this.comboBoxSuspectedACS.Size = new System.Drawing.Size(88, 23);
-            this.comboBoxSuspectedACS.TabIndex = 1;
+            this.comboBoxSuspectedACS.TabIndex = 9;
             // 
             // textBoxAge
             // 
@@ -361,447 +381,198 @@
             // 
             this.DataEntryTab.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataEntryTab.Controls.Add(this.tabPageSymptoms);
+            this.DataEntryTab.Controls.Add(this.tabPageObservations);
             this.DataEntryTab.Controls.Add(this.tabPageECG);
             this.DataEntryTab.Controls.Add(this.tabPageTOMCAT);
-            this.DataEntryTab.Controls.Add(this.tabPageObservations);
             this.DataEntryTab.Controls.Add(this.tabPageAdjudication);
             this.DataEntryTab.Location = new System.Drawing.Point(3, 6);
             this.DataEntryTab.Name = "DataEntryTab";
             this.DataEntryTab.SelectedIndex = 0;
             this.DataEntryTab.Size = new System.Drawing.Size(1094, 161);
-            this.DataEntryTab.TabIndex = 2;
-            // 
-            // tabPageECG
-            // 
-            this.tabPageECG.Controls.Add(this.comboBoxPathologicalQWave);
-            this.tabPageECG.Controls.Add(this.labelPathologicalQWave);
-            this.tabPageECG.Controls.Add(this.comboBoxTWaveInversion);
-            this.tabPageECG.Controls.Add(this.labelTWaveInversion);
-            this.tabPageECG.Controls.Add(this.comboBoxSTElevation);
-            this.tabPageECG.Controls.Add(this.labelSTElevation);
-            this.tabPageECG.Controls.Add(this.comboBoxRhythm);
-            this.tabPageECG.Controls.Add(this.labelRhythm);
-            this.tabPageECG.Controls.Add(this.comboBoxQRSAbnormalities);
-            this.tabPageECG.Controls.Add(this.labelQRSAbnormalities);
-            this.tabPageECG.Controls.Add(this.comboBoxSTDepression);
-            this.tabPageECG.Controls.Add(this.labelSTDepression);
-            this.tabPageECG.Controls.Add(this.comboBoxMyocardialIschaemia);
-            this.tabPageECG.Controls.Add(this.label30);
-            this.tabPageECG.Controls.Add(this.comboBoxSubsequentIschaemia);
-            this.tabPageECG.Controls.Add(this.label33);
-            this.tabPageECG.Controls.Add(this.labelSubsequentIschaemia);
-            this.tabPageECG.Controls.Add(this.comboBoxECGNormal);
-            this.tabPageECG.Controls.Add(this.labelECGNormal);
-            this.tabPageECG.Controls.Add(this.comboBox12LeadECG);
-            this.tabPageECG.Controls.Add(this.label12LeadECG);
-            this.tabPageECG.Controls.Add(this.richTextBoxECGMUSEText);
-            this.tabPageECG.Controls.Add(this.textBoxECGTimeFromPresentation);
-            this.tabPageECG.Controls.Add(this.label29);
-            this.tabPageECG.Location = new System.Drawing.Point(4, 24);
-            this.tabPageECG.Name = "tabPageECG";
-            this.tabPageECG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageECG.Size = new System.Drawing.Size(1086, 133);
-            this.tabPageECG.TabIndex = 0;
-            this.tabPageECG.Text = "ECG";
-            this.tabPageECG.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxPathologicalQWave
-            // 
-            this.comboBoxPathologicalQWave.FormattingEnabled = true;
-            this.comboBoxPathologicalQWave.Location = new System.Drawing.Point(372, 105);
-            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxPathologicalQWave.Name = "comboBoxPathologicalQWave";
-            this.comboBoxPathologicalQWave.Size = new System.Drawing.Size(80, 23);
-            this.comboBoxPathologicalQWave.TabIndex = 9;
-            // 
-            // labelPathologicalQWave
-            // 
-            this.labelPathologicalQWave.AutoSize = true;
-            this.labelPathologicalQWave.Location = new System.Drawing.Point(246, 108);
-            this.labelPathologicalQWave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPathologicalQWave.Name = "labelPathologicalQWave";
-            this.labelPathologicalQWave.Size = new System.Drawing.Size(117, 15);
-            this.labelPathologicalQWave.TabIndex = 24;
-            this.labelPathologicalQWave.Text = "Pathological Q-wave";
-            // 
-            // comboBoxTWaveInversion
-            // 
-            this.comboBoxTWaveInversion.FormattingEnabled = true;
-            this.comboBoxTWaveInversion.Location = new System.Drawing.Point(783, 78);
-            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTWaveInversion.Name = "comboBoxTWaveInversion";
-            this.comboBoxTWaveInversion.Size = new System.Drawing.Size(66, 23);
-            this.comboBoxTWaveInversion.TabIndex = 6;
-            // 
-            // labelTWaveInversion
-            // 
-            this.labelTWaveInversion.AutoSize = true;
-            this.labelTWaveInversion.Location = new System.Drawing.Point(683, 82);
-            this.labelTWaveInversion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTWaveInversion.Name = "labelTWaveInversion";
-            this.labelTWaveInversion.Size = new System.Drawing.Size(96, 15);
-            this.labelTWaveInversion.TabIndex = 22;
-            this.labelTWaveInversion.Text = "T-wave inversion";
-            // 
-            // comboBoxSTElevation
-            // 
-            this.comboBoxSTElevation.FormattingEnabled = true;
-            this.comboBoxSTElevation.Location = new System.Drawing.Point(598, 78);
-            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxSTElevation.Name = "comboBoxSTElevation";
-            this.comboBoxSTElevation.Size = new System.Drawing.Size(66, 23);
-            this.comboBoxSTElevation.TabIndex = 5;
-            // 
-            // labelSTElevation
-            // 
-            this.labelSTElevation.AutoSize = true;
-            this.labelSTElevation.Location = new System.Drawing.Point(464, 82);
-            this.labelSTElevation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSTElevation.Name = "labelSTElevation";
-            this.labelSTElevation.Size = new System.Drawing.Size(70, 15);
-            this.labelSTElevation.TabIndex = 20;
-            this.labelSTElevation.Text = "ST elevation";
-            // 
-            // comboBoxRhythm
-            // 
-            this.comboBoxRhythm.FormattingEnabled = true;
-            this.comboBoxRhythm.Location = new System.Drawing.Point(921, 78);
-            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxRhythm.Name = "comboBoxRhythm";
-            this.comboBoxRhythm.Size = new System.Drawing.Size(148, 23);
-            this.comboBoxRhythm.TabIndex = 7;
-            // 
-            // labelRhythm
-            // 
-            this.labelRhythm.AutoSize = true;
-            this.labelRhythm.Location = new System.Drawing.Point(868, 82);
-            this.labelRhythm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelRhythm.Name = "labelRhythm";
-            this.labelRhythm.Size = new System.Drawing.Size(49, 15);
-            this.labelRhythm.TabIndex = 18;
-            this.labelRhythm.Text = "Rhythm";
-            // 
-            // comboBoxQRSAbnormalities
-            // 
-            this.comboBoxQRSAbnormalities.FormattingEnabled = true;
-            this.comboBoxQRSAbnormalities.Location = new System.Drawing.Point(148, 105);
-            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxQRSAbnormalities.Name = "comboBoxQRSAbnormalities";
-            this.comboBoxQRSAbnormalities.Size = new System.Drawing.Size(94, 23);
-            this.comboBoxQRSAbnormalities.TabIndex = 8;
-            // 
-            // labelQRSAbnormalities
-            // 
-            this.labelQRSAbnormalities.AutoSize = true;
-            this.labelQRSAbnormalities.Location = new System.Drawing.Point(5, 108);
-            this.labelQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelQRSAbnormalities.Name = "labelQRSAbnormalities";
-            this.labelQRSAbnormalities.Size = new System.Drawing.Size(104, 15);
-            this.labelQRSAbnormalities.TabIndex = 16;
-            this.labelQRSAbnormalities.Text = "QRS abnormalities";
-            // 
-            // comboBoxSTDepression
-            // 
-            this.comboBoxSTDepression.FormattingEnabled = true;
-            this.comboBoxSTDepression.Location = new System.Drawing.Point(372, 78);
-            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxSTDepression.Name = "comboBoxSTDepression";
-            this.comboBoxSTDepression.Size = new System.Drawing.Size(80, 23);
-            this.comboBoxSTDepression.TabIndex = 4;
-            // 
-            // labelSTDepression
-            // 
-            this.labelSTDepression.AutoSize = true;
-            this.labelSTDepression.Location = new System.Drawing.Point(246, 82);
-            this.labelSTDepression.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSTDepression.Name = "labelSTDepression";
-            this.labelSTDepression.Size = new System.Drawing.Size(79, 15);
-            this.labelSTDepression.TabIndex = 13;
-            this.labelSTDepression.Text = "ST depression";
-            // 
-            // comboBoxMyocardialIschaemia
-            // 
-            this.comboBoxMyocardialIschaemia.FormattingEnabled = true;
-            this.comboBoxMyocardialIschaemia.Location = new System.Drawing.Point(148, 78);
-            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxMyocardialIschaemia.Name = "comboBoxMyocardialIschaemia";
-            this.comboBoxMyocardialIschaemia.Size = new System.Drawing.Size(94, 23);
-            this.comboBoxMyocardialIschaemia.TabIndex = 3;
-            this.comboBoxMyocardialIschaemia.SelectedIndexChanged += new System.EventHandler(this.comboBoxMyocardialIschaemia_SelectedIndexChanged);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(4, 82);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(122, 15);
-            this.label30.TabIndex = 11;
-            this.label30.Text = "Myocardial ischaemia";
-            // 
-            // comboBoxSubsequentIschaemia
-            // 
-            this.comboBoxSubsequentIschaemia.FormattingEnabled = true;
-            this.comboBoxSubsequentIschaemia.Location = new System.Drawing.Point(598, 105);
-            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxSubsequentIschaemia.Name = "comboBoxSubsequentIschaemia";
-            this.comboBoxSubsequentIschaemia.Size = new System.Drawing.Size(66, 23);
-            this.comboBoxSubsequentIschaemia.TabIndex = 10;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, -20);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(44, 15);
-            this.label33.TabIndex = 8;
-            this.label33.Text = "label33";
-            // 
-            // labelSubsequentIschaemia
-            // 
-            this.labelSubsequentIschaemia.AutoSize = true;
-            this.labelSubsequentIschaemia.Location = new System.Drawing.Point(464, 108);
-            this.labelSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSubsequentIschaemia.Name = "labelSubsequentIschaemia";
-            this.labelSubsequentIschaemia.Size = new System.Drawing.Size(125, 15);
-            this.labelSubsequentIschaemia.TabIndex = 7;
-            this.labelSubsequentIschaemia.Text = "Subsequent ischaemia";
-            // 
-            // comboBoxECGNormal
-            // 
-            this.comboBoxECGNormal.FormattingEnabled = true;
-            this.comboBoxECGNormal.Location = new System.Drawing.Point(148, 54);
-            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxECGNormal.Name = "comboBoxECGNormal";
-            this.comboBoxECGNormal.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxECGNormal.TabIndex = 2;
-            this.comboBoxECGNormal.SelectedIndexChanged += new System.EventHandler(this.comboBoxECGNormal_SelectedIndexChanged);
-            // 
-            // labelECGNormal
-            // 
-            this.labelECGNormal.AutoSize = true;
-            this.labelECGNormal.Location = new System.Drawing.Point(5, 57);
-            this.labelECGNormal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelECGNormal.Name = "labelECGNormal";
-            this.labelECGNormal.Size = new System.Drawing.Size(77, 15);
-            this.labelECGNormal.TabIndex = 5;
-            this.labelECGNormal.Text = "ECG Normal?";
-            // 
-            // comboBox12LeadECG
-            // 
-            this.comboBox12LeadECG.FormattingEnabled = true;
-            this.comboBox12LeadECG.Location = new System.Drawing.Point(148, 27);
-            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox12LeadECG.Name = "comboBox12LeadECG";
-            this.comboBox12LeadECG.Size = new System.Drawing.Size(129, 23);
-            this.comboBox12LeadECG.TabIndex = 1;
-            this.comboBox12LeadECG.SelectedIndexChanged += new System.EventHandler(this.comboBox12LeadECG_SelectedIndexChanged);
-            // 
-            // label12LeadECG
-            // 
-            this.label12LeadECG.AutoSize = true;
-            this.label12LeadECG.Location = new System.Drawing.Point(5, 30);
-            this.label12LeadECG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12LeadECG.Name = "label12LeadECG";
-            this.label12LeadECG.Size = new System.Drawing.Size(72, 15);
-            this.label12LeadECG.TabIndex = 3;
-            this.label12LeadECG.Text = "12 Lead ECG";
-            // 
-            // richTextBoxECGMUSEText
-            // 
-            this.richTextBoxECGMUSEText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxECGMUSEText.Location = new System.Drawing.Point(295, 5);
-            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBoxECGMUSEText.Name = "richTextBoxECGMUSEText";
-            this.richTextBoxECGMUSEText.ReadOnly = true;
-            this.richTextBoxECGMUSEText.Size = new System.Drawing.Size(777, 67);
-            this.richTextBoxECGMUSEText.TabIndex = 2;
-            this.richTextBoxECGMUSEText.TabStop = false;
-            this.richTextBoxECGMUSEText.Text = "";
-            // 
-            // textBoxECGTimeFromPresentation
-            // 
-            this.textBoxECGTimeFromPresentation.Location = new System.Drawing.Point(148, 2);
-            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxECGTimeFromPresentation.Name = "textBoxECGTimeFromPresentation";
-            this.textBoxECGTimeFromPresentation.ReadOnly = true;
-            this.textBoxECGTimeFromPresentation.Size = new System.Drawing.Size(129, 23);
-            this.textBoxECGTimeFromPresentation.TabIndex = 1;
-            this.textBoxECGTimeFromPresentation.TabStop = false;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(5, 8);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(131, 15);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Time from presentation";
-            // 
-            // tabPageTOMCAT
-            // 
-            this.tabPageTOMCAT.Controls.Add(this.comboBoxCulpritVessel);
-            this.tabPageTOMCAT.Controls.Add(this.labelCulpritVessel);
-            this.tabPageTOMCAT.Controls.Add(this.comboBoxMechanism);
-            this.tabPageTOMCAT.Controls.Add(this.labelMechanism);
-            this.tabPageTOMCAT.Controls.Add(this.textBoxLAD);
-            this.tabPageTOMCAT.Controls.Add(this.textBoxLMS);
-            this.tabPageTOMCAT.Controls.Add(this.label18);
-            this.tabPageTOMCAT.Controls.Add(this.label17);
-            this.tabPageTOMCAT.Controls.Add(this.richTextTomcatText);
-            this.tabPageTOMCAT.Controls.Add(this.label16);
-            this.tabPageTOMCAT.Controls.Add(this.textBoxRCA);
-            this.tabPageTOMCAT.Controls.Add(this.label15);
-            this.tabPageTOMCAT.Controls.Add(this.textBoxDaysFromPresentation);
-            this.tabPageTOMCAT.Controls.Add(this.textBoxLCx);
-            this.tabPageTOMCAT.Controls.Add(this.label14);
-            this.tabPageTOMCAT.Location = new System.Drawing.Point(4, 24);
-            this.tabPageTOMCAT.Name = "tabPageTOMCAT";
-            this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTOMCAT.Size = new System.Drawing.Size(1165, 133);
-            this.tabPageTOMCAT.TabIndex = 1;
-            this.tabPageTOMCAT.Text = "TOMCAT";
-            this.tabPageTOMCAT.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxCulpritVessel
-            // 
-            this.comboBoxCulpritVessel.FormattingEnabled = true;
-            this.comboBoxCulpritVessel.Location = new System.Drawing.Point(94, 92);
-            this.comboBoxCulpritVessel.Name = "comboBoxCulpritVessel";
-            this.comboBoxCulpritVessel.Size = new System.Drawing.Size(229, 23);
-            this.comboBoxCulpritVessel.TabIndex = 2;
-            // 
-            // labelCulpritVessel
-            // 
-            this.labelCulpritVessel.AutoSize = true;
-            this.labelCulpritVessel.Location = new System.Drawing.Point(7, 92);
-            this.labelCulpritVessel.Name = "labelCulpritVessel";
-            this.labelCulpritVessel.Size = new System.Drawing.Size(77, 15);
-            this.labelCulpritVessel.TabIndex = 15;
-            this.labelCulpritVessel.Text = "Culprit vessel";
-            // 
-            // comboBoxMechanism
-            // 
-            this.comboBoxMechanism.FormattingEnabled = true;
-            this.comboBoxMechanism.Location = new System.Drawing.Point(94, 66);
-            this.comboBoxMechanism.Name = "comboBoxMechanism";
-            this.comboBoxMechanism.Size = new System.Drawing.Size(229, 23);
-            this.comboBoxMechanism.TabIndex = 1;
-            // 
-            // labelMechanism
-            // 
-            this.labelMechanism.AutoSize = true;
-            this.labelMechanism.Location = new System.Drawing.Point(7, 71);
-            this.labelMechanism.Name = "labelMechanism";
-            this.labelMechanism.Size = new System.Drawing.Size(69, 15);
-            this.labelMechanism.TabIndex = 13;
-            this.labelMechanism.Text = "Mechanism";
-            // 
-            // textBoxLAD
-            // 
-            this.textBoxLAD.Location = new System.Drawing.Point(240, 36);
-            this.textBoxLAD.Name = "textBoxLAD";
-            this.textBoxLAD.ReadOnly = true;
-            this.textBoxLAD.Size = new System.Drawing.Size(75, 23);
-            this.textBoxLAD.TabIndex = 12;
-            this.textBoxLAD.TabStop = false;
-            // 
-            // textBoxLMS
-            // 
-            this.textBoxLMS.Location = new System.Drawing.Point(240, 7);
-            this.textBoxLMS.Name = "textBoxLMS";
-            this.textBoxLMS.ReadOnly = true;
-            this.textBoxLMS.Size = new System.Drawing.Size(75, 23);
-            this.textBoxLMS.TabIndex = 11;
-            this.textBoxLMS.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(186, 37);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 15);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "LAD";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(185, 10);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 15);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "LMS";
-            // 
-            // richTextTomcatText
-            // 
-            this.richTextTomcatText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextTomcatText.Location = new System.Drawing.Point(463, 10);
-            this.richTextTomcatText.Name = "richTextTomcatText";
-            this.richTextTomcatText.ReadOnly = true;
-            this.richTextTomcatText.Size = new System.Drawing.Size(609, 108);
-            this.richTextTomcatText.TabIndex = 8;
-            this.richTextTomcatText.TabStop = false;
-            this.richTextTomcatText.Text = "";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 15);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "RCA";
-            // 
-            // textBoxRCA
-            // 
-            this.textBoxRCA.Location = new System.Drawing.Point(85, 36);
-            this.textBoxRCA.Name = "textBoxRCA";
-            this.textBoxRCA.ReadOnly = true;
-            this.textBoxRCA.Size = new System.Drawing.Size(75, 23);
-            this.textBoxRCA.TabIndex = 6;
-            this.textBoxRCA.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 30);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Days from\r\npresentation";
-            // 
-            // textBoxDaysFromPresentation
-            // 
-            this.textBoxDaysFromPresentation.Location = new System.Drawing.Point(85, 6);
-            this.textBoxDaysFromPresentation.Name = "textBoxDaysFromPresentation";
-            this.textBoxDaysFromPresentation.ReadOnly = true;
-            this.textBoxDaysFromPresentation.Size = new System.Drawing.Size(75, 23);
-            this.textBoxDaysFromPresentation.TabIndex = 4;
-            this.textBoxDaysFromPresentation.TabStop = false;
-            // 
-            // textBoxLCx
-            // 
-            this.textBoxLCx.Location = new System.Drawing.Point(378, 7);
-            this.textBoxLCx.Name = "textBoxLCx";
-            this.textBoxLCx.ReadOnly = true;
-            this.textBoxLCx.Size = new System.Drawing.Size(75, 23);
-            this.textBoxLCx.TabIndex = 3;
-            this.textBoxLCx.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(334, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 15);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "LCx";
+            this.DataEntryTab.TabIndex = 0;
+            // 
+            // tabPageSymptoms
+            // 
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomPainWorseWithInspiration);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomPainReporducedByPalpation);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomHistory);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomSweatingObserved);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomsDescribed);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomsDescribed);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomHistory);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomPainReporducedByPalpation);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomPainWorseWithInspiration);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomPainRadiatingToArmShoulderNeckJaw);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomVomiting);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomPainRadiatingToRightShoulder);
+            this.tabPageSymptoms.Controls.Add(this.comboBoxSymptomCrescendoAngina);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomSweatingObserved);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomVomiting);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomPainRadiatingToRightShoulder);
+            this.tabPageSymptoms.Controls.Add(this.labelSymptomCrescendoAngina);
+            this.tabPageSymptoms.Location = new System.Drawing.Point(4, 24);
+            this.tabPageSymptoms.Name = "tabPageSymptoms";
+            this.tabPageSymptoms.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSymptoms.Size = new System.Drawing.Size(1086, 133);
+            this.tabPageSymptoms.TabIndex = 4;
+            this.tabPageSymptoms.Text = "Symptoms";
+            this.tabPageSymptoms.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxSymptomPainRadiatingToArmShoulderNeckJaw
+            // 
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.FormattingEnabled = true;
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Location = new System.Drawing.Point(787, 42);
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Name = "comboBoxSymptomPainRadiatingToArmShoulderNeckJaw";
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.TabIndex = 6;
+            // 
+            // comboBoxSymptomPainWorseWithInspiration
+            // 
+            this.comboBoxSymptomPainWorseWithInspiration.FormattingEnabled = true;
+            this.comboBoxSymptomPainWorseWithInspiration.Location = new System.Drawing.Point(787, 68);
+            this.comboBoxSymptomPainWorseWithInspiration.Name = "comboBoxSymptomPainWorseWithInspiration";
+            this.comboBoxSymptomPainWorseWithInspiration.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomPainWorseWithInspiration.TabIndex = 7;
+            // 
+            // comboBoxSymptomPainReporducedByPalpation
+            // 
+            this.comboBoxSymptomPainReporducedByPalpation.FormattingEnabled = true;
+            this.comboBoxSymptomPainReporducedByPalpation.Location = new System.Drawing.Point(787, 94);
+            this.comboBoxSymptomPainReporducedByPalpation.Name = "comboBoxSymptomPainReporducedByPalpation";
+            this.comboBoxSymptomPainReporducedByPalpation.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomPainReporducedByPalpation.TabIndex = 8;
+            // 
+            // comboBoxSymptomHistory
+            // 
+            this.comboBoxSymptomHistory.FormattingEnabled = true;
+            this.comboBoxSymptomHistory.Location = new System.Drawing.Point(59, 15);
+            this.comboBoxSymptomHistory.Name = "comboBoxSymptomHistory";
+            this.comboBoxSymptomHistory.Size = new System.Drawing.Size(206, 23);
+            this.comboBoxSymptomHistory.TabIndex = 0;
+            // 
+            // comboBoxSymptomSweatingObserved
+            // 
+            this.comboBoxSymptomSweatingObserved.FormattingEnabled = true;
+            this.comboBoxSymptomSweatingObserved.Location = new System.Drawing.Point(787, 15);
+            this.comboBoxSymptomSweatingObserved.Name = "comboBoxSymptomSweatingObserved";
+            this.comboBoxSymptomSweatingObserved.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomSweatingObserved.TabIndex = 5;
+            // 
+            // comboBoxSymptomsDescribed
+            // 
+            this.comboBoxSymptomsDescribed.FormattingEnabled = true;
+            this.comboBoxSymptomsDescribed.Location = new System.Drawing.Point(470, 15);
+            this.comboBoxSymptomsDescribed.Name = "comboBoxSymptomsDescribed";
+            this.comboBoxSymptomsDescribed.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomsDescribed.TabIndex = 1;
+            this.comboBoxSymptomsDescribed.SelectedIndexChanged += new System.EventHandler(this.comboBoxSymptomsDescribed_SelectedIndexChanged);
+            // 
+            // labelSymptomsDescribed
+            // 
+            this.labelSymptomsDescribed.AutoSize = true;
+            this.labelSymptomsDescribed.Location = new System.Drawing.Point(293, 19);
+            this.labelSymptomsDescribed.Name = "labelSymptomsDescribed";
+            this.labelSymptomsDescribed.Size = new System.Drawing.Size(118, 15);
+            this.labelSymptomsDescribed.TabIndex = 11;
+            this.labelSymptomsDescribed.Text = "Symptoms described";
+            // 
+            // labelSymptomHistory
+            // 
+            this.labelSymptomHistory.AutoSize = true;
+            this.labelSymptomHistory.Location = new System.Drawing.Point(6, 19);
+            this.labelSymptomHistory.Name = "labelSymptomHistory";
+            this.labelSymptomHistory.Size = new System.Drawing.Size(45, 15);
+            this.labelSymptomHistory.TabIndex = 10;
+            this.labelSymptomHistory.Text = "History";
+            // 
+            // labelSymptomPainReporducedByPalpation
+            // 
+            this.labelSymptomPainReporducedByPalpation.AutoSize = true;
+            this.labelSymptomPainReporducedByPalpation.Location = new System.Drawing.Point(546, 97);
+            this.labelSymptomPainReporducedByPalpation.Name = "labelSymptomPainReporducedByPalpation";
+            this.labelSymptomPainReporducedByPalpation.Size = new System.Drawing.Size(163, 15);
+            this.labelSymptomPainReporducedByPalpation.TabIndex = 9;
+            this.labelSymptomPainReporducedByPalpation.Text = "Pain reproduced by palpation";
+            // 
+            // labelSymptomPainWorseWithInspiration
+            // 
+            this.labelSymptomPainWorseWithInspiration.AutoSize = true;
+            this.labelSymptomPainWorseWithInspiration.Location = new System.Drawing.Point(546, 71);
+            this.labelSymptomPainWorseWithInspiration.Name = "labelSymptomPainWorseWithInspiration";
+            this.labelSymptomPainWorseWithInspiration.Size = new System.Drawing.Size(149, 15);
+            this.labelSymptomPainWorseWithInspiration.TabIndex = 8;
+            this.labelSymptomPainWorseWithInspiration.Text = "Pain worse with inspiration";
+            // 
+            // labelSymptomPainRadiatingToArmShoulderNeckJaw
+            // 
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.AutoSize = true;
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.Location = new System.Drawing.Point(545, 42);
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.Name = "labelSymptomPainRadiatingToArmShoulderNeckJaw";
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.Size = new System.Drawing.Size(236, 15);
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.TabIndex = 7;
+            this.labelSymptomPainRadiatingToArmShoulderNeckJaw.Text = "Pain radiating to arm, shoulder, neck or jaw";
+            // 
+            // comboBoxSymptomVomiting
+            // 
+            this.comboBoxSymptomVomiting.FormattingEnabled = true;
+            this.comboBoxSymptomVomiting.Location = new System.Drawing.Point(470, 94);
+            this.comboBoxSymptomVomiting.Name = "comboBoxSymptomVomiting";
+            this.comboBoxSymptomVomiting.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomVomiting.TabIndex = 4;
+            // 
+            // comboBoxSymptomPainRadiatingToRightShoulder
+            // 
+            this.comboBoxSymptomPainRadiatingToRightShoulder.FormattingEnabled = true;
+            this.comboBoxSymptomPainRadiatingToRightShoulder.Location = new System.Drawing.Point(470, 68);
+            this.comboBoxSymptomPainRadiatingToRightShoulder.Name = "comboBoxSymptomPainRadiatingToRightShoulder";
+            this.comboBoxSymptomPainRadiatingToRightShoulder.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomPainRadiatingToRightShoulder.TabIndex = 3;
+            // 
+            // comboBoxSymptomCrescendoAngina
+            // 
+            this.comboBoxSymptomCrescendoAngina.FormattingEnabled = true;
+            this.comboBoxSymptomCrescendoAngina.Location = new System.Drawing.Point(470, 42);
+            this.comboBoxSymptomCrescendoAngina.Name = "comboBoxSymptomCrescendoAngina";
+            this.comboBoxSymptomCrescendoAngina.Size = new System.Drawing.Size(52, 23);
+            this.comboBoxSymptomCrescendoAngina.TabIndex = 2;
+            // 
+            // labelSymptomSweatingObserved
+            // 
+            this.labelSymptomSweatingObserved.AutoSize = true;
+            this.labelSymptomSweatingObserved.Location = new System.Drawing.Point(546, 19);
+            this.labelSymptomSweatingObserved.Name = "labelSymptomSweatingObserved";
+            this.labelSymptomSweatingObserved.Size = new System.Drawing.Size(106, 15);
+            this.labelSymptomSweatingObserved.TabIndex = 3;
+            this.labelSymptomSweatingObserved.Text = "Sweating observed";
+            // 
+            // labelSymptomVomiting
+            // 
+            this.labelSymptomVomiting.AutoSize = true;
+            this.labelSymptomVomiting.Location = new System.Drawing.Point(293, 97);
+            this.labelSymptomVomiting.Name = "labelSymptomVomiting";
+            this.labelSymptomVomiting.Size = new System.Drawing.Size(55, 15);
+            this.labelSymptomVomiting.TabIndex = 2;
+            this.labelSymptomVomiting.Text = "Vomiting";
+            // 
+            // labelSymptomPainRadiatingToRightShoulder
+            // 
+            this.labelSymptomPainRadiatingToRightShoulder.AutoSize = true;
+            this.labelSymptomPainRadiatingToRightShoulder.Location = new System.Drawing.Point(293, 71);
+            this.labelSymptomPainRadiatingToRightShoulder.Name = "labelSymptomPainRadiatingToRightShoulder";
+            this.labelSymptomPainRadiatingToRightShoulder.Size = new System.Drawing.Size(171, 15);
+            this.labelSymptomPainRadiatingToRightShoulder.TabIndex = 1;
+            this.labelSymptomPainRadiatingToRightShoulder.Text = "Pain radiating to right shoulder";
+            // 
+            // labelSymptomCrescendoAngina
+            // 
+            this.labelSymptomCrescendoAngina.AutoSize = true;
+            this.labelSymptomCrescendoAngina.Location = new System.Drawing.Point(293, 44);
+            this.labelSymptomCrescendoAngina.Name = "labelSymptomCrescendoAngina";
+            this.labelSymptomCrescendoAngina.Size = new System.Drawing.Size(102, 15);
+            this.labelSymptomCrescendoAngina.TabIndex = 0;
+            this.labelSymptomCrescendoAngina.Text = "Crescendo angina";
             // 
             // tabPageObservations
             // 
@@ -834,7 +605,7 @@
             this.tabPageObservations.Location = new System.Drawing.Point(4, 24);
             this.tabPageObservations.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageObservations.Name = "tabPageObservations";
-            this.tabPageObservations.Size = new System.Drawing.Size(1165, 133);
+            this.tabPageObservations.Size = new System.Drawing.Size(1086, 133);
             this.tabPageObservations.TabIndex = 2;
             this.tabPageObservations.Text = "Observations";
             this.tabPageObservations.UseVisualStyleBackColor = true;
@@ -1074,6 +845,438 @@
             this.comboBoxCardiacArrest.Name = "comboBoxCardiacArrest";
             this.comboBoxCardiacArrest.Size = new System.Drawing.Size(90, 23);
             this.comboBoxCardiacArrest.TabIndex = 11;
+            // 
+            // tabPageECG
+            // 
+            this.tabPageECG.Controls.Add(this.comboBoxPathologicalQWave);
+            this.tabPageECG.Controls.Add(this.labelPathologicalQWave);
+            this.tabPageECG.Controls.Add(this.comboBoxTWaveInversion);
+            this.tabPageECG.Controls.Add(this.labelTWaveInversion);
+            this.tabPageECG.Controls.Add(this.comboBoxSTElevation);
+            this.tabPageECG.Controls.Add(this.labelSTElevation);
+            this.tabPageECG.Controls.Add(this.comboBoxRhythm);
+            this.tabPageECG.Controls.Add(this.labelRhythm);
+            this.tabPageECG.Controls.Add(this.comboBoxQRSAbnormalities);
+            this.tabPageECG.Controls.Add(this.labelQRSAbnormalities);
+            this.tabPageECG.Controls.Add(this.comboBoxSTDepression);
+            this.tabPageECG.Controls.Add(this.labelSTDepression);
+            this.tabPageECG.Controls.Add(this.comboBoxMyocardialIschaemia);
+            this.tabPageECG.Controls.Add(this.label30);
+            this.tabPageECG.Controls.Add(this.comboBoxSubsequentIschaemia);
+            this.tabPageECG.Controls.Add(this.label33);
+            this.tabPageECG.Controls.Add(this.labelSubsequentIschaemia);
+            this.tabPageECG.Controls.Add(this.comboBoxECGNormal);
+            this.tabPageECG.Controls.Add(this.labelECGNormal);
+            this.tabPageECG.Controls.Add(this.comboBox12LeadECG);
+            this.tabPageECG.Controls.Add(this.label12LeadECG);
+            this.tabPageECG.Controls.Add(this.richTextBoxECGMUSEText);
+            this.tabPageECG.Controls.Add(this.textBoxECGTimeFromPresentation);
+            this.tabPageECG.Controls.Add(this.label29);
+            this.tabPageECG.Location = new System.Drawing.Point(4, 24);
+            this.tabPageECG.Name = "tabPageECG";
+            this.tabPageECG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageECG.Size = new System.Drawing.Size(1086, 133);
+            this.tabPageECG.TabIndex = 0;
+            this.tabPageECG.Text = "ECG";
+            this.tabPageECG.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxPathologicalQWave
+            // 
+            this.comboBoxPathologicalQWave.FormattingEnabled = true;
+            this.comboBoxPathologicalQWave.Location = new System.Drawing.Point(372, 105);
+            this.comboBoxPathologicalQWave.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPathologicalQWave.Name = "comboBoxPathologicalQWave";
+            this.comboBoxPathologicalQWave.Size = new System.Drawing.Size(80, 23);
+            this.comboBoxPathologicalQWave.TabIndex = 9;
+            // 
+            // labelPathologicalQWave
+            // 
+            this.labelPathologicalQWave.AutoSize = true;
+            this.labelPathologicalQWave.Location = new System.Drawing.Point(246, 108);
+            this.labelPathologicalQWave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPathologicalQWave.Name = "labelPathologicalQWave";
+            this.labelPathologicalQWave.Size = new System.Drawing.Size(117, 15);
+            this.labelPathologicalQWave.TabIndex = 24;
+            this.labelPathologicalQWave.Text = "Pathological Q-wave";
+            // 
+            // comboBoxTWaveInversion
+            // 
+            this.comboBoxTWaveInversion.FormattingEnabled = true;
+            this.comboBoxTWaveInversion.Location = new System.Drawing.Point(783, 78);
+            this.comboBoxTWaveInversion.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTWaveInversion.Name = "comboBoxTWaveInversion";
+            this.comboBoxTWaveInversion.Size = new System.Drawing.Size(66, 23);
+            this.comboBoxTWaveInversion.TabIndex = 6;
+            // 
+            // labelTWaveInversion
+            // 
+            this.labelTWaveInversion.AutoSize = true;
+            this.labelTWaveInversion.Location = new System.Drawing.Point(683, 82);
+            this.labelTWaveInversion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTWaveInversion.Name = "labelTWaveInversion";
+            this.labelTWaveInversion.Size = new System.Drawing.Size(96, 15);
+            this.labelTWaveInversion.TabIndex = 22;
+            this.labelTWaveInversion.Text = "T-wave inversion";
+            // 
+            // comboBoxSTElevation
+            // 
+            this.comboBoxSTElevation.FormattingEnabled = true;
+            this.comboBoxSTElevation.Location = new System.Drawing.Point(598, 78);
+            this.comboBoxSTElevation.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSTElevation.Name = "comboBoxSTElevation";
+            this.comboBoxSTElevation.Size = new System.Drawing.Size(66, 23);
+            this.comboBoxSTElevation.TabIndex = 5;
+            // 
+            // labelSTElevation
+            // 
+            this.labelSTElevation.AutoSize = true;
+            this.labelSTElevation.Location = new System.Drawing.Point(464, 82);
+            this.labelSTElevation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSTElevation.Name = "labelSTElevation";
+            this.labelSTElevation.Size = new System.Drawing.Size(70, 15);
+            this.labelSTElevation.TabIndex = 20;
+            this.labelSTElevation.Text = "ST elevation";
+            // 
+            // comboBoxRhythm
+            // 
+            this.comboBoxRhythm.FormattingEnabled = true;
+            this.comboBoxRhythm.Location = new System.Drawing.Point(921, 78);
+            this.comboBoxRhythm.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxRhythm.Name = "comboBoxRhythm";
+            this.comboBoxRhythm.Size = new System.Drawing.Size(148, 23);
+            this.comboBoxRhythm.TabIndex = 7;
+            // 
+            // labelRhythm
+            // 
+            this.labelRhythm.AutoSize = true;
+            this.labelRhythm.Location = new System.Drawing.Point(868, 82);
+            this.labelRhythm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRhythm.Name = "labelRhythm";
+            this.labelRhythm.Size = new System.Drawing.Size(49, 15);
+            this.labelRhythm.TabIndex = 18;
+            this.labelRhythm.Text = "Rhythm";
+            // 
+            // comboBoxQRSAbnormalities
+            // 
+            this.comboBoxQRSAbnormalities.FormattingEnabled = true;
+            this.comboBoxQRSAbnormalities.Location = new System.Drawing.Point(148, 105);
+            this.comboBoxQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxQRSAbnormalities.Name = "comboBoxQRSAbnormalities";
+            this.comboBoxQRSAbnormalities.Size = new System.Drawing.Size(94, 23);
+            this.comboBoxQRSAbnormalities.TabIndex = 8;
+            // 
+            // labelQRSAbnormalities
+            // 
+            this.labelQRSAbnormalities.AutoSize = true;
+            this.labelQRSAbnormalities.Location = new System.Drawing.Point(5, 108);
+            this.labelQRSAbnormalities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelQRSAbnormalities.Name = "labelQRSAbnormalities";
+            this.labelQRSAbnormalities.Size = new System.Drawing.Size(104, 15);
+            this.labelQRSAbnormalities.TabIndex = 16;
+            this.labelQRSAbnormalities.Text = "QRS abnormalities";
+            // 
+            // comboBoxSTDepression
+            // 
+            this.comboBoxSTDepression.FormattingEnabled = true;
+            this.comboBoxSTDepression.Location = new System.Drawing.Point(372, 78);
+            this.comboBoxSTDepression.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSTDepression.Name = "comboBoxSTDepression";
+            this.comboBoxSTDepression.Size = new System.Drawing.Size(80, 23);
+            this.comboBoxSTDepression.TabIndex = 4;
+            // 
+            // labelSTDepression
+            // 
+            this.labelSTDepression.AutoSize = true;
+            this.labelSTDepression.Location = new System.Drawing.Point(246, 82);
+            this.labelSTDepression.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSTDepression.Name = "labelSTDepression";
+            this.labelSTDepression.Size = new System.Drawing.Size(79, 15);
+            this.labelSTDepression.TabIndex = 13;
+            this.labelSTDepression.Text = "ST depression";
+            // 
+            // comboBoxMyocardialIschaemia
+            // 
+            this.comboBoxMyocardialIschaemia.FormattingEnabled = true;
+            this.comboBoxMyocardialIschaemia.Location = new System.Drawing.Point(148, 78);
+            this.comboBoxMyocardialIschaemia.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxMyocardialIschaemia.Name = "comboBoxMyocardialIschaemia";
+            this.comboBoxMyocardialIschaemia.Size = new System.Drawing.Size(94, 23);
+            this.comboBoxMyocardialIschaemia.TabIndex = 3;
+            this.comboBoxMyocardialIschaemia.SelectedIndexChanged += new System.EventHandler(this.comboBoxMyocardialIschaemia_SelectedIndexChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(4, 82);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(122, 15);
+            this.label30.TabIndex = 11;
+            this.label30.Text = "Myocardial ischaemia";
+            // 
+            // comboBoxSubsequentIschaemia
+            // 
+            this.comboBoxSubsequentIschaemia.FormattingEnabled = true;
+            this.comboBoxSubsequentIschaemia.Location = new System.Drawing.Point(598, 105);
+            this.comboBoxSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSubsequentIschaemia.Name = "comboBoxSubsequentIschaemia";
+            this.comboBoxSubsequentIschaemia.Size = new System.Drawing.Size(66, 23);
+            this.comboBoxSubsequentIschaemia.TabIndex = 10;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, -20);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(44, 15);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "label33";
+            // 
+            // labelSubsequentIschaemia
+            // 
+            this.labelSubsequentIschaemia.AutoSize = true;
+            this.labelSubsequentIschaemia.Location = new System.Drawing.Point(464, 108);
+            this.labelSubsequentIschaemia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSubsequentIschaemia.Name = "labelSubsequentIschaemia";
+            this.labelSubsequentIschaemia.Size = new System.Drawing.Size(125, 15);
+            this.labelSubsequentIschaemia.TabIndex = 7;
+            this.labelSubsequentIschaemia.Text = "Subsequent ischaemia";
+            // 
+            // comboBoxECGNormal
+            // 
+            this.comboBoxECGNormal.FormattingEnabled = true;
+            this.comboBoxECGNormal.Location = new System.Drawing.Point(148, 54);
+            this.comboBoxECGNormal.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxECGNormal.Name = "comboBoxECGNormal";
+            this.comboBoxECGNormal.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxECGNormal.TabIndex = 2;
+            this.comboBoxECGNormal.SelectedIndexChanged += new System.EventHandler(this.comboBoxECGNormal_SelectedIndexChanged);
+            // 
+            // labelECGNormal
+            // 
+            this.labelECGNormal.AutoSize = true;
+            this.labelECGNormal.Location = new System.Drawing.Point(5, 57);
+            this.labelECGNormal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelECGNormal.Name = "labelECGNormal";
+            this.labelECGNormal.Size = new System.Drawing.Size(77, 15);
+            this.labelECGNormal.TabIndex = 5;
+            this.labelECGNormal.Text = "ECG Normal?";
+            // 
+            // comboBox12LeadECG
+            // 
+            this.comboBox12LeadECG.FormattingEnabled = true;
+            this.comboBox12LeadECG.Location = new System.Drawing.Point(148, 27);
+            this.comboBox12LeadECG.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox12LeadECG.Name = "comboBox12LeadECG";
+            this.comboBox12LeadECG.Size = new System.Drawing.Size(129, 23);
+            this.comboBox12LeadECG.TabIndex = 1;
+            this.comboBox12LeadECG.SelectedIndexChanged += new System.EventHandler(this.comboBox12LeadECG_SelectedIndexChanged);
+            // 
+            // label12LeadECG
+            // 
+            this.label12LeadECG.AutoSize = true;
+            this.label12LeadECG.Location = new System.Drawing.Point(5, 30);
+            this.label12LeadECG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12LeadECG.Name = "label12LeadECG";
+            this.label12LeadECG.Size = new System.Drawing.Size(72, 15);
+            this.label12LeadECG.TabIndex = 3;
+            this.label12LeadECG.Text = "12 Lead ECG";
+            // 
+            // richTextBoxECGMUSEText
+            // 
+            this.richTextBoxECGMUSEText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxECGMUSEText.Location = new System.Drawing.Point(295, 5);
+            this.richTextBoxECGMUSEText.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBoxECGMUSEText.Name = "richTextBoxECGMUSEText";
+            this.richTextBoxECGMUSEText.ReadOnly = true;
+            this.richTextBoxECGMUSEText.Size = new System.Drawing.Size(777, 67);
+            this.richTextBoxECGMUSEText.TabIndex = 2;
+            this.richTextBoxECGMUSEText.TabStop = false;
+            this.richTextBoxECGMUSEText.Text = "";
+            // 
+            // textBoxECGTimeFromPresentation
+            // 
+            this.textBoxECGTimeFromPresentation.Location = new System.Drawing.Point(148, 2);
+            this.textBoxECGTimeFromPresentation.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxECGTimeFromPresentation.Name = "textBoxECGTimeFromPresentation";
+            this.textBoxECGTimeFromPresentation.ReadOnly = true;
+            this.textBoxECGTimeFromPresentation.Size = new System.Drawing.Size(129, 23);
+            this.textBoxECGTimeFromPresentation.TabIndex = 1;
+            this.textBoxECGTimeFromPresentation.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(5, 8);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(131, 15);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Time from presentation";
+            // 
+            // tabPageTOMCAT
+            // 
+            this.tabPageTOMCAT.Controls.Add(this.comboBoxCulpritVessel);
+            this.tabPageTOMCAT.Controls.Add(this.labelCulpritVessel);
+            this.tabPageTOMCAT.Controls.Add(this.comboBoxMechanism);
+            this.tabPageTOMCAT.Controls.Add(this.labelMechanism);
+            this.tabPageTOMCAT.Controls.Add(this.textBoxLAD);
+            this.tabPageTOMCAT.Controls.Add(this.textBoxLMS);
+            this.tabPageTOMCAT.Controls.Add(this.label18);
+            this.tabPageTOMCAT.Controls.Add(this.label17);
+            this.tabPageTOMCAT.Controls.Add(this.richTextTomcatText);
+            this.tabPageTOMCAT.Controls.Add(this.label16);
+            this.tabPageTOMCAT.Controls.Add(this.textBoxRCA);
+            this.tabPageTOMCAT.Controls.Add(this.label15);
+            this.tabPageTOMCAT.Controls.Add(this.textBoxDaysFromPresentation);
+            this.tabPageTOMCAT.Controls.Add(this.textBoxLCx);
+            this.tabPageTOMCAT.Controls.Add(this.label14);
+            this.tabPageTOMCAT.Location = new System.Drawing.Point(4, 24);
+            this.tabPageTOMCAT.Name = "tabPageTOMCAT";
+            this.tabPageTOMCAT.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTOMCAT.Size = new System.Drawing.Size(1086, 133);
+            this.tabPageTOMCAT.TabIndex = 1;
+            this.tabPageTOMCAT.Text = "TOMCAT";
+            this.tabPageTOMCAT.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxCulpritVessel
+            // 
+            this.comboBoxCulpritVessel.FormattingEnabled = true;
+            this.comboBoxCulpritVessel.Location = new System.Drawing.Point(94, 92);
+            this.comboBoxCulpritVessel.Name = "comboBoxCulpritVessel";
+            this.comboBoxCulpritVessel.Size = new System.Drawing.Size(229, 23);
+            this.comboBoxCulpritVessel.TabIndex = 2;
+            // 
+            // labelCulpritVessel
+            // 
+            this.labelCulpritVessel.AutoSize = true;
+            this.labelCulpritVessel.Location = new System.Drawing.Point(7, 92);
+            this.labelCulpritVessel.Name = "labelCulpritVessel";
+            this.labelCulpritVessel.Size = new System.Drawing.Size(77, 15);
+            this.labelCulpritVessel.TabIndex = 15;
+            this.labelCulpritVessel.Text = "Culprit vessel";
+            // 
+            // comboBoxMechanism
+            // 
+            this.comboBoxMechanism.FormattingEnabled = true;
+            this.comboBoxMechanism.Location = new System.Drawing.Point(94, 66);
+            this.comboBoxMechanism.Name = "comboBoxMechanism";
+            this.comboBoxMechanism.Size = new System.Drawing.Size(229, 23);
+            this.comboBoxMechanism.TabIndex = 1;
+            // 
+            // labelMechanism
+            // 
+            this.labelMechanism.AutoSize = true;
+            this.labelMechanism.Location = new System.Drawing.Point(7, 71);
+            this.labelMechanism.Name = "labelMechanism";
+            this.labelMechanism.Size = new System.Drawing.Size(69, 15);
+            this.labelMechanism.TabIndex = 13;
+            this.labelMechanism.Text = "Mechanism";
+            // 
+            // textBoxLAD
+            // 
+            this.textBoxLAD.Location = new System.Drawing.Point(240, 36);
+            this.textBoxLAD.Name = "textBoxLAD";
+            this.textBoxLAD.ReadOnly = true;
+            this.textBoxLAD.Size = new System.Drawing.Size(75, 23);
+            this.textBoxLAD.TabIndex = 12;
+            this.textBoxLAD.TabStop = false;
+            // 
+            // textBoxLMS
+            // 
+            this.textBoxLMS.Location = new System.Drawing.Point(240, 7);
+            this.textBoxLMS.Name = "textBoxLMS";
+            this.textBoxLMS.ReadOnly = true;
+            this.textBoxLMS.Size = new System.Drawing.Size(75, 23);
+            this.textBoxLMS.TabIndex = 11;
+            this.textBoxLMS.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(186, 37);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 15);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "LAD";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(185, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(30, 15);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "LMS";
+            // 
+            // richTextTomcatText
+            // 
+            this.richTextTomcatText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextTomcatText.Location = new System.Drawing.Point(463, 10);
+            this.richTextTomcatText.Name = "richTextTomcatText";
+            this.richTextTomcatText.ReadOnly = true;
+            this.richTextTomcatText.Size = new System.Drawing.Size(609, 108);
+            this.richTextTomcatText.TabIndex = 8;
+            this.richTextTomcatText.TabStop = false;
+            this.richTextTomcatText.Text = "";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(7, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 15);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "RCA";
+            // 
+            // textBoxRCA
+            // 
+            this.textBoxRCA.Location = new System.Drawing.Point(85, 36);
+            this.textBoxRCA.Name = "textBoxRCA";
+            this.textBoxRCA.ReadOnly = true;
+            this.textBoxRCA.Size = new System.Drawing.Size(75, 23);
+            this.textBoxRCA.TabIndex = 6;
+            this.textBoxRCA.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 30);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Days from\r\npresentation";
+            // 
+            // textBoxDaysFromPresentation
+            // 
+            this.textBoxDaysFromPresentation.Location = new System.Drawing.Point(85, 6);
+            this.textBoxDaysFromPresentation.Name = "textBoxDaysFromPresentation";
+            this.textBoxDaysFromPresentation.ReadOnly = true;
+            this.textBoxDaysFromPresentation.Size = new System.Drawing.Size(75, 23);
+            this.textBoxDaysFromPresentation.TabIndex = 4;
+            this.textBoxDaysFromPresentation.TabStop = false;
+            // 
+            // textBoxLCx
+            // 
+            this.textBoxLCx.Location = new System.Drawing.Point(378, 7);
+            this.textBoxLCx.Name = "textBoxLCx";
+            this.textBoxLCx.ReadOnly = true;
+            this.textBoxLCx.Size = new System.Drawing.Size(75, 23);
+            this.textBoxLCx.TabIndex = 3;
+            this.textBoxLCx.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(334, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 15);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "LCx";
             // 
             // tabPageAdjudication
             // 
@@ -1353,7 +1556,7 @@
             this.buttonNext.Location = new System.Drawing.Point(248, 738);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(78, 24);
-            this.buttonNext.TabIndex = 4;
+            this.buttonNext.TabIndex = 12;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
@@ -1398,7 +1601,7 @@
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(78, 24);
-            this.buttonSave.TabIndex = 3;
+            this.buttonSave.TabIndex = 11;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -1462,7 +1665,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.DataEntryTab);
             this.splitContainer1.Size = new System.Drawing.Size(1100, 646);
             this.splitContainer1.SplitterDistance = 472;
-            this.splitContainer1.TabIndex = 102;
+            this.splitContainer1.TabIndex = 10;
             this.splitContainer1.TabStop = false;
             // 
             // Form1
@@ -1501,12 +1704,14 @@
             this.Text = "Cardiology Adjudication Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DataEntryTab.ResumeLayout(false);
+            this.tabPageSymptoms.ResumeLayout(false);
+            this.tabPageSymptoms.PerformLayout();
+            this.tabPageObservations.ResumeLayout(false);
+            this.tabPageObservations.PerformLayout();
             this.tabPageECG.ResumeLayout(false);
             this.tabPageECG.PerformLayout();
             this.tabPageTOMCAT.ResumeLayout(false);
             this.tabPageTOMCAT.PerformLayout();
-            this.tabPageObservations.ResumeLayout(false);
-            this.tabPageObservations.PerformLayout();
             this.tabPageAdjudication.ResumeLayout(false);
             this.tabPageAdjudication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).EndInit();
@@ -1647,5 +1852,24 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label labelClinicalDiagnosis;
         private ComboBox comboBoxClinicalDiagnosis;
+        private TabPage tabPageSymptoms;
+        private ComboBox comboBoxSymptomPainRadiatingToArmShoulderNeckJaw;
+        private ComboBox comboBoxSymptomPainWorseWithInspiration;
+        private ComboBox comboBoxSymptomPainReporducedByPalpation;
+        private ComboBox comboBoxSymptomHistory;
+        private ComboBox comboBoxSymptomSweatingObserved;
+        private ComboBox comboBoxSymptomsDescribed;
+        private Label labelSymptomsDescribed;
+        private Label labelSymptomHistory;
+        private Label labelSymptomPainReporducedByPalpation;
+        private Label labelSymptomPainWorseWithInspiration;
+        private Label labelSymptomPainRadiatingToArmShoulderNeckJaw;
+        private ComboBox comboBoxSymptomVomiting;
+        private ComboBox comboBoxSymptomPainRadiatingToRightShoulder;
+        private ComboBox comboBoxSymptomCrescendoAngina;
+        private Label labelSymptomSweatingObserved;
+        private Label labelSymptomVomiting;
+        private Label labelSymptomPainRadiatingToRightShoulder;
+        private Label labelSymptomCrescendoAngina;
     }
 }
