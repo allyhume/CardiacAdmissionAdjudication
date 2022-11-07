@@ -79,7 +79,7 @@ namespace CardiacAdmissionAdjudication
                 "12 Lead ECG",
                 label12LeadECG,
                 comboBox12LeadECG,
-                new string[] { "Yes", "No" });
+                new string[] { "Yes - reviewed", "Yes - not relevant", "No" });
 
             deECGNormal = new ComboBoxDataEntry(
                 "ECG Normal",
