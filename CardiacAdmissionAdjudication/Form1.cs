@@ -1275,7 +1275,7 @@ namespace CardiacAdmissionAdjudication
             }
 
             // Progress label
-            labelProgress.Text = "";
+            labelProgress.Text = "No cases loaded";
 
             buttonNext.Enabled = false; 
             buttonPrevious.Enabled = false;

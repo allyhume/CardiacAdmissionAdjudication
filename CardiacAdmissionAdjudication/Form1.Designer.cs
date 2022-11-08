@@ -423,7 +423,7 @@
             // comboBoxSymptomPainRadiatingToArmShoulderNeckJaw
             // 
             this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.FormattingEnabled = true;
-            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Location = new System.Drawing.Point(787, 42);
+            this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Location = new System.Drawing.Point(798, 41);
             this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Name = "comboBoxSymptomPainRadiatingToArmShoulderNeckJaw";
             this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomPainRadiatingToArmShoulderNeckJaw.TabIndex = 6;
@@ -431,7 +431,7 @@
             // comboBoxSymptomPainWorseWithInspiration
             // 
             this.comboBoxSymptomPainWorseWithInspiration.FormattingEnabled = true;
-            this.comboBoxSymptomPainWorseWithInspiration.Location = new System.Drawing.Point(787, 68);
+            this.comboBoxSymptomPainWorseWithInspiration.Location = new System.Drawing.Point(798, 68);
             this.comboBoxSymptomPainWorseWithInspiration.Name = "comboBoxSymptomPainWorseWithInspiration";
             this.comboBoxSymptomPainWorseWithInspiration.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomPainWorseWithInspiration.TabIndex = 7;
@@ -439,7 +439,7 @@
             // comboBoxSymptomPainReporducedByPalpation
             // 
             this.comboBoxSymptomPainReporducedByPalpation.FormattingEnabled = true;
-            this.comboBoxSymptomPainReporducedByPalpation.Location = new System.Drawing.Point(787, 94);
+            this.comboBoxSymptomPainReporducedByPalpation.Location = new System.Drawing.Point(798, 94);
             this.comboBoxSymptomPainReporducedByPalpation.Name = "comboBoxSymptomPainReporducedByPalpation";
             this.comboBoxSymptomPainReporducedByPalpation.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomPainReporducedByPalpation.TabIndex = 8;
@@ -455,7 +455,7 @@
             // comboBoxSymptomSweatingObserved
             // 
             this.comboBoxSymptomSweatingObserved.FormattingEnabled = true;
-            this.comboBoxSymptomSweatingObserved.Location = new System.Drawing.Point(787, 15);
+            this.comboBoxSymptomSweatingObserved.Location = new System.Drawing.Point(798, 15);
             this.comboBoxSymptomSweatingObserved.Name = "comboBoxSymptomSweatingObserved";
             this.comboBoxSymptomSweatingObserved.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomSweatingObserved.TabIndex = 5;
@@ -463,7 +463,7 @@
             // comboBoxSymptomsDescribed
             // 
             this.comboBoxSymptomsDescribed.FormattingEnabled = true;
-            this.comboBoxSymptomsDescribed.Location = new System.Drawing.Point(470, 15);
+            this.comboBoxSymptomsDescribed.Location = new System.Drawing.Point(479, 15);
             this.comboBoxSymptomsDescribed.Name = "comboBoxSymptomsDescribed";
             this.comboBoxSymptomsDescribed.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomsDescribed.TabIndex = 1;
@@ -517,7 +517,7 @@
             // comboBoxSymptomVomiting
             // 
             this.comboBoxSymptomVomiting.FormattingEnabled = true;
-            this.comboBoxSymptomVomiting.Location = new System.Drawing.Point(470, 94);
+            this.comboBoxSymptomVomiting.Location = new System.Drawing.Point(479, 94);
             this.comboBoxSymptomVomiting.Name = "comboBoxSymptomVomiting";
             this.comboBoxSymptomVomiting.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomVomiting.TabIndex = 4;
@@ -525,7 +525,7 @@
             // comboBoxSymptomPainRadiatingToRightShoulder
             // 
             this.comboBoxSymptomPainRadiatingToRightShoulder.FormattingEnabled = true;
-            this.comboBoxSymptomPainRadiatingToRightShoulder.Location = new System.Drawing.Point(470, 68);
+            this.comboBoxSymptomPainRadiatingToRightShoulder.Location = new System.Drawing.Point(479, 68);
             this.comboBoxSymptomPainRadiatingToRightShoulder.Name = "comboBoxSymptomPainRadiatingToRightShoulder";
             this.comboBoxSymptomPainRadiatingToRightShoulder.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomPainRadiatingToRightShoulder.TabIndex = 3;
@@ -533,7 +533,7 @@
             // comboBoxSymptomCrescendoAngina
             // 
             this.comboBoxSymptomCrescendoAngina.FormattingEnabled = true;
-            this.comboBoxSymptomCrescendoAngina.Location = new System.Drawing.Point(470, 42);
+            this.comboBoxSymptomCrescendoAngina.Location = new System.Drawing.Point(479, 42);
             this.comboBoxSymptomCrescendoAngina.Name = "comboBoxSymptomCrescendoAngina";
             this.comboBoxSymptomCrescendoAngina.Size = new System.Drawing.Size(52, 23);
             this.comboBoxSymptomCrescendoAngina.TabIndex = 2;
@@ -1541,9 +1541,9 @@
             // buttonPrevious
             // 
             this.buttonPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPrevious.Location = new System.Drawing.Point(164, 738);
+            this.buttonPrevious.Location = new System.Drawing.Point(184, 738);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(78, 24);
+            this.buttonPrevious.Size = new System.Drawing.Size(80, 24);
             this.buttonPrevious.TabIndex = 0;
             this.buttonPrevious.TabStop = false;
             this.buttonPrevious.Text = "Previous";
@@ -1553,9 +1553,9 @@
             // buttonNext
             // 
             this.buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNext.Location = new System.Drawing.Point(248, 738);
+            this.buttonNext.Location = new System.Drawing.Point(274, 738);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(78, 24);
+            this.buttonNext.Size = new System.Drawing.Size(80, 24);
             this.buttonNext.TabIndex = 12;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -1587,7 +1587,7 @@
             this.buttonLoad.Location = new System.Drawing.Point(4, 738);
             this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(78, 24);
+            this.buttonLoad.Size = new System.Drawing.Size(80, 24);
             this.buttonLoad.TabIndex = 32;
             this.buttonLoad.TabStop = false;
             this.buttonLoad.Text = "Load...";
@@ -1597,10 +1597,10 @@
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSave.Location = new System.Drawing.Point(86, 738);
+            this.buttonSave.Location = new System.Drawing.Point(94, 738);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(78, 24);
+            this.buttonSave.Size = new System.Drawing.Size(80, 24);
             this.buttonSave.TabIndex = 11;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -1610,7 +1610,7 @@
             // 
             this.labelProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelProgress.AutoSize = true;
-            this.labelProgress.Location = new System.Drawing.Point(328, 740);
+            this.labelProgress.Location = new System.Drawing.Point(370, 743);
             this.labelProgress.Name = "labelProgress";
             this.labelProgress.Size = new System.Drawing.Size(77, 15);
             this.labelProgress.TabIndex = 34;
