@@ -167,10 +167,10 @@
             this.dataGridViewTroponinTests = new System.Windows.Forms.DataGridView();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.labelProgress = new System.Windows.Forms.Label();
             this.richTextBoxEDNotes = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelProgress = new System.Windows.Forms.Label();
             this.DataEntryTab.SuspendLayout();
             this.tabPageSymptoms.SuspendLayout();
             this.tabPageObservations.SuspendLayout();
@@ -1541,7 +1541,7 @@
             // buttonPrevious
             // 
             this.buttonPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPrevious.Location = new System.Drawing.Point(184, 738);
+            this.buttonPrevious.Location = new System.Drawing.Point(184, 735);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(80, 24);
             this.buttonPrevious.TabIndex = 0;
@@ -1553,7 +1553,7 @@
             // buttonNext
             // 
             this.buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNext.Location = new System.Drawing.Point(274, 738);
+            this.buttonNext.Location = new System.Drawing.Point(274, 735);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(80, 24);
             this.buttonNext.TabIndex = 12;
@@ -1570,7 +1570,6 @@
             this.dataGridViewTroponinTests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTroponinTests.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewTroponinTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTroponinTests.Enabled = false;
             this.dataGridViewTroponinTests.Location = new System.Drawing.Point(653, 2);
             this.dataGridViewTroponinTests.MultiSelect = false;
             this.dataGridViewTroponinTests.Name = "dataGridViewTroponinTests";
@@ -1584,7 +1583,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLoad.Location = new System.Drawing.Point(4, 738);
+            this.buttonLoad.Location = new System.Drawing.Point(4, 735);
             this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(80, 24);
@@ -1597,7 +1596,7 @@
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSave.Location = new System.Drawing.Point(94, 738);
+            this.buttonSave.Location = new System.Drawing.Point(94, 735);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(80, 24);
@@ -1605,16 +1604,6 @@
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // labelProgress
-            // 
-            this.labelProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelProgress.AutoSize = true;
-            this.labelProgress.Location = new System.Drawing.Point(370, 743);
-            this.labelProgress.Name = "labelProgress";
-            this.labelProgress.Size = new System.Drawing.Size(77, 15);
-            this.labelProgress.TabIndex = 34;
-            this.labelProgress.Text = "labelProgress";
             // 
             // richTextBoxEDNotes
             // 
@@ -1668,13 +1657,22 @@
             this.splitContainer1.TabIndex = 10;
             this.splitContainer1.TabStop = false;
             // 
+            // labelProgress
+            // 
+            this.labelProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProgress.Location = new System.Drawing.Point(370, 739);
+            this.labelProgress.Name = "labelProgress";
+            this.labelProgress.Size = new System.Drawing.Size(370, 19);
+            this.labelProgress.TabIndex = 101;
+            this.labelProgress.Text = "progressLabel";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 764);
-            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.labelProgress);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.dataGridViewTroponinTests);
@@ -1787,7 +1785,6 @@
         private DataGridView dataGridViewTroponinTests;
         private Button buttonLoad;
         private Button buttonSave;
-        private Label labelProgress;
         private ComboBox comboBoxSubsequentIschaemia;
         private Label label33;
         private Label labelSubsequentIschaemia;
@@ -1871,5 +1868,6 @@
         private Label labelSymptomVomiting;
         private Label labelSymptomPainRadiatingToRightShoulder;
         private Label labelSymptomCrescendoAngina;
+        private Label labelProgress;
     }
 }
