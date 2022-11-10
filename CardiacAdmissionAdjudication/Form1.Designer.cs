@@ -170,6 +170,7 @@
             this.richTextBoxEDNotes = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelProgress = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DataEntryTab.SuspendLayout();
             this.tabPageSymptoms.SuspendLayout();
             this.tabPageObservations.SuspendLayout();
@@ -178,6 +179,10 @@
             this.tabPageAdjudication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -385,10 +390,10 @@
             this.richTextBoxDischargeNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(785, 5);
+            this.richTextBoxDischargeNotes.Location = new System.Drawing.Point(775, 5);
             this.richTextBoxDischargeNotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBoxDischargeNotes.Name = "richTextBoxDischargeNotes";
-            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(774, 789);
+            this.richTextBoxDischargeNotes.Size = new System.Drawing.Size(763, 767);
             this.richTextBoxDischargeNotes.TabIndex = 27;
             this.richTextBoxDischargeNotes.TabStop = false;
             this.richTextBoxDischargeNotes.Text = "";
@@ -402,11 +407,11 @@
             this.DataEntryTab.Controls.Add(this.tabPageECG);
             this.DataEntryTab.Controls.Add(this.tabPageTOMCAT);
             this.DataEntryTab.Controls.Add(this.tabPageAdjudication);
-            this.DataEntryTab.Location = new System.Drawing.Point(10, 949);
+            this.DataEntryTab.Location = new System.Drawing.Point(7, 7);
             this.DataEntryTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataEntryTab.Name = "DataEntryTab";
             this.DataEntryTab.SelectedIndex = 0;
-            this.DataEntryTab.Size = new System.Drawing.Size(1563, 268);
+            this.DataEntryTab.Size = new System.Drawing.Size(1538, 268);
             this.DataEntryTab.TabIndex = 0;
             // 
             // tabPageSymptoms
@@ -1320,7 +1325,7 @@
             this.tabPageAdjudication.Controls.Add(this.labelPrimaryMechanism);
             this.tabPageAdjudication.Location = new System.Drawing.Point(4, 34);
             this.tabPageAdjudication.Name = "tabPageAdjudication";
-            this.tabPageAdjudication.Size = new System.Drawing.Size(1555, 230);
+            this.tabPageAdjudication.Size = new System.Drawing.Size(1530, 230);
             this.tabPageAdjudication.TabIndex = 3;
             this.tabPageAdjudication.Text = "Adjudication";
             this.tabPageAdjudication.UseVisualStyleBackColor = true;
@@ -1622,7 +1627,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxEDNotes.Location = new System.Drawing.Point(3, 3);
             this.richTextBoxEDNotes.Name = "richTextBoxEDNotes";
-            this.richTextBoxEDNotes.Size = new System.Drawing.Size(775, 793);
+            this.richTextBoxEDNotes.Size = new System.Drawing.Size(765, 771);
             this.richTextBoxEDNotes.TabIndex = 35;
             this.richTextBoxEDNotes.TabStop = false;
             this.richTextBoxEDNotes.Text = "";
@@ -1638,12 +1643,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxDischargeNotes, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxEDNotes, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 140);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 5);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1563, 799);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1542, 777);
             this.tableLayoutPanel1.TabIndex = 101;
             // 
             // labelProgress
@@ -1656,13 +1661,32 @@
             this.labelProgress.TabIndex = 101;
             this.labelProgress.Text = "progressLabel";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(13, 146);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.DataEntryTab);
+            this.splitContainer1.Size = new System.Drawing.Size(1565, 1071);
+            this.splitContainer1.SplitterDistance = 787;
+            this.splitContainer1.TabIndex = 102;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1590, 1273);
-            this.Controls.Add(this.DataEntryTab);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonLoad);
@@ -1706,6 +1730,11 @@
             this.tabPageAdjudication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTroponinTests)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1855,5 +1884,6 @@
         private Label labelSymptomPainRadiatingToRightShoulder;
         private Label labelSymptomCrescendoAngina;
         private Label labelProgress;
+        private SplitContainer splitContainer1;
     }
 }
