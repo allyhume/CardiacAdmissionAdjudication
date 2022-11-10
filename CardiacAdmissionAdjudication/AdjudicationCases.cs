@@ -205,7 +205,6 @@ namespace CardiacAdmissionAdjudication
                 sb.Append("\tSuspectedCAD2");
                 sb.Append("\tCardiac2");
                 sb.Append("\tSystemic2");
-                sb.Append("\tClinicalDiagnosis2");
 
                 lines.Add(sb.ToString());
 

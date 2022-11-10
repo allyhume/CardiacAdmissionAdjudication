@@ -523,7 +523,7 @@ namespace CardiacAdmissionAdjudication
             adjudication1DataEntries.Add(deSymptomPainWorseWithInspiration);
             adjudication1DataEntries.Add(deSymptomPainReporducedByPalpation);
             adjudication1DataEntries.Add(deSymptomHistory);
-
+            adjudication1DataEntries.Add(deClinicalDiagnosis);
 
             adjudication2DataEntries.Add(deInsufficientInfo);
             adjudication2DataEntries.Add(deSpontaneous); 
@@ -536,7 +536,6 @@ namespace CardiacAdmissionAdjudication
             adjudication2DataEntries.Add(deSuspectedCAD);
             adjudication2DataEntries.Add(deCardiac);
             adjudication2DataEntries.Add(deSystemic);
-            adjudication2DataEntries.Add(deClinicalDiagnosis);
             adjudication2DataEntries.Add(de12LeadECG);
             adjudication2DataEntries.Add(deECGNormal);
             adjudication2DataEntries.Add(deMyocardialIschaemia);
@@ -1149,6 +1148,7 @@ namespace CardiacAdmissionAdjudication
                     deSymptomPainWorseWithInspiration.SetValue(c.SymptomPainWorseWithInspiration);
                     deSymptomPainReporducedByPalpation.SetValue(c.SymptomPainReporducedByPalpation);
                     deSymptomHistory.SetValue(c.SymptomHistory);
+                    deClinicalDiagnosis.SetValue(c.ClinicalDiagnosis);
 
                     // Adjudication 2
                     if (c.Adjudication2Complete)
@@ -1164,7 +1164,6 @@ namespace CardiacAdmissionAdjudication
                         deSuspectedCAD.SetValue(c.SuspectedCAD2);
                         deCardiac.SetValue(c.Cardiac2);
                         deSystemic.SetValue(c.Systemic2);
-                        deClinicalDiagnosis.SetValue(c.ClinicalDiagnosis2);
                     }
                     else
                     {
@@ -1448,19 +1447,19 @@ namespace CardiacAdmissionAdjudication
             }
             else
             {
+                if (c.ECG12Lead2 != de12LeadECG.GetValue()) return false;
+                if (c.ECGNormalAbnormal2 != deECGNormal.GetValue()) return false;
+                if (c.ECGMyocardialIschaemia2 != deMyocardialIschaemia.GetValue()) return false;
+                if (c.ECGSubsequentIschaemia2 != deSubsequentIschaemia.GetValue()) return false;
+                if (c.ECGSTElevation2 != deSTElevation.GetValue()) return false; ;
+                if (c.ECGSTDepression2 != deSTDepression.GetValue()) return false;
+                if (c.ECGTWaveInversion2 != deTWaveInversion.GetValue()) return false;
+                if (c.ECGQRSAbnormalities2 != deQRSAbnormalities.GetValue()) return false;
+                if (c.ECGPathologicalQWave2 != dePathologicalQWave.GetValue()) return false;
+                if (c.Rhythm2 != deRhythm.GetValue()) return false;
+
                 if (!c.Adjudication2Complete)
                 {
-                    if ("" != de12LeadECG.GetValue()) return false;
-                    if ("" != deECGNormal.GetValue()) return false;
-                    if ("" != deMyocardialIschaemia.GetValue()) return false;
-                    if ("" != deSubsequentIschaemia.GetValue()) return false;
-                    if ("" != deSTElevation.GetValue()) return false;;
-                    if ("" != deSTDepression.GetValue()) return false;
-                    if ("" != deTWaveInversion.GetValue()) return false;
-                    if ("" != deQRSAbnormalities.GetValue()) return false;
-                    if ("" != dePathologicalQWave.GetValue()) return false;
-                    if ("" != deRhythm.GetValue()) return false;
-                    
                     if ("" != deInsufficientInfo.GetValue()) return false;
                     if ("" != deSpontaneous.GetValue()) return false;
                     if ("" != deProcedural.GetValue()) return false;
@@ -1472,21 +1471,9 @@ namespace CardiacAdmissionAdjudication
                     if ("" != deSuspectedCAD.GetValue()) return false;
                     if ("" != deCardiac.GetValue()) return false;
                     if ("" != deSystemic.GetValue()) return false;
-                    if ("" != deClinicalDiagnosis.GetValue()) return false;
                 }
                 else
                 {
-                    if (c.ECG12Lead2 != de12LeadECG.GetValue()) return false;
-                    if (c.ECGNormalAbnormal2 != deECGNormal.GetValue()) return false;
-                    if (c.ECGMyocardialIschaemia2 != deMyocardialIschaemia.GetValue()) return false;
-                    if (c.ECGSubsequentIschaemia2 != deSubsequentIschaemia.GetValue()) return false;
-                    if (c.ECGSTElevation2 != deSTElevation.GetValue()) return false; ;
-                    if (c.ECGSTDepression2 != deSTDepression.GetValue()) return false;
-                    if (c.ECGTWaveInversion2 != deTWaveInversion.GetValue()) return false;
-                    if (c.ECGQRSAbnormalities2 != deQRSAbnormalities.GetValue()) return false;
-                    if (c.ECGPathologicalQWave2 != dePathologicalQWave.GetValue()) return false;
-                    if (c.Rhythm2 != deRhythm.GetValue()) return false;
-
                     if (c.InsufficientInfo2 != deInsufficientInfo.GetValue()) return false;
                     if (c.Spontaneous2 != deSpontaneous.GetValue()) return false;
                     if (c.Procedural2 != deProcedural.GetValue()) return false;
@@ -1498,7 +1485,6 @@ namespace CardiacAdmissionAdjudication
                     if (c.SuspectedCAD2 != deSuspectedCAD.GetValue()) return false;
                     if (c.Cardiac2 != deCardiac.GetValue()) return false;
                     if (c.Systemic2 != deSystemic.GetValue()) return false;
-                    if (c.ClinicalDiagnosis2 != deClinicalDiagnosis.GetValue()) return false;
                 }
             }
 
@@ -1593,7 +1579,6 @@ namespace CardiacAdmissionAdjudication
                 c.SuspectedCAD2 = deSuspectedCAD.GetValue();
                 c.Cardiac2 = deCardiac.GetValue();
                 c.Systemic2 = deSystemic.GetValue();
-                c.ClinicalDiagnosis2 = deClinicalDiagnosis.GetValue();
             }
 
             adjudicationCases.Save();

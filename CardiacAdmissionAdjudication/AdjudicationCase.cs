@@ -120,7 +120,6 @@ namespace CardiacAdmissionAdjudication
         public string? SuspectedCAD2;
         public string? Cardiac2;
         public string? Systemic2;
-        public string? ClinicalDiagnosis2;
 
         public AdjudicationCase(string input)
         {
@@ -318,7 +317,6 @@ namespace CardiacAdmissionAdjudication
             SuspectedCAD2 = columns[index++];
             Cardiac2 = columns[index++];
             Systemic2 = columns[index++];
-            ClinicalDiagnosis2 = columns[index++];
         }
 
         public string GetAnnotation1TSV()
@@ -403,7 +401,6 @@ namespace CardiacAdmissionAdjudication
             sb.Append("\t" + SuspectedCAD2);
             sb.Append("\t" + Cardiac2);
             sb.Append("\t" + Systemic2);
-            sb.Append("\t" + ClinicalDiagnosis2);
 
             return sb.ToString();
         }
