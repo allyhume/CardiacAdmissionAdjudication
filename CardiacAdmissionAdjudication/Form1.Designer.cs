@@ -1693,6 +1693,7 @@
             this.Name = "Form1";
             this.Text = "Cardiology Adjudication Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new FormClosingEventHandler(this.Form1_FormClosing);
             this.DataEntryTab.ResumeLayout(false);
             this.tabPageSymptoms.ResumeLayout(false);
             this.tabPageSymptoms.PerformLayout();
